@@ -1,0 +1,31 @@
+﻿codice;etichetta;gruppo10
+1;CAV;CAV
+2;Case Rifugio;CAV
+3;Comuni;Servizi comunali
+4;Polizia Municipale;Servizi comunali
+5;Settore educativo comunale;Settore Educativo
+6;Servizi sociali comunali;Servizi comunali
+7;Servizio abusi e maltrattamenti comunale;Servizi comunali
+8;Province/Città metropolitane;Province/Città metropolitane
+9;Ambiti della programmazione sociale e socio-sanitaria (Ambiti Sociali, Piani di Zona, Distretti socio-sanitari, Società della Salute);Territorio
+10;Regioni/province Autonome;Regioni/province Autonome
+11;Ospedale (Pronto soccorso, ecc.);settore sanitario
+12;ASL (consultori familiari e altri servizi territoriali);settore sanitario
+13;Prefettura;Settore giudiziario
+14;Questura;Settore giudiziario
+15;Carabinieri/Polizia/altre forze dell'ordine;Settore giudiziario
+16;Scuole/Ufficio scolastico provinciale e regionale;Settore Educativo
+17;Procura Minorile/ Tribunale minorile;Settore giudiziario
+18;Procura Ordinaria/Tribunale/Corte d'appello;Settore giudiziario
+19;Ordine avvocati;associazionismo
+20;Ordine psicologi e Ordine assistenti sociali;associazionismo
+21;Ordine medici e odontoiatri e Ordine farmacisti;associazionismo
+22;Altri ordini professionali (infermieri, ostetriche, giornalisti, commercialisti, ecc.);associazionismo
+23;Organismi di parità;Territorio
+24;Ente terzo settore - ETS (iscritto al RUNTS)[1];associazionismo
+25;Ente terzo settore - ETS (iscritto al RUNTS) costituito da donne per le donne;associazionismo
+26;Servizi per l'impiego;Territorio
+27;Sindacati/Associazioni di categoria;associazionismo
+28;Università;Settore Educativo
+29;Associazioni che si occupano di programmi di prevenzione, recupero e trattamento per uomini maltrattanti;associazionismo
+30;Altro;altro
