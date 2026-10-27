@@ -15,10 +15,18 @@ Entrambe le analisi (controllo qualità e integrazione) vanno nel paper. Dettagl
 
 ## Dati
 
-251 protocolli abbinati (254 questionari, 253 output AI). Chiave: `ID_RISPONDENTE_RILEV` + `PROGRESSIVO_QUEST`. I microdati non sono nel repo: vedi `microdati/README.md`.
+Dal 2026-10-27 il lato questionario si ricostruisce dai PDF dei questionari compilati, non dal CSV dei colleghi. Il lato AI (pipeline di Paolo sui protocolli) resta com'è: non si rifà.
+
+- Questionari: PDF con layout identico, parsati da `codice/parse_questionari.py`.
+- Protocolli: PDF/TXT letti dalla pipeline AI di Paolo.
+- Campione: in arrivo, fino a 251–253 questionari (prima ipotesi ≈100). Se non è il totale, si descrive come campione di convenienza e si confronta la composizione con l'universo.
+- CSV GINO dei colleghi (251 protocolli abbinati, chiave `ID_RISPONDENTE_RILEV` + `PROGRESSIVO_QUEST`): resta come controllo incrociato del parser.
+
+I microdati non sono nel repo: vedi `microdati/README.md`.
 
 ## Cosa c'è stato fatto finora
 
+- **Cambio di impianto (27/10):** parser dei questionari PDF scritto e verificato su 3 casi (vedi `docs/stato.md`).
 - Ricalcolo indipendente del Match AI/umano dei colleghi: i numeri tornano.
 - Accordo per categoria (30 e 10 gruppi): Jaccard, κ di Cohen, PABAK (il κ inganna con prevalenze alte), sensibilità alla mappatura dei 604 soggetti AI senza categoria.
 - **Proponente**: il disaccordo è soprattutto di definizione. La domanda 2.1 non ha definizione; gli umani tendono a segnare chi compare nel testo/firma, l'AI il promotore esplicito.
@@ -46,7 +54,10 @@ microdati/     NON versionata, tranne README e _fonti.csv
 
 ```
 export RETI_MICRODATI="/percorso/analisi/microdati"   # opzionale
-cd codice && python3 analisi_01_accordo_categorie.py
+cd codice && python3 parse_questionari.py              # PDF questionari -> tabelle in microdati/gino
+cd codice && python3 analisi_01_accordo_categorie.py    # analisi sul CSV dei colleghi (impianto precedente)
 ```
 
-Servono python3, pandas, openpyxl.
+I PDF dei questionari vanno in `microdati/gino/` con nome `questionario*.pdf`. Servono anche `pdfplumber`.
+
+Servono python3, pandas, openpyxl, pdfplumber.

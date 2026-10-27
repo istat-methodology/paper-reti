@@ -11,3 +11,6 @@ Per lavorare da qui: copiali nelle sottocartelle, oppure `export RETI_MICRODATI=
 - `_fonti.csv`: nome originale, byte e sha256 di ogni file, per la provenienza
 
 Convenzione nomi: `<tipo>_<contenuto>[_<dettaglio>][_<versione>]`, con tipo = gino / ai / rif / confronto. `pN_M` indica la fase della pipeline.
+
+## File prodotti dal parser
+`gino/gino_pdf_risposte_lungo.csv` (una riga per domanda e voce) e `gino/gino_pdf_risposte_largo.csv` (una riga per questionario). Si rigenerano con `codice/parse_questionari.py`. I PDF dei questionari e dei protocolli non vanno in git (`*.pdf` è ignorato).
