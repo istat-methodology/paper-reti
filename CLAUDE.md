@@ -9,5 +9,7 @@ Paper su reti territoriali antiviolenza: confronto micro tra questionario GINO e
 - I microdati non vanno MAI committati (nomi di enti, testo libero). Controlla `.gitignore` prima di ogni `git add`.
 - Niente commit né push se non richiesti.
 - Il confronto sta in `codice/common.py`: nessuna dipendenza dal file Match.
+- Lato questionario: partire dai PDF compilati (`codice/parse_questionari.py`), non dal CSV dei colleghi. Lato AI: usare i risultati di Paolo, non rifare la pipeline.
+- Per l'ultimo stato leggi `docs/stato.md` e `docs/decisioni.md`.
 - Output nuovi con la convenzione `<tipo>_<contenuto>[_<dettaglio>][_<versione>]`.
 - In attesa: lista esatta delle variabili estratte dai nuovi script AI.
