@@ -10,8 +10,23 @@ import pdfplumber, pandas as pd
 from pathlib import Path
 from config import MICRODATI
 
-# immagini delle spunte (stessi oggetti in tutti i PDF visti): vuoto/pieno
-IMG = {28: ("radio", 0), 29: ("radio", 1), 30: ("check", 0), 31: ("check", 1)}
+# Immagini delle spunte. Gli ID oggetto cambiano da PDF a PDF, quindi si classifica per dimensione e per
+# luminosita' media (valori di riferimento misurati sui PDF): 16 px = radio, 26 px = checkbox; (vuoto, pieno).
+import io, numpy as np
+from PIL import Image
+REF = {16: ("radio", (202.2, 167.6)), 26: ("check", (187.3, 150.7))}
+_cache = {}
+def classe_spunta(im):
+    """Ritorna (tipo, stato) per un'immagine di spunta, None per altre immagini (es. logo)."""
+    n = im["srcsize"][0]
+    if im["srcsize"][0] != im["srcsize"][1] or n not in REF: return None
+    data = im["stream"].get_data(); key = (n, hash(data))
+    if key not in _cache:
+        m = float(np.array(Image.open(io.BytesIO(data)).convert("L"), dtype=float).mean())
+        tipo, (v, p) = REF[n]; d = [abs(m - v), abs(m - p)]
+        if min(d) > 8: raise ValueError(f"immagine di spunta non riconosciuta (luminosita' {m:.1f}, {n}px)")
+        _cache[key] = (tipo, int(d[1] < d[0]))
+    return _cache[key]
 XCOMM = 330      # a destra di questa x: colonna commento (e numerosita' oltre XNUM)
 XNUM = 560
 # 30 categorie nell'ordine del questionario: (codice, prefisso della prima riga nel PDF)
@@ -45,7 +60,7 @@ def parse(path):
     with pdfplumber.open(path) as pdf:
         for pn, pg in enumerate(pdf.pages):
             for im in pg.images:
-                t = IMG.get(im["stream"].objid)
+                t = classe_spunta(im)
                 if t: sel.append(dict(p=pn, top=(im["top"] + im["bottom"]) / 2, tipo=t[0], stato=t[1], x0=im["x0"], cur=None))
             for ln in lines_of(pg):
                 if ln["top"] < 45 or ln["text"].startswith("Reti territoriali"): continue

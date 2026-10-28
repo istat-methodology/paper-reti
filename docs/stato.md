@@ -1,6 +1,6 @@
 # Stato
 
-Aggiornato: 2026-10-27 (sera)
+Aggiornato: 2026-10-28
 
 ## Cambio di impianto
 Mauro ritiene le analisi dei colleghi poco difendibili e riproducibili. Nuovo impianto:
@@ -16,11 +16,19 @@ Mauro ritiene le analisi dei colleghi poco difendibili e riproducibili. Nuovo im
 - Il campo 3.9 contiene il nome del file del protocollo: candidato a chiave per abbinare questionario, protocollo e output AI (coincide con `UPLOAD_FILE` del CSV).
 - Analisi sul CSV (accordo per categoria, numerosità): vedi `risultati_preliminari.md`. Resta valida come indicazione, ma verrà rifatta sul nuovo impianto.
 
+## 28/10: 251 questionari
+- Mauro ha caricato 251 PDF in `microdati/gino/`. Rinominati `questionario_<codice>.pdf`. Il codice è regione (2 cifre) + progressivo (2 cifre), per Bolzano/Trento regione + codice territoriale (41/42) + progressivo (6 cifre). I protocolli useranno `protocollo_<codice>`.
+- `risultati_questionari_gino.csv` (colleghi, 251 righe): codice regione, provincia, nome dell'allegato, pagina di 3.9. Non l'ho ancora usato.
+- Parser lanciato su tutti: 251 questionari, 43.172 righe, nessun errore (172 righe per questionario). Servono ~95 secondi.
+- Correzione: gli ID oggetto delle immagini delle spunte cambiano da PDF a PDF (es. 0201 ne ha 13 pagine). Ora le spunte si classificano per dimensione e luminosità media.
+- Confronto con il CSV dei colleghi, chiave = nome file 3.9 + data stipula: 240 abbinati, durata e scadenza coincidono in tutti i 240. 11 questionari non si abbinano per differenze di testo (da risolvere con l'anagrafica).
+- Il formato lungo (`gino_pdf_risposte_lungo.csv`) è approvato da Mauro. Manca la colonna ID (ora `file`) e l'anagrafica, che Mauro fornirà.
+
 ## Limiti noti del parser
 - Apostrofi già `?` nel PDF (es. "D?INTESA"): perdita a monte.
 - Testi lunghi (titolo) possono essere tagliati dal layout del PDF.
-- Le immagini delle spunte sono riconosciute per ID oggetto (28/29 radio, 30/31 checkbox). Se altri export usano immagini diverse, lo script si ferma.
-- Il confronto completo parser vs CSV è fatto solo su 3 casi e su pochi campi. Da estendere a 2.1, 2.2, 3.3, 3.4, 3.5, 3.7 con tutti i questionari.
+- Le spunte sono riconosciute per dimensione e luminosità (16 px radio, 26 px checkbox). Se compare un'immagine con luminosità diversa, lo script si ferma.
+- Il confronto parser vs CSV è fatto su durata e scadenza (240 casi). Da estendere a 2.1, 2.2, 3.3, 3.4, 3.5, 3.7 e al resto.
 
 ## Domani (Mauro + Paolo)
 1. Come sono nominati i file dei protocolli dati alla pipeline (per verificare la chiave dal campo 3.9).
