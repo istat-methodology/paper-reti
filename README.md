@@ -21,7 +21,7 @@ Tre fonti, tutte fuori da git (vedi `microdati/README.md`):
 2. **Protocolli**: i documenti (TXT o PDF) da cui si compila il questionario.
 3. **Output AI**: le variabili che la pipeline LLM estrae dai protocolli.
 
-Il codice nel nome del file (`questionario_0101.pdf`, `protocollo_0101.*`) collega le tre fonti.
+Il codice nel nome del file (`questionario_0101.pdf`, `protocollo_0101.txt`) collega le tre fonti. L'anagrafica `microdati/rif_anagrafica_v1.xlsx` elenca nomi nuovi e originali.
 
 ## Struttura
 
@@ -38,6 +38,7 @@ microdati/     non versionata, tranne il README
 ```
 export RETI_MICRODATI="/percorso/microdati"    # opzionale, default: <repo>/microdati
 cd codice && python3 parse_questionari.py
+cd codice && python3 anagrafica_protocolli.py   # anagrafica e copie dei protocolli
 ```
 
 Legge `microdati/gino/questionario*.pdf` e scrive `gino_pdf_risposte_lungo.csv` e `gino_pdf_risposte_largo.csv` nella stessa cartella (circa 95 secondi per 251 questionari). Servono python3, pandas, pdfplumber, numpy, Pillow.

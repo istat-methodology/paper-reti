@@ -8,13 +8,14 @@ Aggiornato: 2026-10-28
 - Controllo incrociato con l'export del database GINO, chiave = nome del file caricato (3.9) + data di stipula: 240 questionari abbinati, durata e scadenza coincidono in tutti.
 - Repo impostato; microdati fuori da git.
 
+- Protocolli (337 TXT, 335 senza i file di prova) abbinati ai 251 questionari: 239 per timestamp, 12 per nome dell'allegato. Nei 239 il nome del file coincide con l'allegato di 3.9 in 236 casi; gli altri 3 differiscono solo per la codifica dei caratteri. Due questionari (0909, 0910) condividono lo stesso protocollo. 85 file non sono usati da nessun questionario (altri documenti caricati, soprattutto Toscana e Puglia).
+- Anagrafica `microdati/rif_anagrafica_v1.xlsx` con nome nuovo/originale e regione.
+
 ## In arrivo
-- I protocolli (`protocollo_<codice>`).
 - Gli output AI sui protocolli.
-- L'anagrafica con ID, regione e collegamento questionario–protocollo.
 
 ## Prossimi passi
-1. Mettere protocolli e output AI in `microdati/` e fissare il codice di collegamento.
+1. Mettere gli output AI in `microdati/ai/` e collegarli con il codice.
 2. Definire le variabili da confrontare, per domanda e con la numerazione del questionario: tipo, modalità, cosa corrisponde nell'output AI.
 3. Estendere il controllo del parser a tutte le variabili.
 4. Costruire il confronto questionario–AI (RQ1) e valutare l'integrazione (RQ2).
