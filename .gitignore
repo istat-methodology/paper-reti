@@ -1,15 +1,10 @@
-# Microdati: MAI nel repository (contengono nomi di enti e testo libero)
+# Microdati: mai nel repository (nomi di enti, testo libero, PDF)
 microdati/*
 !microdati/README.md
-!microdati/_fonti.csv
 !microdati/*/
 microdati/*/*
 !microdati/*/.gitkeep
-# Analisi aggregate dei colleghi (contengono nomi/testo libero)
-risultati/precedenti/
-# PDF dei protocolli e questionari
 *.pdf
-data/
 # Varie
 __pycache__/
 *.pyc

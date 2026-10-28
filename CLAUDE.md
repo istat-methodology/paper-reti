@@ -1,15 +1,13 @@
 # Contesto per Claude
 
-Paper su reti territoriali antiviolenza: confronto micro tra questionario GINO e parsing LLM dei PDF dei protocolli. Leggi `README.md` e `docs/stato.md` prima di tutto.
+Paper su reti territoriali antiviolenza: confronto micro tra i questionari GINO (parsati dai PDF) e l'estrazione LLM dai protocolli. Leggi `README.md`, `docs/stato.md` e `docs/decisioni.md` prima di tutto.
 
 ## Regole
-- Lingua: inglese. Frasi dichiarative semplici, paragrafi corti. Niente frasi generiche.
+- Lingua del paper: inglese. Con Mauro si conversa in italiano.
+- Stile: frasi dichiarative semplici, paragrafi corti, niente frasi generiche.
 - Prima di scrivere testo del paper, fai domande se il contesto non è chiaro.
-- Non usare la parola "inventario": il file si chiama "variabili questionario V1".
-- I microdati non vanno MAI committati (nomi di enti, testo libero). Controlla `.gitignore` prima di ogni `git add`.
+- I microdati non vanno mai committati (nomi di enti, testo libero, PDF). Controlla `.gitignore` prima di ogni `git add`.
 - Niente commit né push se non richiesti.
-- Il confronto sta in `codice/common.py`: nessuna dipendenza dal file Match.
-- Lato questionario: partire dai PDF compilati (`codice/parse_questionari.py`), non dal CSV dei colleghi. Lato AI: usare i risultati di Paolo, non rifare la pipeline.
-- Per l'ultimo stato leggi `docs/stato.md` e `docs/decisioni.md`.
-- Output nuovi con la convenzione `<tipo>_<contenuto>[_<dettaglio>][_<versione>]`.
-- In attesa: lista esatta delle variabili estratte dai nuovi script AI.
+- Lato questionario: si parte dai PDF compilati (`codice/parse_questionari.py`). Lato AI: si usano gli output della pipeline come arrivano, non si rifà.
+- Niente script complessi né ipotesi non richieste: chiedi.
+- File nuovi con la convenzione `<tipo>_<contenuto>[_<dettaglio>][_<versione>]`.

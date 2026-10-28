@@ -2,62 +2,46 @@
 
 Paper sulle reti territoriali antiviolenza: come gli strumenti LLM si affiancano alla raccolta tradizionale per indagini nella statistica ufficiale.
 
-Gruppo: Istat, Direzione metodologia (Mauro Bruno, Paolo, Elena). Revisione di *Reti Territoriali extended*, a partire dall'analisi di Paolo.
+Istat, Direzione metodologica.
 
 ## Idea
 
-Gli uffici regionali compilano il questionario GINO leggendo i PDF dei protocolli d'intesa. Una pipeline LLM legge gli stessi PDF e estrae le stesse informazioni. Confrontiamo i due risultati a livello micro: unità = protocollo × categoria di soggetto × ruolo.
+Gli uffici regionali compilano il questionario GINO leggendo i protocolli d'intesa delle reti territoriali. Una pipeline LLM legge gli stessi protocolli ed estrae le stesse informazioni. Confrontiamo i due risultati a livello micro.
 
-- **RQ1 – qualità del questionario.** Quanta sovra/sotto-copertura c'è? Dove le definizioni sono ambigue (cos'è un proponente, un attore, un incaricato)?
-- **RQ2 – integrazione.** Il PDF può arricchire l'indagine? Prima validazione, poi arricchimento, poi eventuale precompilazione o sostituzione del questionario.
+- **RQ1 – qualità del questionario.** Quanta sovra/sotto-copertura c'è rispetto al protocollo? Dove le definizioni sono ambigue (cos'è un proponente, un attore, un incaricato)?
+- **RQ2 – integrazione.** Il protocollo può arricchire l'indagine? Prima validazione, poi arricchimento, poi eventuale precompilazione o sostituzione del questionario.
 
-Entrambe le analisi (controllo qualità e integrazione) vanno nel paper. Dettagli della pipeline (geocoding, RUNTS) fuori scopo.
+Il paper contiene sia il controllo di qualità sia l'integrazione. Pipeline di estrazione (geocoding, RUNTS) fuori scopo.
 
 ## Dati
 
-Dal 2026-10-27 il lato questionario si ricostruisce dai PDF dei questionari compilati, non dal CSV dei colleghi. Il lato AI (pipeline di Paolo sui protocolli) resta com'è: non si rifà.
+Tre fonti, tutte fuori da git (vedi `microdati/README.md`):
 
-- Questionari: PDF con layout identico, parsati da `codice/parse_questionari.py`.
-- Protocolli: PDF/TXT letti dalla pipeline AI di Paolo.
-- Campione: in arrivo, fino a 251–253 questionari (prima ipotesi ≈100). Se non è il totale, si descrive come campione di convenienza e si confronta la composizione con l'universo.
-- CSV GINO dei colleghi (251 protocolli abbinati, chiave `ID_RISPONDENTE_RILEV` + `PROGRESSIVO_QUEST`): resta come controllo incrociato del parser.
+1. **Questionari GINO**: 251 PDF compilati, layout identico. `codice/parse_questionari.py` li converte in CSV.
+2. **Protocolli**: i documenti (TXT o PDF) da cui si compila il questionario.
+3. **Output AI**: le variabili che la pipeline LLM estrae dai protocolli.
 
-I microdati non sono nel repo: vedi `microdati/README.md`.
-
-## Cosa c'è stato fatto finora
-
-- **Cambio di impianto (27/10):** parser dei questionari PDF scritto e verificato su 3 casi (vedi `docs/stato.md`).
-- Ricalcolo indipendente del Match AI/umano dei colleghi: i numeri tornano.
-- Accordo per categoria (30 e 10 gruppi): Jaccard, κ di Cohen, PABAK (il κ inganna con prevalenze alte), sensibilità alla mappatura dei 604 soggetti AI senza categoria.
-- **Proponente**: il disaccordo è soprattutto di definizione. La domanda 2.1 non ha definizione; gli umani tendono a segnare chi compare nel testo/firma, l'AI il promotore esplicito.
-- **Attori**: accordo buono, migliore nei protocolli grandi.
-- **Numerosità (2.2)**: i conteggi AI sono maggiori in 200 protocolli su 251.
-- **3.7**: l'AI fonde gestire/monitorare/coordinare; il questionario separa gestione e governance.
-- I campi `questionario_*` nell'output AI sono copiati dal questionario, non estratti: l'accordo sui metadati non è evidenza sull'LLM.
-- Qualità interna del questionario: codici durata (0/999), scadenze incoerenti, commenti liberi.
-- Elenco delle variabili del questionario con modalità: `docs/variabili_questionario_v1.xlsx`.
-
-Numeri e dettagli: `docs/risultati_preliminari.md`. Stato e prossimi passi: `docs/stato.md`.
+Il codice nel nome del file (`questionario_0101.pdf`, `protocollo_0101.*`) collega le tre fonti.
 
 ## Struttura
 
 ```
 README.md, CLAUDE.md
-docs/          stato, decisioni, metodologia, risultati preliminari, variabili
-codice/        config.py, common.py, analisi_*.py, pipeline_ai/
-riferimenti/   categorie_gino_30.csv (30 categorie → 10 gruppi)
-risultati/     output delle analisi (precedenti/ ignorata)
-microdati/     NON versionata, tranne README e _fonti.csv
+docs/          stato, decisioni, metodologia
+codice/        config.py, parse_questionari.py, pipeline_ai/ (script di estrazione LLM, riferimento)
+riferimenti/   categorie_gino_30.csv (30 categorie di soggetti → 10 gruppi)
+microdati/     non versionata, tranne il README
 ```
 
 ## Eseguire
 
 ```
-export RETI_MICRODATI="/percorso/analisi/microdati"   # opzionale
-cd codice && python3 parse_questionari.py              # PDF questionari -> tabelle in microdati/gino
-cd codice && python3 analisi_01_accordo_categorie.py    # analisi sul CSV dei colleghi (impianto precedente)
+export RETI_MICRODATI="/percorso/microdati"    # opzionale, default: <repo>/microdati
+cd codice && python3 parse_questionari.py
 ```
 
-I PDF dei questionari vanno in `microdati/gino/` con nome `questionario*.pdf`. Servono anche `pdfplumber`.
+Legge `microdati/gino/questionario*.pdf` e scrive `gino_pdf_risposte_lungo.csv` e `gino_pdf_risposte_largo.csv` nella stessa cartella (circa 95 secondi per 251 questionari). Servono python3, pandas, pdfplumber, numpy, Pillow.
 
-Servono python3, pandas, openpyxl, pdfplumber.
+## Stato
+
+`docs/stato.md` ha lo stato e i prossimi passi. `docs/decisioni.md` ha le scelte fatte. `docs/metodologia.md` descrive i dati e il disegno del confronto.

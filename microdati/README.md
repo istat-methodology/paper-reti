@@ -1,16 +1,22 @@
 # microdati
 
-Questa cartella è ignorata da git (vedi `.gitignore`). Si committa solo questo README e `_fonti.csv`.
+Questa cartella è ignorata da git (vedi `.gitignore`). Si committa solo questo README.
 
-I file veri stanno in OneDrive: `Istat/Papers/2026 - Reti Territoriali extended/analisi/microdati/`.
-Per lavorare da qui: copiali nelle sottocartelle, oppure `export RETI_MICRODATI=/percorso/microdati`.
+Per usare i dati da un'altra posizione: `export RETI_MICRODATI=/percorso/microdati`.
 
-- `gino/`: questionario compilato dagli uffici regionali (protocolli, obiettivi, soggetti)
-- `ai/`: output della pipeline LLM (JSON arricchiti, tabelle p2_6)
-- `rif/`: tabelle di riferimento (30 categorie → 10 gruppi)
-- `_fonti.csv`: nome originale, byte e sha256 di ogni file, per la provenienza
+## Cartelle
+- `gino/`: questionari compilati (`questionario_<codice>.pdf`) e CSV prodotti dal parser
+- `protocolli/`: protocolli d'intesa (`protocollo_<codice>.<ext>`)
+- `ai/`: output della pipeline LLM sui protocolli
 
-Convenzione nomi: `<tipo>_<contenuto>[_<dettaglio>][_<versione>]`, con tipo = gino / ai / rif / confronto. `pN_M` indica la fase della pipeline.
+## Codice dei file
+Il codice collega questionario, protocollo e output AI. Regione (2 cifre) + progressivo (2 cifre), per esempio `0101`. Per Bolzano e Trento: regione + codice territoriale (41 o 42) + progressivo, 6 cifre, per esempio `044101`.
 
-## File prodotti dal parser
-`gino/gino_pdf_risposte_lungo.csv` (una riga per domanda e voce) e `gino/gino_pdf_risposte_largo.csv` (una riga per questionario). Si rigenerano con `codice/parse_questionari.py`. I PDF dei questionari e dei protocolli non vanno in git (`*.pdf` è ignorato).
+## File del parser
+- `gino/gino_pdf_risposte_lungo.csv`: una riga per questionario, domanda e voce
+- `gino/gino_pdf_risposte_largo.csv`: una riga per questionario
+
+Si rigenerano con `codice/parse_questionari.py`.
+
+## Convenzione nomi
+`<tipo>_<contenuto>[_<dettaglio>][_<versione>]`, con tipo = gino / protocollo / ai / confronto.

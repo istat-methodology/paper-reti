@@ -1,16 +1,11 @@
 # Decisioni
 
-- Unità di confronto: protocollo × categoria (30) × ruolo (Proponente, Attore).
-- Ruoli AI: proponente = `soggetto_proponente`, attore = `attore`.
-- Mappatura base: i 604 soggetti AI senza categoria sono esclusi. Mappatura alt (provvisoria, da validare): ODV/APS/imprese sociali/altri ETS/enti filantropici → 24; Unione dei Comuni → 3; Centri/Sportelli di ascolto → 1; Consorzi → 30. Si riportano sempre entrambe.
-- Metriche: Jaccard, κ, PABAK. κ da solo non basta.
-- Niente gold standard: serve un audit sui PDF.
-- Microdati fuori da git; percorso configurabile con `RETI_MICRODATI`.
+**Ultimo aggiornamento: 2026-10-28**
 
-## 2026-10-27 – nuovo impianto
-- Il lato questionario si ricostruisce dai PDF compilati con `parse_questionari.py`. Motivo: le trasformazioni dei colleghi non sono riproducibili né difendibili.
-- Il lato AI non si rifà (costo di molte chiamate API): si usano i risultati di Paolo.
-- Il CSV dei colleghi serve solo da controllo incrociato.
-- Il campione, se non è il totale, è un benchmark di convenienza: si descrive e si confronta con l'universo. Nessuna inferenza di statistica ufficiale.
-- Chiave candidata per l'abbinamento: nome del file caricato (campo 3.9).
-- L'Excel delle variabili va rifatto per domanda, partendo dal PDF del questionario.
+- **Questionario da PDF.** Il lato questionario si ricostruisce parsando i PDF compilati con `parse_questionari.py`. Motivo: il passaggio dal PDF ai dati è riproducibile e verificabile.
+- **Output AI come arrivano.** La pipeline LLM sui protocolli non si rifà (molte chiamate API). Si usano i suoi output.
+- **Benchmark, non statistica ufficiale.** Il confronto è un benchmark sui questionari disponibili. Nessuna inferenza sull'universo. Se il campione non è il totale, si descrive e si confronta con l'universo.
+- **Formato lungo.** `gino_pdf_risposte_lungo.csv` è il formato di riferimento. Il largo si deriva da lì.
+- **Codice nel nome file.** `questionario_<codice>` e `protocollo_<codice>` condividono il codice regione + progressivo. Serve a collegare le fonti.
+- **Spunte per luminosità.** Le immagini delle spunte si riconoscono per dimensione (16 px radio, 26 px checkbox) e luminosità media, perché gli ID oggetto cambiano da PDF a PDF.
+- **Microdati fuori da git.** Percorso configurabile con `RETI_MICRODATI`.
