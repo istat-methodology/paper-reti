@@ -6,43 +6,61 @@ Istat, Direzione metodologica.
 
 ## Idea
 
-Gli uffici regionali compilano il questionario GINO leggendo i protocolli d'intesa delle reti territoriali. Una pipeline LLM legge gli stessi protocolli ed estrae le stesse informazioni. Confrontiamo i due risultati a livello micro.
+Gli uffici regionali compilano il questionario GINO leggendo i protocolli d'intesa delle reti territoriali. Una pipeline LLM legge gli stessi protocolli ed estrae le stesse informazioni. Confrontiamo i due risultati a livello micro: la fonte è la stessa, cambia chi la legge.
 
-- **RQ1 – qualità del questionario.** Quanta sovra/sotto-copertura c'è rispetto al protocollo? Dove le definizioni sono ambigue (cos'è un proponente, un attore, un incaricato)?
+- **RQ1 – qualità del questionario.** Quanta sovra/sotto-copertura c'è rispetto al protocollo? Dove le definizioni sono ambigue (proponente, attore, incaricato)? Parte del disaccordo dipende da come le domande sono formulate, non dagli errori di chi risponde.
 - **RQ2 – integrazione.** Il protocollo può arricchire l'indagine? Prima validazione, poi arricchimento, poi eventuale precompilazione o sostituzione del questionario.
 
-Il paper contiene sia il controllo di qualità sia l'integrazione. Pipeline di estrazione (geocoding, RUNTS) fuori scopo.
+Il paper contiene sia il controllo di qualità sia l'integrazione.
 
-## Dati
+## Le tre fonti
 
-Tre fonti, tutte fuori da git (vedi `microdati/README.md`):
+Tutte collegate dallo stesso codice (regione + progressivo, per esempio `0101`; 6 cifre per Bolzano e Trento).
 
-1. **Questionari GINO**: 251 PDF compilati, layout identico. `codice/parse_questionari.py` li converte in CSV.
-2. **Protocolli**: i documenti (TXT o PDF) da cui si compila il questionario.
-3. **Output AI**: le variabili che la pipeline LLM estrae dai protocolli.
+| Fonte | File | Come si ottiene |
+|---|---|---|
+| Questionario GINO | `questionario_<codice>.pdf` → CSV | `codice/parse_questionari.py` legge i 251 PDF compilati |
+| Protocollo | `protocollo_<codice>.txt` | testo del documento da cui si compila il questionario |
+| Output AI | `ai_<codice>.json` | pipeline LLM sul protocollo (prompt in `prompts/`), spezzata con `codice/ai_split.py` |
 
-Il codice nel nome del file (`questionario_0101.pdf`, `protocollo_0101.txt`) collega le tre fonti. L'anagrafica `microdati/rif_anagrafica_v1.xlsx` elenca nomi nuovi e originali.
+```
+protocollo ──► questionario compilato (PDF) ──► parser ──► CSV
+    │
+    └────────► pipeline LLM (prompts/) ───────► JSON ───► ai_<codice>.json
+                                                           │
+                                  confronto micro  ◄───────┘
+```
+
+Il confronto copre le domande sui soggetti (2.1, 2.2, 3.3, 3.7): l'output AI attuale non contiene date, natura dell'accordo, durata né obiettivi. L'anagrafica `microdati/rif_anagrafica_v1.xlsx` elenca nomi nuovi e originali.
+
+I microdati non sono nel repo: vedi `microdati/README.md`.
 
 ## Struttura
 
 ```
 README.md, CLAUDE.md
 docs/          stato, decisioni, metodologia
-codice/        config.py, parse_questionari.py, pipeline_ai/ (script di estrazione LLM, riferimento)
+prompts/       prompt della pipeline LLM (versionati)
+codice/        config.py, parse_questionari.py, anagrafica_protocolli.py, ai_split.py, pipeline_ai/
 riferimenti/   categorie_gino_30.csv (30 categorie di soggetti → 10 gruppi)
 microdati/     non versionata, tranne il README
+output/        analisi aggregate preesistenti, non versionata, non usata per ora
 ```
 
 ## Eseguire
 
 ```
 export RETI_MICRODATI="/percorso/microdati"    # opzionale, default: <repo>/microdati
-cd codice && python3 parse_questionari.py
-cd codice && python3 anagrafica_protocolli.py   # anagrafica e copie dei protocolli
+cd codice
+python3 parse_questionari.py       # PDF questionari -> CSV (lungo e largo), ~95 s
+python3 anagrafica_protocolli.py   # anagrafica e copie dei protocolli (richiede gli originali)
+python3 ai_split.py                # JSON AI unico -> ai_<codice>.json
 ```
 
-Legge `microdati/gino/questionario*.pdf` e scrive `gino_pdf_risposte_lungo.csv` e `gino_pdf_risposte_largo.csv` nella stessa cartella (circa 95 secondi per 251 questionari). Servono python3, pandas, pdfplumber, numpy, Pillow.
+Servono python3, pandas, openpyxl, numpy, Pillow, pdfplumber.
 
-## Stato
+## Documenti
 
-`docs/stato.md` ha lo stato e i prossimi passi. `docs/decisioni.md` ha le scelte fatte. `docs/metodologia.md` descrive i dati e il disegno del confronto.
+- `docs/stato.md`: stato, prossimi passi, domande aperte
+- `docs/decisioni.md`: scelte fatte e motivi
+- `docs/metodologia.md`: fonti, prompt, corrispondenza domande–AI, disegno del confronto

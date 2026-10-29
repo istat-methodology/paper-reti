@@ -8,5 +8,7 @@
 - **Formato lungo.** `gino_pdf_risposte_lungo.csv` è il formato di riferimento. Il largo si deriva da lì.
 - **Codice nel nome file.** `questionario_<codice>` e `protocollo_<codice>` condividono il codice regione + progressivo. Serve a collegare le fonti.
 - **Abbinamento questionario–protocollo.** Il timestamp nel nome del file protocollo coincide con la data di ultima modifica del questionario (stessa regione). Dove manca (Toscana, parte della Puglia) si abbina per nome dell'allegato indicato in 3.9. I protocolli si copiano come `protocollo_<codice>.txt`, in una cartella piatta; gli originali restano in `protocolli/_originali/`.
+- **Prompt versionati.** `prompts/` è nel repo: non contiene microdati ed è parte del metodo.
+- **Un file AI per questionario.** Il JSON unico (versione 2.5) è spezzato in `ai_<codice>.json`. Si usa la 2.5 perché la 2.6 aggiunge un blocco `questionario` copiato dal questionario, che non è output AI. Abbinamento per timestamp nel nome (227 casi) o per nome del file (24).
 - **Spunte per luminosità.** Le immagini delle spunte si riconoscono per dimensione (16 px radio, 26 px checkbox) e luminosità media, perché gli ID oggetto cambiano da PDF a PDF.
 - **Microdati fuori da git.** Percorso configurabile con `RETI_MICRODATI`.
