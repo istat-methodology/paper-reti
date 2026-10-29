@@ -1,0 +1,39 @@
+﻿tipo_AI;codice;categoria_GINO;stato;origine
+Comuni;3;Comuni;diretto (abbinamento per nome, Claude);prompt
+Altro;30;Altro;diretto (abbinamento per nome, Claude);prompt
+CAV/Centri Antiviolenza;1;CAV;diretto (abbinamento per nome, Claude);prompt
+ASL (consultori familiari e altri servizi territoriali);12;ASL (consultori familiari e altri servizi territoriali);diretto (abbinamento per nome, Claude);prompt
+Ambiti della programmazione sociale e socio-sanitaria (Ambiti Sociali, Piani di Zona, Distretti socio-sanitari, Società della Salute);9;Ambiti della programmazione sociale e socio-sanitaria (Ambiti Sociali, Piani di Zona, Distretti socio-sanitari, Società della Salute);diretto (abbinamento per nome, Claude);prompt
+Procura Ordinaria/Tribunale/Corte d'appello;18;Procura Ordinaria/Tribunale/Corte d'appello;diretto (abbinamento per nome, Claude);prompt
+Ente terzo settore - ETS (iscritto al RUNTS);24;Ente terzo settore - ETS (iscritto al RUNTS)[1];diretto (abbinamento per nome, Claude);prompt
+Carabinieri/Polizia/altre forze dell'ordine;15;Carabinieri/Polizia/altre forze dell'ordine;diretto (abbinamento per nome, Claude);prompt
+Scuole/Ufficio scolastico provinciale e regionale;16;Scuole/Ufficio scolastico provinciale e regionale;diretto (abbinamento per nome, Claude);prompt
+Ospedale (Pronto soccorso, ecc.);11;Ospedale (Pronto soccorso, ecc.);diretto (abbinamento per nome, Claude);prompt
+Case Rifugio;2;Case Rifugio;diretto (abbinamento per nome, Claude);prompt
+Sindacati/Associazioni di categoria;27;Sindacati/Associazioni di categoria;diretto (abbinamento per nome, Claude);prompt
+Regioni/Province Autonome;10;Regioni/province Autonome;diretto (abbinamento per nome, Claude);prompt
+Servizi sociali comunali;6;Servizi sociali comunali;diretto (abbinamento per nome, Claude);prompt
+Organismi di parità;23;Organismi di parità;diretto (abbinamento per nome, Claude);prompt
+Prefettura;13;Prefettura;diretto (abbinamento per nome, Claude);prompt
+Questura;14;Questura;diretto (abbinamento per nome, Claude);prompt
+Province/Città metropolitane;8;Province/Città metropolitane;diretto (abbinamento per nome, Claude);prompt
+Procura Minorile/Tribunale minorile;17;Procura Minorile/ Tribunale minorile;diretto (abbinamento per nome, Claude);prompt
+Ordine avvocati;19;Ordine avvocati;diretto (abbinamento per nome, Claude);prompt
+Ente terzo settore - ETS (iscritto al RUNTS) costituito da donne per le donne;25;Ente terzo settore - ETS (iscritto al RUNTS) costituito da donne per le donne;diretto (abbinamento per nome, Claude);prompt
+Associazioni che si occupano di programmi di prevenzione, recupero e trattamento per uomini maltrattanti;29;Associazioni che si occupano di programmi di prevenzione, recupero e trattamento per uomini maltrattanti;diretto (abbinamento per nome, Claude);prompt
+Università;28;Università;diretto (abbinamento per nome, Claude);prompt
+Polizia Municipale;4;Polizia Municipale;diretto (abbinamento per nome, Claude);prompt
+Servizi per l'impiego;26;Servizi per l'impiego;diretto (abbinamento per nome, Claude);prompt
+Ordine medici e odontoiatri e Ordine farmacisti;21;Ordine medici e odontoiatri e Ordine farmacisti;diretto (abbinamento per nome, Claude);prompt
+Ordine psicologi e Ordine assistenti sociali;20;Ordine psicologi e Ordine assistenti sociali;diretto (abbinamento per nome, Claude);prompt
+Altri ordini professionali;22;Altri ordini professionali (infermieri, ostetriche, giornalisti, commercialisti, ecc.);diretto (abbinamento per nome, Claude);prompt
+Settore educativo comunale;5;Settore educativo comunale;diretto (abbinamento per nome, Claude);prompt
+Servizio abusi e maltrattamenti comunale;7;Servizio abusi e maltrattamenti comunale;diretto (abbinamento per nome, Claude);prompt
+ORGANIZZAZIONI DI VOLONTARIATO;24;Ente terzo settore - ETS (iscritto al RUNTS)[1];"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";RUNTS (natura)
+ASSOCIAZIONI DI PROMOZIONE SOCIALE;24;Ente terzo settore - ETS (iscritto al RUNTS)[1];"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";RUNTS (natura)
+IMPRESE SOCIALI;24;Ente terzo settore - ETS (iscritto al RUNTS)[1];"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";RUNTS (natura)
+ALTRI ENTI DEL TERZO SETTORE;30;Altro;"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";RUNTS (natura)
+ENTI FILANTROPICI;30;Altro;"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";RUNTS (natura)
+Unione dei Comuni;8;Province/Città metropolitane;"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";pipeline s2.2
+Centri/Sportelli di ascolto;30;Altro;"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";prompt
+Consorzi;30;Altro;"da Paolo (s3.1: TIPO_MAP, map_tipo; fallback Altro)";prompt
