@@ -12,3 +12,7 @@ __pycache__/
 ~$*
 .venv/
 output/
+# Chiavi API: mai nel repository
+.env
+# Eccezione: documento pubblico Istat (risultati ufficiali e nota metodologica)
+!riferimenti/rif_istat_reti_territoriali_2025_v1.pdf
