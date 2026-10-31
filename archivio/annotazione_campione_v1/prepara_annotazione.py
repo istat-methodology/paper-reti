@@ -10,7 +10,8 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from config import MICRODATI, RIFERIMENTI, REPO
 
 OUT = REPO / "annotazione"
-GIUDIZI = "ok,non_ente,duplicato,fuori_rete,generico"
+GIUDIZI = "corretto,sbagliato,duplicato"
+TIPI_ERRORE = "non_ente,fuori_rete,generico,altro"
 
 ana = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)
 camp = pd.read_csv(OUT / "campione_v1.csv", sep=";", encoding="utf-8-sig", dtype=str)
@@ -31,7 +32,7 @@ for _, r in sel.iterrows():
     for s in sogg:
         t = s.get("tipo", "")
         righe.append(dict(codice=c, regione=r.regione, annotatori=ASS[c], nome_AI=s.get("nome", ""), tipo_AI=t,
-                          cat_AI=MAP.get(t, ""), giudizio="", nome_corretto="", cat_principale="",
+                          cat_AI=MAP.get(t, ""), giudizio="", tipo_errore="", nome_corretto="", cat_principale="",
                           cat_secondarie="", note=""))
 PROT = pd.DataFrame(prot)
 ENTI = pd.DataFrame(righe)
@@ -39,8 +40,9 @@ ENTI.insert(0, "id", range(1, len(ENTI) + 1))  # id globale, uguale in tutti i f
 
 ISTR = [
     "Per ogni protocollo (foglio 'protocolli'), leggi il testo originale e controlla le righe di 'enti_AI' con quel codice.",
-    "Colonna 'giudizio': ok = ente corretto; non_ente = non è un ente (norma, ministero solo citato, ecc.); duplicato = stesso ente di un'altra riga; fuori_rete = esiste ma non partecipa alla rete; generico = citazione generica (es. 'i Comuni dell'ambito').",
-    "Colonna 'nome_corretto': solo se il nome AI è sbagliato o incompleto.",
+    "Colonna 'giudizio' (riguarda l'ente, non la categoria): corretto = l'ente esiste ed è parte della rete; sbagliato = la riga non è valida; duplicato = stesso ente di un'altra riga (indica quale nella nota).",
+    "Colonna 'tipo_errore', solo se 'sbagliato': non_ente = non è un ente (norma, convenzione, persona, ecc.); fuori_rete = esiste ma non è parte della rete di questo protocollo (citato solo come esempio, come riferimento normativo o come ente di un'altra rete); generico = citazione generica (es. 'i Comuni dell'ambito'); altro = scrivi una nota.",
+    "Colonna 'nome_corretto': solo se l'ente è corretto ma il nome AI è sbagliato o incompleto. Una riga 'corretto' può avere una categoria diversa da cat_AI: in quel caso scrivi la categoria giusta in cat_principale.",
     "'cat_principale': un codice da 1 a 30 (foglio 'categorie'). 'cat_secondarie': altri codici separati da ';'.",
     "Enti presenti nel protocollo e NON nella lista AI: aggiungili nel foglio 'enti_mancanti'.",
     "Regole di classificazione: docs/definizioni_soggetti_v1.md. Nel dubbio usa 30 (Altro) e scrivi una nota.",
@@ -69,14 +71,15 @@ def scrivi(path, p, e):
     for row in wb["istruzioni"].iter_rows(min_row=2):
         row[0].alignment = Alignment(wrap_text=True)
     ws = wb["enti_AI"]
-    # id A, codice B, regione C, annotatori D, nome_AI E, tipo_AI F, cat_AI G, giudizio H, nome_corretto I, cat_principale J, cat_secondarie K, note L
-    for col, wd in zip("ABCDEFGHIJKL", [6, 8, 16, 10, 55, 40, 8, 14, 35, 14, 14, 40]):
+    # id A, codice B, regione C, annotatori D, nome_AI E, tipo_AI F, cat_AI G, giudizio H, tipo_errore I, nome_corretto J, cat_principale K, cat_secondarie L, note M
+    for col, wd in zip("ABCDEFGHIJKLM", [6, 8, 16, 10, 55, 40, 8, 14, 14, 35, 14, 14, 40]):
         ws.column_dimensions[col].width = wd
     n = max(ws.max_row, 2)
     dv_g = DataValidation(type="list", formula1=f'"{GIUDIZI}"', allow_blank=True)
     dv_c = DataValidation(type="whole", operator="between", formula1="1", formula2="30", allow_blank=True)
-    ws.add_data_validation(dv_g); ws.add_data_validation(dv_c)
-    dv_g.add(f"H2:H{n}"); dv_c.add(f"J2:J{n}")
+    dv_t = DataValidation(type="list", formula1=f'"{TIPI_ERRORE}"', allow_blank=True)
+    ws.add_data_validation(dv_g); ws.add_data_validation(dv_c); ws.add_data_validation(dv_t)
+    dv_g.add(f"H2:H{n}"); dv_t.add(f"I2:I{n}"); dv_c.add(f"K2:K{n}")
     wm = wb["enti_mancanti"]
     dv_m = DataValidation(type="whole", operator="between", formula1="1", formula2="30", allow_blank=True)
     wm.add_data_validation(dv_m); dv_m.add("C2:C300")
@@ -88,9 +91,9 @@ def scrivi(path, p, e):
     wb.save(path)
 
 
-scrivi(OUT / "gold_enti_v1_template.xlsx", PROT.copy(), ENTI.copy())
+scrivi(OUT / "gold_enti_v2_template.xlsx", PROT.copy(), ENTI.copy())
 for x in ("A1", "A2"):
     m = PROT.annotatori.isin([x, "A1+A2"])
-    scrivi(OUT / f"gold_enti_v1_{x}.xlsx", PROT[m].copy(), ENTI[ENTI.codice.isin(PROT.codice[m])].copy())
+    scrivi(OUT / f"gold_enti_v2_{x}.xlsx", PROT[m].copy(), ENTI[ENTI.codice.isin(PROT.codice[m])].copy())
     print(x, int(m.sum()), "protocolli", int(ENTI.codice.isin(PROT.codice[m]).sum()), "enti")
 print("template:", len(PROT), "protocolli", len(ENTI), "enti")

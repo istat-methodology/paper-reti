@@ -1,0 +1,44 @@
+{
+  "stato": "bozza: da congelare con un commit e un tag prima di lanciare i 251",
+  "modello": {
+    "deployment": "gpt-6.1-terra",
+    "api": "Azure Responses API",
+    "seed": null,
+    "reasoning_effort": null
+  },
+  "stadio1": {
+    "prompt": "prompts/v2/stadio1_estrazione_enti_v1_2.txt",
+    "prompt_sha": "155f9b79ef07",
+    "input": "testo",
+    "n_run": 5,
+    "spezzatura": {
+      "soglia_caratteri": 40000,
+      "pezzo": 25000,
+      "sovrapposizione": 2000,
+      "coda": 5000
+    },
+    "script": [
+      "codice/pipeline_ai_v2/stadio1_estrazione.py",
+      "codice/pipeline_ai_v2/stadio1_spezzato.py"
+    ],
+    "tag_output": "pubblicazione_v1_2",
+    "comando": "python codice/pipeline_ai_v2/stadio1_spezzato.py --campione campione/campione_pubblicazione_v1.csv --runs 5 --tag pubblicazione_v1_2 --workers 2; poi --tutti"
+  },
+  "confronto_nomi": {
+    "tollerante": "codice/pipeline_ai_v2/stabilita_tollerante.py",
+    "soglia_difflib": 0.85
+  },
+  "revisione": {
+    "script": "codice/pipeline_ai_v2/revisione_enti.py",
+    "campione_unanimi": 0.1,
+    "seed": 20261031
+  },
+  "campione": {
+    "file": "campione/campione_pubblicazione_v1.csv",
+    "n": 60,
+    "seed": 20261031,
+    "script": "codice/campione_pubblicazione.py",
+    "frame": "249 protocolli con almeno 500 caratteri di testo",
+    "allocazione": "1 per regione, resto proporzionale (resti più grandi); sistematico sulla lunghezza dentro la regione"
+  }
+}

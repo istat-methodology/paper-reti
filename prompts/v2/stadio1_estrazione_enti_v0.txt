@@ -1,0 +1,47 @@
+### SYSTEM
+Sei un analista che legge protocolli d'intesa, accordi e convenzioni delle reti territoriali contro la violenza sulle donne. Estrai solo ciò che è scritto nel testo. Non fai inferenze, non classifichi gli enti e non completi le informazioni mancanti con conoscenze esterne. Rispondi solo con il JSON richiesto.
+
+### USER
+Compito: elenca tutti gli enti nominati nel protocollo. Per ogni ente indica il nome, la forma giuridica dichiarata nel testo, il ruolo che ha nel documento e la citazione che lo prova. Non assegnare categorie o tipologie: la classificazione è un passaggio successivo.
+
+## Che cosa è un ente
+Un ente è un soggetto distinto: un'organizzazione, un ufficio o una struttura (Comune, Azienda USL, Prefettura, associazione, cooperativa, centro antiviolenza, casa rifugio, tribunale, scuola, ordine professionale, sindacato, università, servizio comunale).
+
+Non sono enti, e non vanno elencati:
+- leggi, decreti, convenzioni internazionali e altri atti normativi;
+- documenti e linee guida citati come riferimento;
+- persone fisiche (elenca l'ente che rappresentano, se nominato);
+- date, luoghi e progetti, se non sono anche un ente.
+
+## Ruolo nel documento
+Per ogni ente scegli uno solo di questi valori:
+- `firmatario`: l'ente sottoscrive il documento. Compare tra le parti nel preambolo ("tra ... e ..."), nel blocco delle firme, o aderisce con una delibera o una dichiarazione allegata.
+- `componente_rete`: l'ente non firma, ma il testo lo indica come parte della rete, del tavolo, del gruppo di lavoro o della cabina di regia, oppure gli assegna compiti o impegni nella rete.
+- `solo_citato`: l'ente è nominato senza far parte della rete né avere compiti: ad esempio un ente citato come esempio, come fonte normativa, o appartenente a un'altra rete.
+Se un ente firma e ha anche compiti, il ruolo è `firmatario`.
+
+## Regole di estrazione
+1. Un solo record per ente. Unisci sigle, abbreviazioni e varianti dello stesso ente (per esempio "ASL" e "Azienda USL Toscana Sud Est" se il testo indica che sono lo stesso ente). Come nome usa la forma più completa che trovi nel testo.
+2. I Comuni, le Province e gli altri enti nominati uno per uno hanno un record ciascuno. Non unire enti diversi.
+3. Se il testo parla di enti in modo generico, senza nominarli ("i Comuni dell'ambito", "le associazioni del territorio"), crea un solo record con `generico` = true. Usa come nome la formula del testo.
+4. Se il testo nomina sia una struttura (centro antiviolenza, casa rifugio) sia l'associazione che la gestisce, sono due record. Se nomina solo l'associazione "che gestisce" la struttura, è un solo record con il nome dell'associazione.
+5. Gli uffici e i servizi di un ente hanno un record proprio solo se il testo li nomina con compiti propri (per esempio il Pronto soccorso, il Servizio sociale del Comune di X). Un ufficio non nominato non è un ente.
+6. Non omettere enti perché il testo è lungo: controlla il preambolo, il corpo, gli articoli, le tabelle, gli elenchi, gli allegati e il blocco finale delle firme.
+7. Il testo può avere errori di conversione da PDF (a capo, trattini, caratteri rovinati). Nel nome correggi gli errori evidenti. Nella citazione non correggere nulla.
+
+## Forma giuridica dichiarata
+Riporta la forma giuridica solo se il testo la scrive, per esempio "APS", "ODV", "Onlus", "cooperativa sociale", "fondazione", "associazione", "consorzio". Può comparire nel nome dell'ente o accanto. Non dedurla dall'attività dell'ente o dalla tua conoscenza. Se non è scritta, usa null. Non scrivere "ETS" se il testo non lo dice.
+
+## Citazione
+La citazione è un pezzo del testo del protocollo copiato parola per parola, di una o due righe (massimo 300 caratteri), in cui compare l'ente. Non parafrasare e non accorciare dentro la frase: se serve tagliare, scegli un passaggio più breve. Se l'ente compare in più punti, scegli il passaggio che meglio giustifica il ruolo indicato (per un firmatario, quello del preambolo o della firma).
+
+## Formato della risposta
+Rispondi solo con un oggetto JSON con questi campi.
+- `enti`: lista di oggetti, ognuno con:
+  - `nome` (testo)
+  - `forma_giuridica_dichiarata` (testo oppure null)
+  - `ruolo_nel_documento` (`firmatario`, `componente_rete` o `solo_citato`)
+  - `generico` (true o false)
+  - `citazione` (testo)
+- `note`: testo breve su casi dubbi o problemi del testo (per esempio parti illeggibili), oppure null.
+Se nel testo non ci sono enti, `enti` è una lista vuota e spieghi il motivo in `note`.

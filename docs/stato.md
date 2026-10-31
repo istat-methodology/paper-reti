@@ -1,6 +1,6 @@
 # Stato
 
-Aggiornato: 2026-10-28
+Aggiornato: 2026-10-31
 
 ## Fatto
 - 251 questionari GINO in PDF, rinominati `questionario_<codice>.pdf`.
@@ -38,3 +38,8 @@ Aggiornato: 2026-10-28
 - Cosa conta la numerosità in 2.2?
 - Significato di durata 0 in 3.6 (un questionario ha durata 0 e scadenza valorizzata).
 - Chi legge i protocolli per l'audit?
+
+## Pipeline AI v2 (aggiornamento 2026-10-31)
+- Stadio 1 (enti e ruolo) sperimentato sulla Toscana: 9 esperimenti (prompt v0–v1.2, testo e PDF, protocolli lunghi spezzati, numero di run). Risultati in `docs/experiments.md`; stabilità del nucleo tra run 0.96 (confronto tollerante dei nomi).
+- Pronto: script di revisione manuale degli enti (`codice/pipeline_ai_v2/revisione_enti.py`).
+- In sospeso: numerosità e estrazione del nuovo campione (`campione/README.md`); congelamento di prompt e parametri (`parametri/`); decisione sul conteggio della periferia; risposta dei colleghi sulle definizioni; stadi 2–4.

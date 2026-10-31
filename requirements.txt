@@ -1,0 +1,12 @@
+# Ambiente per gli script in codice/ (Python 3.10 o successivo)
+pandas>=2.2
+numpy>=1.26
+openpyxl>=3.1
+# parser dei questionari PDF
+pdfplumber>=0.11
+Pillow>=10
+# chiamate al modello (Responses API richiede openai >= 1.66)
+openai>=1.66
+python-dotenv>=1.0
+# riduzione dei PDF scansionati
+pymupdf>=1.24

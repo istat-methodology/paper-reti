@@ -1,0 +1,71 @@
+### SYSTEM
+Sei un analista che legge protocolli d'intesa, accordi e convenzioni delle reti territoriali contro la violenza sulle donne. Estrai solo ciò che è scritto nel testo. Non fai inferenze, non classifichi gli enti e non completi le informazioni mancanti con conoscenze esterne. Rispondi solo con il JSON richiesto.
+
+### USER
+Compito: leggi il protocollo e produci due elenchi separati.
+1. `enti_identificati`: le organizzazioni che il testo nomina con un nome proprio.
+2. `menzioni_generiche`: i soggetti che il testo cita solo per tipo, per funzione o come unità interna di un'organizzazione.
+Non assegnare categorie o tipologie: la classificazione è un passaggio successivo.
+
+## Che cosa va in `enti_identificati`
+Il criterio è meccanico: il testo contiene un nome proprio che individua una specifica organizzazione. Un'organizzazione è identificata quando il suo nome contiene un toponimo o un nome proprio che la distingue dalle altre dello stesso tipo, oppure quando il suo nome è di per sé unico.
+
+Sono identificati, per esempio:
+- "Comune di Chiusi", "Provincia di Grosseto", "Regione Toscana", "Città metropolitana di Firenze";
+- "Azienda USL Toscana Sud Est", "ASL 2 di Lucca", "Società della Salute Zona Pisana";
+- "Prefettura di Lucca", "Questura di Lucca", "Tribunale per i Minorenni di Firenze", "Procura della Repubblica presso il Tribunale di Siena";
+- "Associazione Amica Donna", "Centro Antiviolenza Olympia de Gouges", "Casa di Nicoletta", "Cooperativa sociale Alice";
+- "Consigliera di Parità della Provincia di Lucca", "Ufficio Scolastico Provinciale di Lucca";
+- enti nazionali italiani con un nome proprio, come "Ministero dell'Interno", "Garante per la protezione dei dati personali", "Banca d'Italia". Di solito hanno ruolo `solo_citato`.
+
+Non sono identificati, e vanno in `menzioni_generiche`:
+- un nome comune senza nome proprio: "la Prefettura", "la Regione", "i Comuni", "il Pronto soccorso", "le associazioni di volontariato", "le forze dell'ordine";
+- i corpi di polizia nominati senza comando o località: "Carabinieri", "Polizia di Stato", "Guardia di Finanza". Con un comando o una località ("Comando provinciale dei Carabinieri di Lucca") sono identificati;
+- le unità interne di un'organizzazione, nominate per tipo di servizio: reparti, uffici, servizi, settori, sportelli, assessorati, polizia municipale (esempi: "reparto di Ostetricia della ASL 2 di Lucca", "Servizio sociale del Comune di Chiusi", "Assessorato alla Sanità della Regione Toscana"). Anche se il nome dell'organizzazione di appartenenza è scritto, l'unità resta una menzione generica con quel nome in `ente_di_appartenenza`.
+
+Fusione: se lo stesso ente è nominato per intero in un altro punto del documento, non creare la menzione generica. Usa l'ente identificato e come nome la forma più completa. Vale anche per sigle e abbreviazioni ("ASL" e "Azienda USL Toscana Sud Est", se il testo indica che sono lo stesso ente).
+
+## Che cosa non è un ente (né in un elenco né nell'altro)
+- leggi, decreti, convenzioni internazionali e altri atti normativi;
+- documenti, linee guida, protocolli, progetti e programmi citati come riferimento;
+- persone fisiche (se è nominato l'ente che rappresentano, elenca l'ente);
+- gli organismi internazionali e sovranazionali citati come fonte di convenzioni, raccomandazioni o norme (Nazioni Unite, Consiglio d'Europa, Comitato dei Ministri, Unione europea, Organizzazione mondiale della sanità, Corte penale internazionale);
+- i tavoli, le reti, le cabine di regia, i gruppi di lavoro, le commissioni, i percorsi e i programmi, anche se non sono costituiti dal protocollo stesso (per esempio "Codice Rosa" come percorso, "Rete regionale Codice Rosa", un "Programma" con un suo nome): sono organi, percorsi o progetti, non organizzazioni. Elenca invece gli enti che ne fanno parte.
+
+## Ruolo nel documento
+Per ogni ente identificato scegli uno solo di questi valori:
+- `firmatario`: l'ente sottoscrive il documento. Compare tra le parti nel preambolo ("tra ... e ..."), nel blocco delle firme, o aderisce con una delibera o una dichiarazione allegata.
+- `componente_rete`: l'ente non firma, ma il testo lo indica come parte della rete, del tavolo o del gruppo di lavoro, oppure gli assegna un impegno: finanziare, costituire, gestire, partecipare, inviare, accogliere, segnalare.
+- `solo_citato`: l'ente è nominato senza far parte della rete e senza impegni: un ente citato come esempio, come fonte, come riferimento o appartenente a un'altra rete.
+Se un ente firma e ha anche impegni, il ruolo è `firmatario`. Se il testo dice che gli enti del tavolo sottoscrivono il protocollo ma non li nomina nel blocco delle firme, quelli indicati come partecipanti sono `componente_rete`.
+Per le menzioni generiche usa solo `componente_rete` o `solo_citato`, con gli stessi criteri.
+
+## Regole di estrazione
+1. Un solo record per ente identificato. I Comuni, le Province e gli altri enti nominati uno per uno hanno un record ciascuno.
+2. Per le menzioni generiche, un record per espressione distinta. Se la stessa espressione si ripete, un solo record. Unità interne di enti diversi (reparto di Ostetricia della ASL 2 e della ASL 12) sono record diversi.
+3. Se il testo nomina sia una struttura (centro antiviolenza, casa rifugio) sia l'associazione che la gestisce, sono due enti identificati, a meno che abbiano lo stesso nome proprio e il testo non li distingua ("Associazione Olympia de Gouges" e "Centro antiviolenza Olympia de Gouges"): in quel caso è un solo record. Se nomina solo l'associazione "che gestisce" la struttura, è un solo ente con il nome dell'associazione.
+4. Scrivi il nome di ogni ente nella forma più completa che trovi nel testo, senza riformularlo né abbreviarlo: lo stesso ente deve avere sempre lo stesso nome.
+5. Non omettere enti perché il testo è lungo: controlla il preambolo, il corpo, gli articoli, le tabelle, gli elenchi, gli allegati e il blocco finale delle firme.
+6. Il testo può avere errori di conversione da PDF (a capo, trattini, caratteri rovinati). Nel nome correggi gli errori evidenti. Nella citazione non correggere nulla.
+
+## Forma giuridica dichiarata (solo per gli enti identificati)
+Riporta la forma giuridica solo se il testo la scrive, per esempio "APS", "ODV", "Onlus", "cooperativa sociale", "fondazione", "associazione", "consorzio". Può comparire nel nome dell'ente o accanto. Non dedurla dall'attività dell'ente o dalla tua conoscenza. Se non è scritta, usa null. Non scrivere "ETS" se il testo non lo dice.
+
+## Tipo di menzione generica
+Per ogni menzione generica scegli uno di questi valori:
+- `tipologia`: una categoria di soggetti, senza dire quali ("i Comuni", "le associazioni sportive", "le forze dell'ordine", "enti locali");
+- `struttura_senza_nome`: un servizio, un reparto o una struttura senza nome proprio ("Pronto soccorso", "Consultorio", "casa rifugio", "reparto di Ginecologia"). Se il testo dice a quale ente appartiene, scrivi quel nome in `ente_di_appartenenza`, altrimenti null;
+- `istituzione_senza_riferimento`: un'istituzione o un corpo nominato senza località o nome distintivo ("Carabinieri", "Polizia di Stato", "la Prefettura", "la Regione", "la Società della salute").
+
+## Citazione
+La citazione è un pezzo del testo del protocollo copiato parola per parola, di una o due righe (massimo 300 caratteri), in cui compare l'ente o l'espressione. Non parafrasare, non correggere e non accorciare dentro la frase: se serve tagliare, scegli un passaggio più breve. Se compare in più punti, scegli il passaggio che meglio giustifica il ruolo indicato (per un firmatario, quello del preambolo o della firma).
+
+## Pagina
+Per ogni record indica in `pagina` il numero della pagina del documento in cui compare la citazione (1 è la prima pagina). Se ricevi il testo senza pagine, o non riesci a stabilirla, usa null.
+
+## Formato della risposta
+Rispondi solo con un oggetto JSON con questi campi.
+- `enti_identificati`: lista di oggetti con `nome`, `forma_giuridica_dichiarata` (testo o null), `ruolo_nel_documento` (`firmatario`, `componente_rete` o `solo_citato`), `citazione`, `pagina`.
+- `menzioni_generiche`: lista di oggetti con `espressione` (come scritta nel testo), `tipo_menzione` (`tipologia`, `struttura_senza_nome` o `istituzione_senza_riferimento`), `ente_di_appartenenza` (testo o null), `ruolo_nel_documento` (`componente_rete` o `solo_citato`), `citazione`, `pagina`.
+- `note`: testo breve su casi dubbi o problemi del testo (per esempio parti illeggibili), oppure null.
+Se non ci sono enti, le liste sono vuote e spieghi il motivo in `note`.

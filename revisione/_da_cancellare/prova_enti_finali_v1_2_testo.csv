@@ -1,0 +1,240 @@
+﻿codice;nome;ruolo;n_run_presente;n_run;stato
+0901;Comando Provinciale della Guardia di Finanza di Massa Carrara;firmatario;5;5;automatico
+0901;Provincia di Massa Carrara;firmatario;1;5;automatico
+0901;Centro di Ascolto “Sabine” di Montignoso;firmatario;5;5;automatico
+0901;Società della Salute della Lunigiana;firmatario;5;5;automatico
+0901;Centro Antiviolenza “Centro Donna Lunigiana” di Aulla;firmatario;2;5;automatico
+0901;Associazione A.R.P.A.;solo_citato;5;5;automatico
+0901;Regione Toscana;solo_citato;5;5;automatico
+0901;Procura della Repubblica di Firenze;solo_citato;5;5;automatico
+0901;Presidenza del Consiglio dei Ministri;solo_citato;5;5;automatico
+0901;Provincia autonoma di Trento;solo_citato;5;5;automatico
+0901;Provincia autonoma di Bolzano;solo_citato;4;5;automatico
+0901;Istat;solo_citato;5;5;automatico
+0901;coordinamento italiano dei servizi contro il maltrattamento e l'abuso all'infanzia;solo_citato;5;5;automatico
+0901;Conferenza unificata Stato-Regioni;solo_citato;5;5;automatico
+0901;Procura del Tribunale dei Minori di Genova;componente_rete;5;5;automatico
+0902;Comune di Poggibonsi;firmatario;5;5;automatico
+0902;Comune di Colle di Val d’Elsa;firmatario;5;5;automatico
+0902;Comune di San Gimignano;firmatario;5;5;automatico
+0902;Comune di Casole d’Elsa;firmatario;5;5;automatico
+0902;Comune di Radicondoli;firmatario;5;5;automatico
+0902;Centro Pari Opportunita Valdelsa;firmatario;5;5;automatico
+0902;Associazione Donne Insieme Valdelsa;firmatario;5;5;automatico
+0902;Casa Rifugio D.1.V.E;componente_rete;5;5;automatico
+0902;Azienda USL Toscana Sud Est;firmatario;5;5;automatico
+0902;Fondazione Territori Sociali Altavaldelsa;firmatario;5;5;automatico
+0902;Societa della Salute Alta Val d’Elsa;firmatario;5;5;automatico
+0902;Tribunale di Siena;firmatario;5;5;automatico
+0902;Prefettura di Siena;componente_rete;5;5;automatico
+0902;Questura di Siena;componente_rete;5;5;automatico
+0902;CPO dell’Ordine degli Avvocati di Siena;firmatario;5;5;automatico
+0902;Comitato Pari Opportunita dell’Ordine dei Dottori Commercialisti e degli Esperti Contabili di Siena;firmatario;5;5;automatico
+0902;Associazione Atelier Vantaggio Donna;firmatario;5;5;automatico
+0902;Ospedale di Campostaggia;solo_citato;4;5;automatico
+0902;Regione Toscana;componente_rete;5;5;automatico
+0902;CAM Firenze;componente_rete;5;5;automatico
+0902;D.i.Re. (Donne in Rete);solo_citato;5;5;automatico
+0902;ANCI;solo_citato;5;5;automatico
+0902;Conferenza Unificata;solo_citato;5;5;automatico
+0902;Consiglio dei Ministri;solo_citato;2;5;automatico
+0902;CISMAI (Coordinamento Italiano dei servizi contro il maltrattamento e l’abuso all’Infanzia);solo_citato;5;5;automatico
+0902;Associazione Scientifica Genetisti Forensi Italiani;solo_citato;5;5;automatico
+0902;Commissione Parlamentare di inchiesta sul femminicidio, nonché su ogni forma di violenza di genere;solo_citato;5;5;automatico
+0902;Scuola Superiore di Magistratura;solo_citato;5;5;automatico
+0902;Ministero della Giustizia;solo_citato;5;5;automatico
+0902;Proactive Resolution;solo_citato;5;5;automatico
+0902;CESVIS;solo_citato;5;5;automatico
+0902;SUN;solo_citato;3;5;automatico
+0902;Azienda USL 7;solo_citato;3;5;automatico
+0902;Procura della Repubblica di Siena;firmatario;2;5;automatico
+0903;Comando Provinciale della Guardia di Finanza di Arezzo;firmatario;5;5;automatico
+0903;Ufficio Scolastico Regionale per la Toscana Ambito Territoriale della Provincia di Arezzo Ufficio VI;firmatario;1;5;automatico
+0903;Procura della Repubblica presso il Tribunale di Arezzo;firmatario;1;5;automatico
+0903;Azienda USL Toscana Sud Est;firmatario;5;5;automatico
+0903;Conferenza dei Sindaci della Zona Aretina;firmatario;5;5;automatico
+0903;Conferenza Zonale dei Sindaci del Casentino;firmatario;5;5;automatico
+0903;Unione dei Comuni Montani del Casentino;firmatario;5;5;automatico
+0903;Conferenza Zonale dei Sindaci del Valdarno;firmatario;5;5;automatico
+0903;Conferenza Zonale dei Sindaci della Valdichiana Aretina;firmatario;5;5;automatico
+0903;Conferenza Zonale dei Sindaci della Valtiberina Toscana;firmatario;5;5;automatico
+0903;Unione Montana dei Comuni della Valtiberina Toscana;firmatario;5;5;automatico
+0903;Consigliera Provinciale di Parità;firmatario;5;5;automatico
+0903;Associazione “Pronto Donna” Centro Antiviolenza;firmatario;5;5;automatico
+0903;Azienda Usl n. 8;solo_citato;4;5;automatico
+0903;Consiglio dei Ministri;solo_citato;5;5;automatico
+0903;Regione Toscana;solo_citato;5;5;automatico
+0903;Procura Generale della Repubblica presso la Corte d'Appello di Firenze;solo_citato;5;5;automatico
+0903;Consiglio Regionale della Toscana;solo_citato;5;5;automatico
+0903;Procura della Repubblica per i Minorenni di Firenze;solo_citato;5;5;automatico
+0903;Procura Generale presso la Corte d'Appello di Genova;solo_citato;5;5;automatico
+0903;Ministero dell’Università e della Ricerca;solo_citato;5;5;automatico
+0903;Consiglio Superiore della Magistratura;solo_citato;5;5;automatico
+0904;Città Metropolitana di Firenze;componente_rete;5;5;automatico
+0904;Società della Salute Mugello;componente_rete;5;5;automatico
+0904;Società della Salute Fiorentina Nord Ovest;componente_rete;5;5;automatico
+0904;Centro Antiviolenza Associazione Artemisia APS;componente_rete;5;5;automatico
+0904;Casa di Nicoletta;componente_rete;5;5;automatico
+0904;European Society Stress Traumatic Studies;solo_citato;3;5;automatico
+0904;DIRE;solo_citato;5;5;automatico
+0904;ANCI;solo_citato;5;5;automatico
+0904;CNOAS;solo_citato;5;5;automatico
+0904;CISMAI;solo_citato;5;5;automatico
+0904;Regione Toscana;componente_rete;5;5;automatico
+0905;Ufficio Scolastico Provinciale di Grosseto;firmatario;5;5;automatico
+0905;Azienda USL Toscana Sud est;firmatario;5;5;automatico
+0905;Centro antiviolenza “Olympia de Gouges” di Grosseto e Orbetello;firmatario;1;5;automatico
+0905;Centro antiviolenza “Tutto é vita — Elisabetta Fiorilli” Grosseto;firmatario;1;5;automatico
+0905;Azienda USL 9 di Grosseto;solo_citato;1;5;automatico
+0905;Ascom;solo_citato;5;5;automatico
+0905;Confesercenti;solo_citato;5;5;automatico
+0905;Federalberghi;solo_citato;5;5;automatico
+0905;Regione Toscana;firmatario;5;5;rivisto
+0905;Procura Generale della Repubblica presso la Corte d'Appello di Firenze;solo_citato;5;5;automatico
+0905;Procura della Repubblica per i Minorenni di Firenze;solo_citato;5;5;automatico
+0905;Procura Generale presso la Corte d'Appello di Genova;solo_citato;5;5;automatico
+0905;Procura della Repubblica presso il Tribunale di Massa;solo_citato;5;5;automatico
+0905;Ministero dell'Interno;solo_citato;5;5;automatico
+0905;Comune di Campagnatico;firmatario;5;5;automatico
+0905;Comune di Capalbio;firmatario;5;5;automatico
+0905;Comune di Castiglione della Pescaia;firmatario;5;5;automatico
+0905;Comune di Cinigiano;firmatario;5;5;automatico
+0905;Comune di Civitella Paganico;firmatario;5;5;automatico
+0905;Comune di Follonica;firmatario;5;5;automatico
+0905;Comune di Gavorrano;firmatario;5;5;automatico
+0905;Comune di Isola del Giglio;firmatario;5;5;automatico
+0905;Comune di Magliano in Toscana;firmatario;5;5;automatico
+0905;Comune di Massa Marittima;firmatario;5;5;automatico
+0905;Comune di Monte Argentario;firmatario;5;5;automatico
+0905;Comune di Monterotondo Marittimo;firmatario;5;5;automatico
+0905;Comune di Montieri;firmatario;5;5;automatico
+0905;Comune di Pitigliano;firmatario;5;5;automatico
+0905;Comune di Scansano;firmatario;5;5;automatico
+0905;Comune di Scarlino;firmatario;5;5;automatico
+0905;Unione dei comuni Montani Amiata Grossetana;firmatario;5;5;automatico
+0905;Comune di Sorano;firmatario;5;5;automatico
+0906;Tribunale di Livorno;firmatario;5;5;automatico
+0906;Università degli Studi di Firenze;firmatario;5;5;automatico
+0906;ARTI Servizi per il Lavoro di GR-LI;firmatario;5;5;automatico
+0906;Azienda USL Toscana Nord Ovest;firmatario;5;5;automatico
+0906;IPPOGRIFO APS;firmatario;5;5;automatico
+0906;ASSOCIAZIONE RANDI APS;firmatario;5;5;automatico
+0906;ASSOCIAZIONE PSICOSFERA;firmatario;5;5;automatico
+0906;Regione Toscana;solo_citato;5;5;automatico
+0906;Studio Notarile Catania;solo_citato;1;5;automatico
+0907;Provincia di Lucca;firmatario;5;5;automatico
+0907;Prefettura di Lucca;firmatario;5;5;automatico
+0907;Questura di Lucca;firmatario;5;5;automatico
+0907;Arma dei Carabinieri-Comando provinciale di Lucca;firmatario;5;5;automatico
+0907;Conferenza dei Sindaci ASL 2 zona Piana di Lucca;firmatario;5;5;automatico
+0907;Conferenza dei Sindaci ASL 2 zona Valle del Serchio;firmatario;5;5;automatico
+0907;Conferenza dei Sindaci ASL 12 zona Versilia;firmatario;5;5;rivisto
+0907;ASL 2 di Lucca;firmatario;5;5;automatico
+0907;Consigliera di Parità di Lucca;firmatario;4;5;automatico
+0907;Ufficio Scolastico Provinciale di Lucca;firmatario;5;5;automatico
+0907;Governo Italiano;solo_citato;5;5;automatico
+0908;Bientina;firmatario;5;5;automatico
+0908;Buti;firmatario;5;5;automatico
+0908;Calcinaia;firmatario;5;5;automatico
+0908;Capannoli;firmatario;5;5;automatico
+0908;Casale Marittimo;firmatario;5;5;automatico
+0908;Casciana Terme-Lari;firmatario;5;5;automatico
+0908;Cascina;firmatario;5;5;automatico
+0908;Castellina Marittima;firmatario;5;5;automatico
+0908;Castelfranco di Sotto;firmatario;5;5;automatico
+0908;Castelnuovo Val di Cecina;firmatario;5;5;automatico
+0908;Chianni;firmatario;5;5;automatico
+0908;Crespina-Lorenzana;firmatario;5;5;automatico
+0908;Fauglia;firmatario;5;5;automatico
+0908;Guardistallo;firmatario;5;5;automatico
+0908;Lajatico;firmatario;5;5;automatico
+0908;Montecatini Val Di Cecina;firmatario;5;5;automatico
+0908;Montescudaio;firmatario;5;5;automatico
+0908;Monteverdi Marittimo;firmatario;5;5;automatico
+0908;Montopoli Valdarno;firmatario;5;5;automatico
+0908;Palaia;firmatario;5;5;automatico
+0908;Peccioli;firmatario;5;5;automatico
+0908;Pomarance;firmatario;5;5;automatico
+0908;Ponsacco;firmatario;5;5;automatico
+0908;Pontedera;firmatario;5;5;automatico
+0908;Riparbella;firmatario;5;5;automatico
+0908;Santa Croce sull'Arno;firmatario;5;5;automatico
+0908;Santa Luce;firmatario;5;5;automatico
+0908;Santa Maria a Monte;firmatario;5;5;automatico
+0908;San Giuliano Terme;firmatario;5;5;automatico
+0908;San Miniato;firmatario;5;5;automatico
+0908;Terricciola;firmatario;5;5;automatico
+0908;Vecchiano;firmatario;5;5;automatico
+0908;Volterra;firmatario;5;5;automatico
+0908;Usl Toscana Nord-Ovest;firmatario;5;5;automatico
+0908;Usl Toscana Centro;firmatario;5;5;automatico
+0908;Società della Salute Zona Alta Valdicecina-Valdera;firmatario;5;5;automatico
+0908;Società della Salute Zona Empolese Valdarno Valdelsa;firmatario;5;5;automatico
+0908;Associazione Casa della donna;firmatario;5;5;automatico
+0908;Associazione Frida;firmatario;5;5;automatico
+0908;Associazione Eunice;firmatario;5;5;automatico
+0908;Associazione Le Amiche di Mafalda;firmatario;5;5;automatico
+0908;Associazione Donne In Movimento;firmatario;5;5;automatico
+0908;AIED;firmatario;5;5;automatico
+0908;Nuovo Maschile. Uomini liberi dalla violenza;firmatario;5;5;automatico
+0908;Arnera Società Cooperativa Sociale;firmatario;5;5;automatico
+0908;Regione Toscana;solo_citato;5;5;automatico
+0908;Consiglio dei ministri;solo_citato;5;5;automatico
+0908;Procura generale della Repubblica presso la Corte d'appello di Firenze;solo_citato;5;5;automatico
+0908;USL 6 di Livorno;solo_citato;5;5;automatico
+0908;USL 11 di Empoli;solo_citato;5;5;automatico
+0908;Azienda Ospedaliera Universitaria di Careggi;solo_citato;5;5;automatico
+0908;Azienda Ospedaliera Universitaria Meyer;solo_citato;5;5;automatico
+0908;USL 1 Massa e Carrara;solo_citato;5;5;automatico
+0908;USL 3 Pistoia;solo_citato;5;5;automatico
+0908;USL 7 Siena;solo_citato;5;5;automatico
+0908;USL 10 Firenze;solo_citato;5;5;automatico
+0908;AOU Senese;solo_citato;5;5;automatico
+0908;Procura della Repubblica per i Minorenni di Firenze;solo_citato;5;5;automatico
+0908;Procura generale presso la Corte d'appello di Genova;solo_citato;5;5;automatico
+0908;Procura della Repubblica presso il Tribunale di Massa;solo_citato;1;5;automatico
+0908;Consiglio Superiore della Magistratura;solo_citato;5;5;automatico
+0908;Ministero dell’Interno;solo_citato;5;5;automatico
+0908;Consiglio Regionale della Toscana;solo_citato;1;5;automatico
+0908;Giunta Regionale della Toscana;solo_citato;1;5;automatico
+0910;MIUR Ufficio Scolastico Regionale per la Toscana XI Ambito Territoriale di Prato e Pistoia sede di Prato;firmatario;5;5;automatico
+0910;Procura della Repubblica di Prato;firmatario;1;5;automatico
+0910;Questura di Prato;firmatario;1;5;automatico
+0910;Comando Provinciale dell’Arma dei Carabinieri di Prato;firmatario;1;5;automatico
+0910;Comando Provinciale della Guardia di Finanza di Prato;firmatario;1;5;automatico
+0910;Società della Salute Area Pratese;firmatario;5;5;automatico
+0910;Comune di Cantagallo;firmatario;5;5;automatico
+0910;Comune di Carmignano;firmatario;5;5;automatico
+0910;Comune di Montemurlo;firmatario;5;5;automatico
+0910;Comune di Poggio a Caiano;firmatario;5;5;automatico
+0910;Comune di Vaiano;firmatario;5;5;automatico
+0910;Comune di Vernio;firmatario;5;5;automatico
+0910;Azienda Sanitaria USL Toscana Centro;firmatario;5;5;automatico
+0910;Centro Antiviolenza La Nara;firmatario;5;5;automatico
+0910;Alice Cooperativa Sociale;firmatario;5;5;automatico
+0910;Centro di Ascolto Uomini Maltrattanti;firmatario;5;5;automatico
+0910;Conferenza Unificata;solo_citato;5;5;automatico
+0910;Presidenza del Consiglio dei Ministri;solo_citato;5;5;automatico
+0910;Regione Toscana;solo_citato;5;5;automatico
+0910;RELIVE (Relazioni libera dalla violenza);solo_citato;3;5;automatico
+0910;Work With Perpetrators European Network (WWP EN);solo_citato;3;5;automatico
+0911;Regione Toscana;firmatario;5;5;automatico
+0911;Procura Generale della Repubblica presso la Corte d’Appello di Firenze;firmatario;5;5;automatico
+0911;Procura della Repubblica per i Minorenni di Firenze;firmatario;5;5;automatico
+0911;Procura Generale presso la Corte d’Appello di Genova;firmatario;5;5;automatico
+0911;Procura della Repubblica presso il Tribunale di Massa;firmatario;5;5;automatico
+0911;Azienda USL 9 di Grosseto;solo_citato;5;5;automatico
+0911;Garante italiano per la protezione dei dati personali;solo_citato;5;5;automatico
+0912;Centro Pari Opportunità Valdichiana;firmatario;5;5;automatico
+0912;Associazione Amica Donna;firmatario;5;5;automatico
+0912;Comunità Montana del Cetona;componente_rete;5;5;automatico
+0912;Chianciano Terme;componente_rete;5;5;automatico
+0912;Montepulciano;componente_rete;5;5;automatico
+0912;San Casciano dei Bagni;componente_rete;5;5;automatico
+0912;Sarteano;componente_rete;5;5;automatico
+0912;Chiusi;componente_rete;5;5;automatico
+0912;Sinalunga;componente_rete;5;5;automatico
+0912;Torrita di Siena;componente_rete;5;5;automatico
+0912;Trequanda;componente_rete;5;5;automatico
+0912;Azienda ASL7;componente_rete;5;5;automatico
+0912;O.M.S.;solo_citato;4;5;automatico

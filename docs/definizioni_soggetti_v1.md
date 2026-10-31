@@ -14,6 +14,8 @@ Fonti usate: nota metodologica Istat (`riferimenti/rif_istat_reti_territoriali_2
 - Struttura e gestore: se il protocollo nomina sia il CAV sia l'associazione che lo gestisce, sono due enti. Se nomina solo l'associazione "che gestisce il CAV", è un ente solo.
 - Stesso ente nominato in modi diversi (sigla, nome esteso): un record solo.
 
+**Ente identificato e menzione generica.** Un ente è identificato quando il testo ne dà un nome proprio che lo individua (toponimo o nome distintivo): "Comune di Chiusi", "Prefettura di Lucca", "Associazione Amica Donna". Sono menzioni generiche le espressioni senza nome proprio ("i Comuni", "il Pronto soccorso", "le associazioni sportive"), i corpi di polizia senza comando o località ("Carabinieri", "Polizia di Stato") e le unità interne di un ente (reparti, uffici, servizi, assessorati). Il criterio è formale: dipende solo dal testo. Se lo stesso ente è nominato per intero altrove nel documento, la menzione generica confluisce nell'ente identificato. I due gruppi si estraggono e si analizzano separatamente (vedi `ipotesi_lavoro_v2.md`).
+
 ## 2. Glossario
 
 **ETS (Ente del Terzo settore).** Stato giuridico, non funzione. Ente privato senza scopo di lucro che persegue finalità civiche, solidaristiche o di utilità sociale e che è iscritto al RUNTS (D.Lgs. 117/2017, art. 4) **[da verificare]**. Rientrano: organizzazioni di volontariato, associazioni di promozione sociale, enti filantropici, imprese sociali (comprese le cooperative sociali), reti associative, società di mutuo soccorso, altre associazioni e fondazioni iscritte. Sono escluse le amministrazioni pubbliche, i partiti, i sindacati e le associazioni professionali e di categoria **[da verificare]**.

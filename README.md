@@ -21,7 +21,7 @@ Tutte collegate dallo stesso codice (regione + progressivo, per esempio `0101`; 
 |---|---|---|
 | Questionario GINO | `questionario_<codice>.pdf` → CSV | `codice/parse_questionari.py` legge i 251 PDF compilati |
 | Protocollo | `protocollo_<codice>.txt` | testo del documento da cui si compila il questionario |
-| Output AI | `ai_<codice>.json` | pipeline LLM sul protocollo (prompt in `prompts/`), spezzata con `codice/ai_split.py` |
+| Output AI | `ai_<codice>.json` (pipeline v1, archiviata) · `microdati/ai_v2/` (pipeline v2) | pipeline LLM sul protocollo; la v2 è rifatta da zero, vedi `docs/experiments.md` |
 
 ```
 protocollo ──► questionario compilato (PDF) ──► parser ──► CSV
@@ -35,16 +35,35 @@ Il confronto copre le domande sui soggetti (2.1, 2.2, 3.3, 3.7): l'output AI att
 
 I microdati non sono nel repo: vedi `microdati/README.md`.
 
+## Ambiente
+
+```
+python3 -m venv .venv
+source .venv/bin/activate        # su Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env             # poi inserire chiave, endpoint e deployment
+python codice/test_api.py        # prova la connessione al modello
+```
+
+`.venv/` e `.env` sono ignorati da git: la chiave non va mai committata.
+
 ## Struttura
 
 ```
 README.md, CLAUDE.md
-docs/          stato, decisioni, metodologia
-prompts/       prompt della pipeline LLM (versionati)
-codice/        config.py, parse_questionari.py, anagrafica_protocolli.py, ai_split.py, pipeline_ai/
-riferimenti/   categorie_gino_30.csv (30 categorie di soggetti → 10 gruppi)
-microdati/     non versionata, tranne il README
-output/        analisi aggregate preesistenti, non versionata, non usata per ora
+docs/             stato, decisioni, metodologia, definizioni, ipotesi di lavoro, registro esperimenti (experiments.md)
+prompts/          prompt versionati: v1/ (pipeline archiviata), v2/ (pipeline attuale, v1_2 = candidato al congelamento)
+parametri/        parametri_pubblicazione.json: modello, prompt, n. run, soglie di spezzatura, campione
+campione/         campione per la pubblicazione (disegno e, dopo l'estrazione, l'elenco dei protocolli)
+codice/           config.py, parse_questionari.py, anagrafica_protocolli.py, confronto_*.py, test_api.py
+codice/pipeline_ai_v2/   stadio 1 (estrazione, spezzatura), stabilità, revisione, misure, registro esperimenti
+revisione/        fogli di revisione degli enti e decisioni (con nomi di enti: si possono committare)
+annotazione/      gold standard sul nuovo campione (da generare)
+risultati/        tabelle e figure per il paper, generate da script
+riferimenti/      categorie_gino_30.csv (30 categorie di soggetti → 10 gruppi), documento Istat
+archivio/         pipeline v1, campione e fogli di annotazione sul campione v1 (superato): non si usano
+microdati/        non versionata, tranne il README
+output/           analisi aggregate preesistenti, non versionata, non usata per ora
 ```
 
 ## Eseguire
@@ -54,7 +73,7 @@ export RETI_MICRODATI="/percorso/microdati"    # opzionale, default: <repo>/micr
 cd codice
 python3 parse_questionari.py       # PDF questionari -> CSV (lungo e largo), ~95 s
 python3 anagrafica_protocolli.py   # anagrafica e copie dei protocolli (richiede gli originali)
-python3 ai_split.py                # JSON AI unico -> ai_<codice>.json
+python3 ai_split.py                # (archivio/pipeline_v1) JSON AI unico -> ai_<codice>.json
 ```
 
 Servono python3, pandas, openpyxl, numpy, Pillow, pdfplumber.

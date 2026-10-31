@@ -1,5 +1,8 @@
 # Ipotesi di lavoro per la ripartenza dell'estrazione AI (v2)
 
+> **Nota (2026-10-31).** Il campione di 36 protocolli (`archivio/annotazione_campione_v1/`) e la scelta della Toscana come set di sviluppo sono superati: vedi `docs/decisioni.md` e `campione/README.md`. I fogli di annotazione v2 sono archiviati e vanno rifatti sul nuovo campione.
+
+
 **Aggiornato: 2026-10-30.** Da confermare con i colleghi che hanno costruito il questionario. Quando arrivano le istruzioni di compilazione, si rivede questo file.
 
 ## Impostazione
@@ -41,6 +44,28 @@ Si lavora ancora con gpt-4.1 finché non è pronta la nuova run.
 
 ## Gold standard
 
-- Pre-compilato da noi con l'output AI esistente (gpt-4.1): `annotazione/gold_enti_v1_template.xlsx`. Due file, `_A1` e `_A2`, per due annotatori indipendenti (Paolo ed Elena), ciascuno con i propri protocolli. Gli annotatori non vedono il questionario.
+- Pre-compilato da noi con l'output AI esistente (gpt-4.1): `annotazione/gold_enti_v2_template.xlsx`. Due file, `_A1` e `_A2`, per due annotatori indipendenti (Paolo ed Elena), ciascuno con i propri protocolli. Gli annotatori non vedono il questionario.
 - Si misura l'accordo tra i due annotatori prima di usare il gold standard come verità.
 - La verità è il protocollo.
+
+## Stadio 1: estrazione degli enti
+
+Prompt v1: `prompts/v2/stadio1_estrazione_enti_v1.txt` (la v0 resta nel repo per confronto). Script: `codice/pipeline_ai_v2/stadio1_estrazione.py`. Output in `microdati/ai_v2/stadio1/` (fuori da git).
+
+**Due contenitori separati**, perché nella v0 il confine tra enti precisi ed espressioni generiche era la principale fonte di instabilità (generici stabili al 47% nelle 3 run, enti con nome al 85%).
+- `enti_identificati` (nucleo): il testo contiene un nome proprio che individua una specifica organizzazione. Campi: nome, forma giuridica dichiarata, ruolo nel documento (firmatario / componente_rete / solo_citato), citazione letterale.
+- `menzioni_generiche` (periferia): tipologie ("i Comuni", "associazioni sportive"), strutture senza nome (Pronto soccorso, reparto di Ginecologia, con l'ente di appartenenza), istituzioni senza riferimento locale (Carabinieri, Polizia di Stato, "la Prefettura", "la Regione"). Come contarle si decide con i colleghi di produzione.
+- Fusione: se l'ente è nominato per intero altrove nel documento, la menzione generica confluisce nell'ente identificato.
+- Casi di confine tenuti nel nucleo: enti nazionali o internazionali con nome proprio (Ministero dell'Interno, Garante privacy, ONU), di solito `solo_citato`.
+- Tavoli, reti, cabine di regia e gruppi di lavoro creati dal protocollo non sono enti.
+
+**Prompt v1.1** (`prompts/v2/stadio1_estrazione_enti_v1_1.txt`), dopo le prime run in PDF sulla Toscana:
+- percorsi, programmi, reti e tavoli ("Codice Rosa", "Rete regionale Codice Rosa") non sono enti, anche se non creati dal protocollo;
+- gli organismi internazionali citati come fonte di norme (ONU, Consiglio d'Europa, Comitato dei Ministri, UE, OMS) non sono enti. Restano nel nucleo gli enti nazionali italiani con nome proprio;
+- un'associazione e il centro che gestisce con lo stesso nome proprio ("Olympia de Gouges") sono un solo record se il testo non li distingue;
+- ogni ente con un solo nome, nella forma più completa del testo (le varianti di nome tra le run gonfiavano l'instabilità);
+- nuovo campo `pagina`: dove compare la citazione. Per le scansioni il controllo della citazione contro il testo OCR non è affidabile (nel testo OCR mancano anche firmatari presenti nel PDF, per esempio i Comuni nel blocco firme dello 0905).
+
+**Analisi.** Nucleo e periferia si analizzano separatamente: stabilità tra le run, confronto testo/PDF, accordo con il gold standard. Sul nucleo provvisorio della v0 (enti non marcati generici) testo e PDF coincidono quasi del tutto (226 enti in comune, 11 solo testo, 7 solo PDF; Jaccard tra run 0,90 per entrambi).
+
+**Run.** 3 run per protocollo, per misurare la stabilità. Due varianti di input, testo estratto e PDF originale (5 dei 11 protocolli toscani sono scansioni, e 0902 è misto). Con il PDF si saltano i file sopra 3 MB (0902, 0903, 0908). Il prompt si mette a punto sui protocolli toscani (sviluppo) e si valuta sugli altri 25 del campione (test).
