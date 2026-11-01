@@ -44,3 +44,18 @@ Aggiornato: 2026-10-31
 - Pronto: script di revisione manuale degli enti (`codice/pipeline_ai_v2/revisione_enti.py`).
 - Fatto (2026-10-31/11-01): campione n = 60; stadio 1 con 5 run sul campione; gold da zero su 20 protocolli estratti dai 60 (`campione/campione_gold_v1.csv`), template in `annotazione/gold_v2/`.
 - In sospeso: annotazione del gold (Paolo; secondo annotatore su 8 protocolli); revisione di fase 2 sui 40 protocolli fuori dal gold; stadio 1 su tutti i 251 testi; congelamento di prompt e parametri (`parametri/`); decisione sul conteggio della periferia; risposta dei colleghi sulle definizioni; stadi 2–4.
+
+## Dove siamo (2026-11-01, sera)
+- Commit e tag `freeze-stadio1` fatti. Run di stadio 1 su tutti i protocolli in corso: `python codice/pipeline_ai_v2/stadio1_spezzato.py --tutti --runs 5 --tag pubblicazione_v1_2 --workers 2` (si riprende rilanciando lo stesso comando).
+- Gold: pacchetto in `annotazione/gold_v2/pacchetto_gold.zip`; Paolo inizia il 2026-11-02 (sui PDF). Secondo annotatore sugli 8 protocolli `doppia=si`: Elena o Mauro, da confermare.
+- Revisione di fase 2: `revisione/revisione_pubblicazione_v1_2.xlsx` (40 protocolli, 310 righe), non ancora assegnata.
+- Schema complessivo: `docs/pipeline_e_stime.md`.
+
+## Prossimi passi
+1. Contare i protocolli processati dalla run (`--tutti`) e uniformare 249 / 251 nei documenti.
+2. Stadio 2 (classificazione nelle 30 categorie) sulle liste della run: prompt da scrivere.
+3. Quando arriva il gold: accordo tra annotatori, recall e precision di stadio 1, pooling degli enti trovati solo dal modello.
+4. Assegnare la fase 2 a un revisore; decidere la quota di unanimi da rivedere.
+5. Regola di conteggio della periferia (con i colleghi della produzione); metodo di correzione per le stime.
+6. Verificare i ruoli e i casi aperti (Banca d'Italia in 0906, RELIVE, WWP EN, OMS); doppioni nella fusione dei pezzi (SDS, Donne Insieme); protocollo 1613.
+7. Unione dei Comuni (categoria 3 o 8); definizioni da confermare con Paolo ed Elena.
