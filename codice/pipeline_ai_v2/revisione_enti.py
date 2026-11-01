@@ -15,12 +15,12 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent)); sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import REPO  # noqa: E402
+from config import MICRODATI, REPO  # noqa: E402
 from stabilita_tollerante import BASE, formato_v2, norm, uguali  # noqa: E402
 
 OUT = REPO / "revisione"
 FORZA = {"firmatario": 3, "componente_rete": 2, "solo_citato": 1}
-AZIONI = ["ok", "elimina", "unisci"]
+AZIONI = ["corretto", "sbagliato", "elimina", "unisci"]
 
 
 def carica(tag, codici=None, n_run=None):
@@ -58,6 +58,105 @@ def nome(g):
     return max(g["nomi"], key=lambda n: (g["nomi"][n], len(n)))
 
 
+def contesto(codice, citazione, margine=250, _cache={}):
+    """tratto di testo del protocollo attorno alla citazione, con la citazione tra « »; se non si trova, la sola citazione"""
+    import re
+    if codice not in _cache:
+        t = (MICRODATI / "protocolli" / f"protocollo_{codice}.txt").read_text(encoding="utf-8", errors="ignore")
+        _cache[codice] = re.sub(r"\s+", " ", t)
+    t = _cache[codice]; q = re.sub(r"\s+", " ", citazione).strip()
+    for cand in (q, q[:80], q[:40]):
+        k = t.lower().find(cand.lower()) if cand else -1
+        if k >= 0:
+            fine = k + len(q) if cand == q else k + len(cand)
+            return ("…" if k > margine else "") + t[max(0, k - margine):k] + "«" + t[k:fine] + "»" + t[fine:fine + margine] + "…"
+    return "«" + q + "» (citazione non ritrovata nel testo)"
+
+
+def scrivi_excel(a, righe, dati):
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+    from openpyxl.worksheet.datavalidation import DataValidation
+    import pandas as pd
+    random.seed(20261031)
+    an = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str).set_index("codice")
+    # righe mescolate dentro ogni protocollo, con id progressivo: chi rivede non vede il motivo
+    per = {}
+    for r in righe: per.setdefault(r["codice"], []).append(r)
+    ordine = []
+    for c in sorted(per):
+        random.shuffle(per[c]); ordine += per[c]
+    for n, r in enumerate(ordine, 1): r["id"] = f"R{n:04d}"
+    wb = Workbook(); grassetto = Font(bold=True); fill = PatternFill("solid", fgColor="DDEBF7"); fill_dec = PatternFill("solid", fgColor="FFF2CC")
+    wrap = Alignment(wrap_text=True, vertical="top")
+
+    ist = wb.active; ist.title = "istruzioni"
+    testo = [
+        "REVISIONE DEGLI ENTI ESTRATTI DAI PROTOCOLLI",
+        "",
+        "Foglio 'revisione': una riga per ente proposto dal modello. 'codice_protocollo' è il protocollo; 'id_riga' è solo un numero di riga.",
+        "Leggi il contesto (la citazione del protocollo è tra « »). Se serve, apri il protocollo: il foglio 'protocolli' dice quale file.",
+        "Per ogni riga scegli un valore in 'azione'. Una riga senza azione risulta non rivista.",
+        "",
+        "corretto  = è un'organizzazione con un nome proprio e il ruolo proposto è giusto.",
+        "sbagliato = è un'organizzazione, ma il nome o il ruolo sono sbagliati: scrivi il valore giusto in 'nome_corretto' e/o 'ruolo_corretto'.",
+        "elimina   = non è un'organizzazione (persona, legge, documento, progetto, programma).",
+        "unisci    = è lo stesso ente di un'altra riga dello stesso protocollo (stesso ente scritto in due modi, o l'ente e la sua sigla): scrivi in 'unisci_con' il nome dell'altra riga",
+        "            (il foglio 'tutti_gli_enti' elenca tutti gli enti del protocollo). Due enti diversi con nome simile (due Comuni, due Procure di città diverse) NON si uniscono.",
+        "",
+        "Ruoli: firmatario = sottoscrive il documento; componente_rete = fa parte della rete o ha impegni; solo_citato = nominato senza far parte della rete e senza impegni.",
+        "Un'organizzazione che non fa parte della rete NON si elimina: resta, con ruolo solo_citato (esempio: l'ente che certifica la firma digitale).",
+        "'note': dubbi e casi particolari.",
+        "Foglio 'mancanti': se leggendo il protocollo vedi un ente con nome proprio che non è in 'tutti_gli_enti', scrivilo lì.",
+        "Finisci un protocollo prima di passare al successivo.",
+    ]
+    for t in testo: ist.append([t])
+    ist["A1"].font = Font(bold=True, size=13); ist.column_dimensions["A"].width = 170
+
+    ws = wb.create_sheet("revisione")
+    cols = ["id_riga", "codice_protocollo", "nome", "ruolo_proposto", "contesto", "azione", "unisci_con", "nome_corretto", "ruolo_corretto", "note"]
+    ws.append(cols)
+    for r in ordine:
+        ws.append([r["id"], r["codice"], r["nome"], r["ruolo_prevalente"], contesto(r["codice"], r["citazione"]), None, None, None, None, None])
+    for c in ws[1]:
+        c.font = grassetto; c.fill = fill_dec if c.value in ("azione", "unisci_con", "nome_corretto", "ruolo_corretto", "note") else fill
+    for col, w_ in zip("ABCDEFGHIJ", [8, 8, 42, 16, 90, 12, 34, 34, 16, 34]): ws.column_dimensions[col].width = w_
+    for row in ws.iter_rows(min_row=2):
+        for c in row: c.alignment = wrap
+    n = len(ordine) + 1
+    dv = DataValidation(type="list", formula1='"' + ",".join(AZIONI) + '"', allow_blank=True); ws.add_data_validation(dv); dv.add(f"F2:F{n}")
+    dv2 = DataValidation(type="list", formula1='"firmatario,componente_rete,solo_citato"', allow_blank=True); ws.add_data_validation(dv2); dv2.add(f"I2:I{n}")
+    ws.freeze_panes = "D2"; ws.auto_filter.ref = f"A1:J{n}"
+
+    wt = wb.create_sheet("tutti_gli_enti"); wt.append(["codice_protocollo", "nome", "ruolo_proposto"])
+    for c in sorted(dati):
+        for g in sorted(dati[c][1], key=lambda g: nome(g).lower()): wt.append([c, nome(g), g["ruoli"].most_common(1)[0][0]])
+    for c in wt[1]: c.font = grassetto; c.fill = fill
+    for col, w_ in zip("ABC", [8, 70, 18]): wt.column_dimensions[col].width = w_
+    wt.freeze_panes = "A2"; wt.auto_filter.ref = f"A1:C{wt.max_row}"
+
+    wp = wb.create_sheet("protocolli"); wp.append(["codice_protocollo", "regione", "titolo_documento", "file_allegato", "caratteri", "righe_da_rivedere"])
+    conta = Counter(r["codice"] for r in righe)
+    for c in sorted(dati):
+        t = (MICRODATI / "protocolli" / f"protocollo_{c}.txt").read_text(encoding="utf-8", errors="ignore")
+        x = an.loc[c] if c in an.index else {}
+        wp.append([c, x.get("regione"), x.get("titolo_documento"), x.get("allegato_gino_3_9"), len(t), conta.get(c, 0)])
+    for c in wp[1]: c.font = grassetto; c.fill = fill
+    for col, w_ in zip("ABCDEF", [8, 16, 80, 50, 10, 16]): wp.column_dimensions[col].width = w_
+    wp.freeze_panes = "A2"
+
+    wm = wb.create_sheet("mancanti"); wm.append(["codice_protocollo", "nome_ente_mancante", "ruolo", "dove_nel_testo", "note"])
+    for c in wm[1]: c.font = grassetto; c.fill = fill_dec
+    for col, w_ in zip("ABCDE", [8, 60, 18, 60, 40]): wm.column_dimensions[col].width = w_
+    dv3 = DataValidation(type="list", formula1='"firmatario,componente_rete,solo_citato"', allow_blank=True); wm.add_data_validation(dv3); dv3.add("C2:C500")
+
+    wi = wb.create_sheet("info_tecnica"); wi.append(["id_riga", "codice_protocollo", "nome", "n_run_presente", "n_run", "ruolo_prevalente", "ruoli", "varianti_nome", "motivo"])
+    for r in ordine:
+        wi.append([r["id"], r["codice"], r["nome"], r["n_run_presente"], r["n_run"], r["ruolo_prevalente"], r["ruoli"], r["varianti_nome"], r["motivo"]])
+    wi.sheet_state = "hidden"
+    wb.save(OUT / f"revisione_{a.tag}.xlsx")
+
+
 def prepara(a):
     random.seed(20261031)
     dati = carica(a.tag, a.codici.split(",") if a.codici else None, a.n_run)
@@ -90,28 +189,7 @@ def prepara(a):
     righe.sort(key=lambda r: (r["codice"], -FORZA[r["ruolo_prevalente"]], r["nome"]))
     with open(OUT / f"enti_automatici_{a.tag}.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(tutti[0]), delimiter=";"); w.writeheader(); w.writerows(tutti)
-    from openpyxl import Workbook
-    from openpyxl.worksheet.datavalidation import DataValidation
-    wb = Workbook(); ws = wb.active; ws.title = "da_rivedere"
-    cols = list(righe[0]) + ["azione", "unisci_con", "nome_finale", "ruolo_finale", "note"]
-    ws.append(cols)
-    for i, r in enumerate(righe, 2):
-        ws.append([r[k] for k in list(r)] + [None] * 5)
-    dv = DataValidation(type="list", formula1='"' + ",".join(AZIONI) + '"', allow_blank=True); ws.add_data_validation(dv)
-    dv.add(f"{chr(65 + cols.index('azione'))}2:{chr(65 + cols.index('azione'))}{len(righe) + 1}")
-    dv2 = DataValidation(type="list", formula1='"firmatario,componente_rete,solo_citato"', allow_blank=True); ws.add_data_validation(dv2)
-    dv2.add(f"{chr(65 + cols.index('ruolo_finale'))}2:{chr(65 + cols.index('ruolo_finale'))}{len(righe) + 1}")
-    ws.freeze_panes = "C2"
-    for col, w_ in zip("ABCDEFGHIJKLMNO", [8, 45, 9, 6, 16, 28, 45, 40, 60, 10, 30, 30, 16, 30]): ws.column_dimensions[col].width = w_
-    ist = wb.create_sheet("istruzioni", 0)
-    for t in ["Revisione degli enti del nucleo. Una riga per ente; se non scrivi nulla in 'azione' l'ente resta com'è.",
-              "azione = ok (confermato), elimina (non è un ente della rete o non è un ente), unisci (stesso ente di un'altra riga dello stesso protocollo: scrivi il suo nome in 'unisci_con').",
-              "nome_finale, ruolo_finale: solo se vuoi cambiare il nome o il ruolo.",
-              "Il motivo dice perché la riga è qui. 'campione dei presenti in tutte le run' serve a stimare quanti errori stabili ci sono: giudicale come le altre.",
-              "Ruolo: firmatario = sottoscrive; componente_rete = parte della rete o con impegni; solo_citato = nominato senza essere parte della rete."]:
-        ist.append([t])
-    ist.column_dimensions["A"].width = 160
-    wb.save(OUT / f"revisione_{a.tag}.xlsx")
+    scrivi_excel(a, righe, dati)
     c = Counter(m.split(" (")[0].split(" +")[0] for r in righe for m in r["motivo"].split(" + "))
     print(f"{len(dati)} protocolli, {len(tutti)} enti, {len(righe)} da rivedere ({len(righe) / len(dati):.1f} per protocollo)")
     for k, v in c.most_common(): print(f"  {k}: {v}")
@@ -121,13 +199,39 @@ def prepara(a):
 def applica(a):
     import openpyxl
     dati = carica(a.tag, None, a.n_run)
-    ws = openpyxl.load_workbook(a.decisioni)["da_rivedere"]
-    h = [c.value for c in ws[1]]; dec = {}
-    for r in ws.iter_rows(min_row=2, values_only=True):
-        d = dict(zip(h, r))
-        if d.get("azione"):
-            for v in str(d["varianti_nome"] or d["nome"]).split(" | "):
+    wb = openpyxl.load_workbook(a.decisioni)
+    if "da_rivedere" in wb.sheetnames:        # formato precedente
+        ws = wb["da_rivedere"]; h = [c.value for c in ws[1]]; righe = [dict(zip(h, r)) for r in ws.iter_rows(min_row=2, values_only=True)]
+    else:                                     # formato attuale: decisioni in 'revisione', varianti in 'info_tecnica' (stesso id)
+        ws = wb["revisione"]; h = [c.value for c in ws[1]]; righe = [dict(zip(h, r)) for r in ws.iter_rows(min_row=2, values_only=True)]
+        wi = wb["info_tecnica"]; hi = [c.value for c in wi[1]]
+        info = {r[0]: dict(zip(hi, r)) for r in wi.iter_rows(min_row=2, values_only=True)}
+        for d in righe: d["varianti_nome"] = info.get(d.get("id_riga", d.get("id")), {}).get("varianti_nome")
+    dec, esiti, avvisi = {}, [], []
+    for d in righe:
+        d["id"] = d.get("id_riga", d.get("id")); d["codice"] = d.get("codice_protocollo", d.get("codice"))
+        d["nome_finale"] = d.get("nome_corretto", d.get("nome_finale")); d["ruolo_finale"] = d.get("ruolo_corretto", d.get("ruolo_finale"))
+        az = (d.get("azione") or "").strip().lower()
+        az = {"ok": "corretto"}.get(az, az)
+        if not az and (d.get("nome_finale") or d.get("ruolo_finale")): az = "sbagliato"      # correzione senza azione
+        if not az and d.get("unisci_con"): az = "unisci"
+        d["azione"] = az or None
+        esiti.append(dict(id_riga=d["id"], codice=d["codice"], nome=d["nome"], ruolo_proposto=d.get("ruolo_proposto") or d.get("ruolo_prevalente"),
+                          esito=az or "non_rivisto", nome_corretto=d.get("nome_finale"), ruolo_corretto=d.get("ruolo_finale"), unisci_con=d.get("unisci_con")))
+        if az == "sbagliato" and not (d.get("nome_finale") or d.get("ruolo_finale")):
+            avvisi.append(f"{d['id']} {d['codice']} {d['nome'][:40]}: 'sbagliato' senza nome_corretto né ruolo_corretto")
+        if az == "unisci" and not d.get("unisci_con"):
+            avvisi.append(f"{d['id']} {d['codice']} {d['nome'][:40]}: 'unisci' senza 'unisci_con'"); d["azione"] = None
+        if az and az not in AZIONI:
+            avvisi.append(f"{d['id']} azione non riconosciuta: {az!r}"); d["azione"] = None
+        if d["azione"]:
+            for v in str(d.get("varianti_nome") or d["nome"]).split(" | "):
                 dec[(str(d["codice"]), norm(v))] = d
+    with open(OUT / f"esiti_{a.tag}.csv", "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.DictWriter(f, fieldnames=list(esiti[0]), delimiter=";"); w.writeheader(); w.writerows(esiti)
+    ce = Counter(e["esito"] for e in esiti)
+    print("esiti:", ", ".join(f"{k} {v}" for k, v in ce.most_common()))
+    for v in avvisi[:20]: print("  AVVISO", v)
     finali = []
     for c, (n, gr) in dati.items():
         eliminati, uniti = set(), {}

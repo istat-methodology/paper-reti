@@ -42,4 +42,5 @@ Aggiornato: 2026-10-31
 ## Pipeline AI v2 (aggiornamento 2026-10-31)
 - Stadio 1 (enti e ruolo) sperimentato sulla Toscana: 9 esperimenti (prompt v0–v1.2, testo e PDF, protocolli lunghi spezzati, numero di run). Risultati in `docs/experiments.md`; stabilità del nucleo tra run 0.96 (confronto tollerante dei nomi).
 - Pronto: script di revisione manuale degli enti (`codice/pipeline_ai_v2/revisione_enti.py`).
-- In sospeso: numerosità e estrazione del nuovo campione (`campione/README.md`); congelamento di prompt e parametri (`parametri/`); decisione sul conteggio della periferia; risposta dei colleghi sulle definizioni; stadi 2–4.
+- Fatto (2026-10-31/11-01): campione n = 60; stadio 1 con 5 run sul campione; gold da zero su 20 protocolli estratti dai 60 (`campione/campione_gold_v1.csv`), template in `annotazione/gold_v2/`.
+- In sospeso: annotazione del gold (Paolo; secondo annotatore su 8 protocolli); revisione di fase 2 sui 40 protocolli fuori dal gold; stadio 1 su tutti i 251 testi; congelamento di prompt e parametri (`parametri/`); decisione sul conteggio della periferia; risposta dei colleghi sulle definizioni; stadi 2–4.

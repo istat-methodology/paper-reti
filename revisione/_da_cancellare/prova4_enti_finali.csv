@@ -1,0 +1,1213 @@
+﻿codice;nome;ruolo;n_run_presente;n_run;stato
+0110;Comune di Rivoli;firmatario;5;5;automatico
+0110;Associazione Centri Antiviolenza E.M.M.A. Onlus;componente_rete;5;5;automatico
+0110;CONSIP;solo_citato;5;5;automatico
+0110;INAIL;solo_citato;5;5;automatico
+0111;Università degli Studi di Torino;firmatario;5;5;automatico
+0111;CENTRI ANTIVIOLENZA E.M.M.A. ONLUS;firmatario;5;5;automatico
+0111;Telefono Rosa;solo_citato;5;5;automatico
+0111;Agenzia delle Entrate;solo_citato;5;5;automatico
+0111;InfoCamere Qualified Electronic Signature CA;solo_citato;3;5;rivisto
+0115;Provincia di Torino;firmatario;5;5;automatico
+0115;Consigliera di Parità della Città Metropolitana di Torino;componente_rete;5;5;automatico
+0115;casa del quartiere di S. Salvario;solo_citato;5;5;automatico
+0115;CSIPiemonte;componente_rete;5;5;automatico
+0115;CSST;componente_rete;5;5;automatico
+0120;Azienda Sanitaria Locale CN1;firmatario;5;5;automatico
+0120;UNIONE MONTANA delle Valli Mongia Cevetta e Langa Cebana - Alta Valle Bormida;firmatario;5;5;automatico
+0120;ASSOCIAZIONE Futuro Donna OdV;firmatario;5;5;automatico
+0120;CENTRO ANTIVIOLENZA SERVIZIO ROSA;firmatario;5;5;automatico
+0120;Conferenza Unificata;solo_citato;5;5;automatico
+0120;province autonome di Trento e di Bolzano;solo_citato;5;5;automatico
+0120;Provincia autonoma di Bolzano;solo_citato;3;5;automatico
+0120;Regione Piemonte;solo_citato;5;5;automatico
+0120;presidenza del Consiglio dei ministri;solo_citato;5;5;automatico
+0120;Corte Costituzionale;solo_citato;5;5;automatico
+0120;Comune di Mombasiglio;solo_citato;5;5;automatico
+0120;Comune di Priola;solo_citato;5;5;automatico
+0120;Comune di Niella Tanaro;solo_citato;5;5;automatico
+0120;Comunita Montana Alto Tanaro Cebano Monregalese;solo_citato;1;5;rivisto
+0120;Presidio Ospedaliero di Ceva;solo_citato;2;5;automatico
+0121;Azienda Sanitaria Locale CN1;firmatario;5;5;automatico
+0121;Organizzazione di Volontariato FUTURO DONNA OdV;firmatario;5;5;automatico
+0121;Presidio Ospedaliero di Ceva;componente_rete;4;5;automatico
+0121;Regione Piemonte;solo_citato;5;5;automatico
+0121;A.N.A.C.;solo_citato;5;5;automatico
+0201;Consiglio Regionale della Valle d'Aosta;componente_rete;5;5;automatico
+0201;Azienda regionale sanitaria USL della Valle d'Aosta;componente_rete;5;5;automatico
+0201;Fondazione opere Caritas;componente_rete;5;5;rivisto
+0201;Università della Valle d'Aosta/Université de la Vallée d'Aoste;componente_rete;5;5;automatico
+0201;Consiglio permanente degli enti locali;componente_rete;1;5;automatico
+0301;Prefettura di Cremona;firmatario;5;5;automatico
+0301;Comando Provinciale Arma dei Carabinieri di Cremona;firmatario;5;5;automatico
+0301;Comando Provinciale Guardia di Finanza di Cremona;firmatario;5;5;automatico
+0301;Questura di Cremona;firmatario;5;5;automatico
+0301;Presidenza del Tribunale di Cremona;firmatario;5;5;automatico
+0301;Agenzia di Tutela della Salute della Valpadana;firmatario;5;5;automatico
+0301;Azienda Socio-Sanitaria Territoriale di Cremona;firmatario;5;5;automatico
+0301;Provincia di Cremona;firmatario;5;5;automatico
+0301;Consigliera Provinciale di Parità;firmatario;5;5;rivisto
+0301;Ufficio Scolastico Territoriale di Cremona;firmatario;5;5;automatico
+0301;Comunità Sociale Cremasca;firmatario;5;5;automatico
+0301;Associazione M.I.A. Onlus di Casalmaggiore;firmatario;5;5;automatico
+0301;Azienda Sociale del Cremonese;firmatario;5;5;automatico
+0301;Consorzio Casalasco dei Servizi Sociali;firmatario;5;5;automatico
+0301;Ordine degli Avvocati di Cremona;firmatario;5;5;automatico
+0301;CGIL;firmatario;5;5;automatico
+0301;CISL;firmatario;5;5;automatico
+0301;UIL;firmatario;5;5;automatico
+0301;Associazione Incontro Donne Antiviolenza di Cremona;firmatario;5;5;automatico
+0301;Associazione Donne contro la violenza di Crema;firmatario;5;5;automatico
+0301;Caritas Diocesana di Cremona;firmatario;5;5;automatico
+0301;Consultorio Familiare Insieme per la Famiglia di Crema;firmatario;5;5;automatico
+0301;Consultorio Familiare Kappadue di Crema;firmatario;5;5;automatico
+0301;Consultorio Familiare U.C.I.P.E.M. di Cremona;firmatario;5;5;automatico
+0301;Fondazione Madre Rosa Gozzoli;firmatario;5;5;automatico
+0301;Fondazione Casa Famiglia S. Omobono Onlus di Cremona;firmatario;5;5;automatico
+0301;COSPER Società Cooperativa Sociale Impresa Sociale;firmatario;5;5;automatico
+0301;Coop. Soc. Koala;firmatario;5;5;automatico
+0301;Coop. Soc. Nazareth;firmatario;5;5;automatico
+0301;Coop. Soc. Rinnovamento;firmatario;5;5;automatico
+0301;Comunità d'accoglienza “G. Colbert”;firmatario;5;5;automatico
+0301;Associazione Donne Senza Frontiere;firmatario;5;5;automatico
+0301;Associazione Lyceum Club Internazionale di Cremona;firmatario;5;5;automatico
+0301;Associazione Soroptimist International d’Italia - Club di Cremona - Club di Crema;firmatario;5;5;automatico
+0301;Associazione Zonta International - Zonta Club Cremona;firmatario;5;5;automatico
+0301;Soc. Coop. Soc. Il Cerchio;firmatario;5;5;automatico
+0301;Arci Cremona;firmatario;5;5;automatico
+0301;Società Centrale Femminile S. Vincenzo Cremona ONLUS;firmatario;5;5;automatico
+0301;Croce Rossa di Casalmaggiore;firmatario;5;5;automatico
+0301;Soc. Coop. Soc. Onlus Servizi per l'Accoglienza;firmatario;5;5;automatico
+0301;Associazione “La tenda di Cristo” Onlus;firmatario;5;5;automatico
+0301;Centro di Ascolto Uomini Maltrattanti - Castelleone;firmatario;5;5;automatico
+0301;Liceo delle Scienze Umane ed Economico Sociali “S. Anguissola”;firmatario;5;5;automatico
+0301;Associazione RetedonneLAB OdV;firmatario;5;5;automatico
+0301;Ministero dell’Interno;solo_citato;5;5;automatico
+0301;Regione Lombardia;componente_rete;5;5;automatico
+0301;Inps;solo_citato;5;5;automatico
+0301;Associazione I Care We care;firmatario;5;5;automatico
+0301;Ministero del Lavoro e delle Politiche Sociali;solo_citato;5;5;automatico
+0301;CPI di Soresina;componente_rete;4;5;rivisto
+0303;PIANO DI ZONA DI MANTOVA;firmatario;5;5;rivisto
+0303;PIANO DI ZONA DI GUIDIZZOLO;firmatario;5;5;automatico
+0303;PIANO DI ZONA DI SUZZARA;firmatario;5;5;automatico
+0303;PIANO DI ZONA DI VIADANA;firmatario;5;5;automatico
+0303;Assemblea dei Sindaci Piano di Zona di Ostiglia;firmatario;5;5;automatico
+0303;PIANO DI ZONA DI ASOLA;firmatario;5;5;automatico
+0303;CONSIGLIERA DI PARITÀ DELLA PROVINCIA DI MANTOVA;firmatario;5;5;automatico
+0303;PREFETTURA DI MANTOVA;firmatario;5;5;automatico
+0303;QUESTURA DI MANTOVA;firmatario;5;5;automatico
+0303;TRIBUNALE DI MANTOVA;firmatario;5;5;automatico
+0303;UFFICIO ESECUZIONE PENALE ESTERNA MANTOVA-CREMONA (U.E.P.E.);firmatario;5;5;automatico
+0303;PROCURA DELLA REPUBBLICA DI MANTOVA;firmatario;5;5;rivisto
+0303;A.T.S. – AGENZIA DI TUTELA DELLA SALUTE DELLA VAL PADANA;firmatario;5;5;automatico
+0303;A.S.S.T. – AZIENDA SOCIO SANITARIA TERRITORIALE DI MANTOVA;firmatario;5;5;automatico
+0303;CGIL MANTOVA;firmatario;5;5;automatico
+0303;CISL;firmatario;5;5;automatico
+0303;UIL CREMONA-MANTOVA;firmatario;5;5;automatico
+0303;ASSOCIAZIONE VOLONTARIE DEL TELEFONO ROSA DI MANTOVA;firmatario;5;5;automatico
+0303;ASSOCIAZIONE CENTRO DI AIUTO ALLA VITA (C.A.V.);firmatario;5;5;automatico
+0303;SOCIETÀ COOPERATIVA SOCIALE ONLUS “CENTRO DONNE MANTOVA”;firmatario;5;5;automatico
+0303;ASSOCIAZIONE ABRAMO ETS - ENTE DELLA DIOCESI DI MANTOVA;firmatario;5;5;automatico
+0303;"VILLAGGIO SOS DI MANTOVA – SERVIZIO CASA ""LA RONDINE""";firmatario;5;5;automatico
+0303;COMITATO PARI OPPORTUNITÀ ORDINE DEGLI AVVOCATI DI MANTOVA;firmatario;5;5;automatico
+0303;ASSOCIAZIONE ITALIANA DEGLI AVVOCATI PER LA FAMIGLIA E PER I MINORI (A.I.A.F.) - SEZIONE DI MANTOVA;firmatario;5;5;automatico
+0303;OSPEDALE DI SUZZARA S.P.A.;firmatario;5;5;automatico
+0303;OSPEDALE SAN PELLEGRINO S.R.L.;firmatario;5;5;automatico
+0303;Consorzio Progetto Solidarietà;solo_citato;5;5;automatico
+0303;Castiglione delle Stiviere;solo_citato;1;5;automatico
+0303;Azienda Speciale Consortile Socialis;firmatario;5;5;automatico
+0303;Azienda Speciale Consortile “Oglio Po”;firmatario;5;5;automatico
+0303;Azienda Speciale Servizi alla Persona dell’Asolano A.S.P.A.;firmatario;5;5;automatico
+0303;ISTAT;solo_citato;5;5;automatico
+0303;Regione Lombardia;solo_citato;5;5;automatico
+0303;Ministero dell’Interno;solo_citato;5;5;automatico
+0303;Comando Provinciale Carabinieri di Mantova;componente_rete;5;5;automatico
+0303;Casa Rifugio “Casa di Maria Clotilde”;componente_rete;5;5;automatico
+0303;Conferenza Stato-Regioni;solo_citato;5;5;automatico
+0303;Distretto Sociale di Mantova;componente_rete;5;5;automatico
+0303;Casa della Rosa;componente_rete;5;5;automatico
+0303;Camera;solo_citato;1;5;rivisto
+0305;Comune di San Donato Milanese;firmatario;5;5;automatico
+0305;Carpiano;firmatario;5;5;automatico
+0305;Cerro al Lambro;firmatario;5;5;automatico
+0305;Colturano;firmatario;5;5;automatico
+0305;Dresano;firmatario;5;5;automatico
+0305;ASST — Azienda Sociosanitaria Territoriale Melegnano e Martesana;firmatario;5;5;automatico
+0305;Comune di San Giuliano Milanese;firmatario;5;5;automatico
+0305;San Zenone al Lambro;firmatario;5;5;automatico
+0305;Vizzolo Predabissi;firmatario;5;5;automatico
+0305;Caritas Mediglia;firmatario;5;5;automatico
+0305;Pantigliate;firmatario;5;5;automatico
+0305;Paullo;firmatario;5;5;automatico
+0305;Comune di Peschiera Borromeo;firmatario;5;5;automatico
+0305;Tribiano;firmatario;5;5;automatico
+0305;Distretto Sociale Paullese;firmatario;5;5;automatico
+0305;A.S.S.E.M.1. — Azienda Sociale Sud Est Milano;firmatario;5;5;automatico
+0305;ATS - Agenzia di Tutela della Salute della Città Metropolitana di Milano;firmatario;5;5;automatico
+0305;IRCCS Policlinico San Donato;firmatario;5;5;automatico
+0305;Prefettura di Milano;firmatario;5;5;automatico
+0305;Questura di Milano;firmatario;5;5;automatico
+0305;Fondazione Somaschi Onlus;firmatario;5;5;automatico
+0305;Fondazione Centro Per La Famiglia Cardinal Carlo Maria Martini Onlus;firmatario;5;5;automatico
+0305;Consultorio Familiare Ceaf;componente_rete;5;5;automatico
+0305;Associazione Nazionale D.i.Re Donne in Rete contro la violenza;solo_citato;5;5;automatico
+0305;Associazione Generazione;firmatario;5;5;automatico
+0305;No alla violenza sulle donne SGM;firmatario;5;5;automatico
+0305;Associazione Culturale Orizzonte;firmatario;5;5;automatico
+0305;Circolo Arci L’isola che non c’è APS;firmatario;5;5;automatico
+0305;Banca del Tempo;firmatario;3;5;automatico
+0305;Naikan Do Shotokan Academy asd;firmatario;5;5;rivisto
+0305;Brigata Volontaria Lupo Rosso;firmatario;5;5;automatico
+0305;Assemblea del Distretto Sociale Sud Est Milano;firmatario;3;5;rivisto
+0305;Comando Provinciale dell’Arma dei Carabinieri;firmatario;4;5;rivisto
+0305;Comando Provinciale della Guardia di Finanza;firmatario;4;5;automatico
+0307;Comunità Montana Valle Brembana;firmatario;5;5;automatico
+0307;Azienda Speciale Sociale Valle Brembana;firmatario;5;5;automatico
+0307;Ambito Territoriale Sociale Valle Brembana;firmatario;5;5;rivisto
+0307;Ambito Territoriale Sociale Valle Imagna-Villa d’Almé;firmatario;5;5;automatico
+0307;Agenzia di Tutela della Salute di Bergamo;firmatario;5;5;automatico
+0307;ASST - Azienda Socio Sanitaria Territoriale Papa Giovanni XXIII;firmatario;5;5;automatico
+0307;Questura di Bergamo;firmatario;5;5;automatico
+0307;Procura della Repubblica di Bergamo;firmatario;5;5;automatico
+0307;Tribunale Ordinario di Bergamo;firmatario;5;5;automatico
+0307;Procura della Repubblica presso il Tribunale per i Minorenni di Brescia;firmatario;5;5;automatico
+0307;Consigliera di Parità della Provincia di Bergamo;firmatario;5;5;automatico
+0307;Università degli studi di Bergamo;firmatario;5;5;automatico
+0307;Ufficio Scolastico Territoriale di Bergamo;firmatario;5;5;automatico
+0307;Cooperativa Sociale SIRIO;firmatario;5;5;automatico
+0307;Associazione La Svolta;firmatario;5;5;automatico
+0307;Istituto delle suore delle Poverelle - Istituto Palazzolo;firmatario;5;5;automatico
+0307;Cooperativa Sociale Generazioni Fa;firmatario;5;5;automatico
+0307;Associazione LEDHA, lega per i diritti delle persone con disabilità;firmatario;5;5;automatico
+0307;Fisascat-Cisl;firmatario;5;5;automatico
+0307;Confcommercio Bergamo;firmatario;5;5;automatico
+0307;Regione Lombardia;solo_citato;5;5;automatico
+0307;Presidenza del Consiglio dei Ministri;solo_citato;5;5;automatico
+0307;Provincia autonoma di Trento;solo_citato;5;5;automatico
+0307;Provincia autonoma di Bolzano;solo_citato;5;5;automatico
+0307;Ministero dell’Interno;solo_citato;5;5;automatico
+0307;Comune di San Pellegrino Terme;componente_rete;5;5;automatico
+0307;Prefettura di Bergamo;componente_rete;5;5;automatico
+0307;Centro Antiviolenza Valle Brembana e Valle Imagna-Villa d’Almé;componente_rete;5;5;automatico
+0307;Centro Italiano per la Promozione della Mediazione;componente_rete;5;5;automatico
+0307;Associazione Agatha ONLUS;componente_rete;5;5;automatico
+0307;Azienda Speciale Consortile Valle Imagna – Villa d’Almé;componente_rete;5;5;automatico
+0312;Azienda Speciale Consortile del Lodigiano per i Servizi alla Persona;firmatario;5;5;automatico
+0312;Comune di Codogno;firmatario;5;5;automatico
+0312;ASSC Azienda Speciale di Servizi di Casalpusterlengo;firmatario;5;5;rivisto
+0312;Comune di Castiglione d’Adda;firmatario;5;5;automatico
+0312;Comune di San Colombano al Lambro;firmatario;5;5;automatico
+0312;Associazione L’Orsa Minore Onlus;firmatario;5;5;automatico
+0312;Centro Antiviolenza “La Meta di Niente”;firmatario;5;5;automatico
+0312;Associazione Lule Onlus;solo_citato;5;5;automatico
+0312;Regione Lombardia;solo_citato;5;5;automatico
+0312;Procura della Repubblica per i minorenni di Milano;solo_citato;5;5;automatico
+0322;Azienda Ospedaliera di Treviglio e Caravaggio;firmatario;5;5;automatico
+0322;Risorsa Sociale Gera d’Adda;firmatario;5;5;automatico
+0322;Prefettura di Bergamo;firmatario;5;5;automatico
+0322;Questura di Bergamo;firmatario;5;5;automatico
+0322;Procura della Repubblica presso il Tribunale di Bergamo;firmatario;5;5;automatico
+0322;Azienda Sanitaria Locale della Provincia di Bergamo;firmatario;5;5;automatico
+0322;Ufficio Scolastico Ambito Territoriale di Bergamo;firmatario;5;5;automatico
+0322;Sirio Centro Servizi per le Famiglie Società Cooperativa Sociale ONLUS;firmatario;5;5;automatico
+0322;Carabinieri di Bg.;firmatario;2;5;automatico
+0322;Assemblea dei Sindaci;firmatario;5;5;automatico
+0322;Istat;solo_citato;5;5;automatico
+0322;Ministero dell’Interno;solo_citato;5;5;automatico
+0322;Camera dei Deputati;solo_citato;5;5;rivisto
+0322;Comando provinciale dei Carabinieri di Bergamo;firmatario;3;5;automatico
+044103;Accademia Cusano;componente_rete;5;5;automatico
+044103;Caritas;componente_rete;5;5;automatico
+044103;Forum Prevenzione;componente_rete;5;5;automatico
+044202;Comune di Trento;firmatario;5;5;rivisto
+044202;Questura di Trento;componente_rete;1;5;rivisto
+044202;Legione Carabinieri “Trentino Alto Adige”, Comando Provinciale di Trento;componente_rete;1;5;rivisto
+044202;Consiglio delle Autonomie locali della provincia di Trento;componente_rete;1;5;automatico
+044202;Comune di Rovereto;solo_citato;5;5;automatico
+044202;Azienda Provinciale per i Servizi Sanitari;componente_rete;3;5;automatico
+044202;Associazione Laica Famiglie In Difficoltà onlus;componente_rete;5;5;automatico
+044202;Associazione coordinamento donne;componente_rete;5;5;automatico
+044202;associazione Casa di Accoglienza alla vita Padre Angelo;componente_rete;5;5;automatico
+044202;Acisjf - Casa Tridentina della Giovane;componente_rete;5;5;rivisto
+044202;società cooperativa sociale onlus Punto d’Approdo;componente_rete;2;5;automatico
+044202;Associazione Trentina Accoglienza Stranieri;componente_rete;5;5;automatico
+044202;Fondazione Famiglia Materna;componente_rete;5;5;automatico
+044202;AgID;solo_citato;5;5;automatico
+044202;Cooperativa Punto d’Approdo onlus;componente_rete;3;5;automatico
+044206;Azienda Provinciale per i Servizi Sanitari della Provincia autonoma di Trento;firmatario;5;5;rivisto
+044206;Procura della Repubblica presso il Tribunale Ordinario di Rovereto;firmatario;1;5;rivisto
+044206;Procura della Repubblica presso il Tribunale per i Minorenni di Trento;firmatario;1;5;automatico
+044206;Ministero della Giustizia;solo_citato;5;5;automatico
+044206;INAIL;solo_citato;5;5;automatico
+044206;Comune di Pergine;solo_citato;5;5;rivisto
+044206;Ospedale S. Chiara;solo_citato;5;5;automatico
+044206;Ospedale S.M. del Carmine;solo_citato;5;5;automatico
+044206;Villa Rosa;componente_rete;4;5;automatico
+0504;Regione del Veneto;solo_citato;5;5;automatico
+0504;Centro Antiviolenza NILDE del Comune di Castelfranco Veneto;firmatario;5;5;automatico
+0504;Cooperativa Sociale “Iside”;firmatario;5;5;automatico
+0504;Centro Antiviolenza Stella Antares;componente_rete;5;5;automatico
+0504;Cooperativa Sociale “Una Casa per l'uomo”;firmatario;5;5;automatico
+0504;Comitato dei Sindaci del Distretto Socio Sanitario di Asolo;firmatario;2;5;automatico
+0504;Ospedale di Montebelluna;firmatario;4;5;rivisto
+0504;Comune di Valdobbiadene;firmatario;5;5;automatico
+0504;Comune di Vedelago;componente_rete;5;5;automatico
+0504;Azienda Ulss 2 Marca Trevigiana;firmatario;5;5;automatico
+0504;Ospedale di Castelfranco Veneto;componente_rete;4;5;automatico
+0504;Prefettura di Treviso;componente_rete;5;5;automatico
+0504;Ordine degli Avvocati di Treviso;componente_rete;5;5;automatico
+0504;Stazioni dei Carabinieri di Castelfranco Veneto;componente_rete;5;5;rivisto
+0504;Stazioni dei Carabinieri di Montebelluna;componente_rete;5;5;automatico
+0504;Stazione dei Carabinieri di Asolo;firmatario;5;5;rivisto
+0504;Ufficio Scolastico Provinciale di Treviso;componente_rete;5;5;automatico
+0504;Istituto Barsanti di Castelfranco Veneto;componente_rete;5;5;automatico
+0504;Consigliera di Parità Provincia di Treviso;componente_rete;5;5;automatico
+0504;Casa Alma;componente_rete;5;5;automatico
+0504;Casa Aurora;componente_rete;5;5;automatico
+0504;Cambiamento Maschile;componente_rete;5;5;automatico
+0504;Istituto penale “Due Palazzi” di Padova;solo_citato;5;5;automatico
+0504;Casa Circondariale di Treviso;solo_citato;5;5;automatico
+0504;Casa Circondariale di Belluno;solo_citato;5;5;automatico
+0504;CISMAI;solo_citato;5;5;automatico
+0507;Azienda ULSS 7 Pedemontana;firmatario;5;5;automatico
+0507;Regione del Veneto;solo_citato;5;5;automatico
+0507;ANCI (Associazione Nazionale Comuni Italiani);solo_citato;5;5;automatico
+0507;D.i.Re — Donne in Rete contro la violenza;solo_citato;5;5;automatico
+0507;Prefettura di Vicenza;firmatario;5;5;automatico
+0507;Compagnia Carabinieri di Bassano;componente_rete;5;5;automatico
+0507;Stazione Carabinieri di Asiago;componente_rete;5;5;automatico
+0507;Commissariato di Pubblica Sicurezza di Bassano;componente_rete;5;5;automatico
+0507;Compagnia Carabinieri di Thiene;componente_rete;5;5;automatico
+0507;CENTRO ANTIVIOLENZA SPAZIO DONNA;componente_rete;5;5;automatico
+0507;Associazione Questacittà di Bassano;firmatario;5;5;automatico
+0507;CENTRO ANTIVIOLENZA HAGAR;componente_rete;5;5;automatico
+0507;Associazione Casa Sichem di Bassano;firmatario;5;5;automatico
+0507;Centro Antiviolenza di Schio/ Sportello Donna “Maria Grazia Cutuli”;firmatario;5;5;automatico
+0507;Centro Antiviolenza di Cogollo del Cengio;firmatario;5;5;automatico
+0507;Casa Rifugio “Tabita”;componente_rete;5;5;automatico
+0507;Casa Rifugio Schio;firmatario;5;5;automatico
+0507;Casa Rifugio “Il Filo di Roberta”;firmatario;5;5;automatico
+0507;Cooperativa Samarcanda;firmatario;5;5;automatico
+0507;Casa Rifugio “Villa Savardo”;firmatario;5;5;automatico
+0507;Casa Rifugio “Giovanna Meneghini”;firmatario;5;5;automatico
+0507;Congregazione Suore Orsoline del Sacro Cuore di Maria;componente_rete;5;5;automatico
+0507;Casa Rifugio “Casa della Solidarietà”;componente_rete;5;5;automatico
+0507;Centro Ares di Bassano;componente_rete;5;5;rivisto
+0507;Circolo Giuridico Bassanese;firmatario;5;5;automatico
+0507;Ospedale di Asiago;solo_citato;5;5;automatico
+0507;Provincia di Parma;solo_citato;5;5;automatico
+0507;Regione Emilia-Romagna;solo_citato;5;5;automatico
+0507;ASL di Frosinone;solo_citato;5;5;automatico
+0507;Azienda Ospedaliero Universitaria di Palermo;solo_citato;5;5;automatico
+0507;CaD, CASA delle donne di Brescia;solo_citato;5;5;automatico
+0507;CISMAI (Coordinamento Italiano dei Servizi contro il Maltrattamento e l’Abuso all’Infanzia);solo_citato;5;5;automatico
+0507;Comune di Prato;solo_citato;5;5;automatico
+0507;Istat;solo_citato;5;5;automatico
+0507;O.N.Da Osservatorio Nazionale sulla salute della Donna;solo_citato;5;5;automatico
+0507;Ospedale Civile di Legnano;solo_citato;5;5;automatico
+0507;Regione Basilicata;solo_citato;5;5;automatico
+0507;Regione Lombardia;solo_citato;5;5;automatico
+0507;ASL Milano1;solo_citato;5;5;automatico
+0507;Aidos (Associazione Italiana Donne per Sviluppo);solo_citato;5;5;rivisto
+0507;Armando ed.;solo_citato;5;5;automatico
+0507;Libreria Editrice Laureatana;solo_citato;5;5;automatico
+0507;Feltrinelli ed.;solo_citato;5;5;automatico
+0507;Magi Editore;solo_citato;5;5;automatico
+0507;Franco Angeli Editore;solo_citato;5;5;automatico
+0507;Edizioni Unicopoli;solo_citato;5;5;automatico
+0507;Borla Edizioni;solo_citato;5;5;automatico
+0507;Comitati dei Sindaci;firmatario;1;5;automatico
+0507;Centro “Ares” per il trattamento di uomini autori di violenza;firmatario;5;5;automatico
+0507;Sportello Donna Thiene;firmatario;5;5;automatico
+0507;Sportello Donna di Malo;firmatario;5;5;automatico
+0507;Sportello Donna “Anna Filomena Barretta” Marano Vicentino;firmatario;5;5;automatico
+0507;Comune di Bassano del Grappa;componente_rete;5;5;automatico
+0507;Ministero dell'Interno;solo_citato;5;5;automatico
+0507;TI Trust Technologies;solo_citato;5;5;automatico
+0507;InfoCamere Qualified Electronic Signature CA;solo_citato;5;5;automatico
+0507;Biblioteca Civica “Pietro Ragazzoni”;solo_citato;5;5;automatico
+0507;Cooperativa Sociale Con Te;componente_rete;5;5;rivisto
+0507;ULSS7;solo_citato;5;5;automatico
+0507;Creative Commons;solo_citato;4;5;automatico
+0507;Centro Antiviolenza GOAP Trieste;solo_citato;5;5;automatico
+0507;ONU;solo_citato;2;5;rivisto
+0507;UNICEF;solo_citato;2;5;automatico
+0507;UNFPA, Fondo delle Nazioni Unite per la popolazione;solo_citato;5;5;automatico
+0507;Unione Europea;solo_citato;4;5;automatico
+0507;Dipartimento Pari Opportunità;solo_citato;3;5;rivisto
+0507;Casa Rifugio Thiene;firmatario;3;5;rivisto
+0507;Casa don G. Nervo;solo_citato;2;5;automatico
+0507;Centro Polivalente Insieme;solo_citato;3;5;rivisto
+0507;Centro Socio-sanitario “Mons. E. Negrin”;solo_citato;3;5;automatico
+0507;Centro Socio Sanitario “Prospero Alpino”;solo_citato;3;5;automatico
+0507;Azienda Ospedaliera Universitaria;solo_citato;1;5;automatico
+0507;Unicopli;solo_citato;3;5;automatico
+0507;OMS;solo_citato;1;5;rivisto
+0602;Procura della Repubblica presso il Tribunale per i Minorenni del Friuli Venezia Giulia;firmatario;5;5;automatico
+0602;Azienda Ospedaliera Universitaria Santa Maria della Misericordia di Udine;firmatario;5;5;automatico
+0602;Provincia di Udine;firmatario;1;5;automatico
+0602;Comando Provinciale dei Carabinieri;firmatario;3;5;rivisto
+0602;Azienda per i Servizi Sanitari n. 4 Medio Friuli;firmatario;5;5;automatico
+0603;Azienda Sanitaria Universitaria Friuli Centrale di Udine;firmatario;5;5;automatico
+0603;Servizio Sociale dei Comuni dell’Ambito Territoriale Friuli Centrale;firmatario;5;5;automatico
+0603;Servizio “Zero Tolerance — contro la violenza sulle donne”;componente_rete;5;5;automatico
+0603;Presidio Ospedaliero Universitario “Santa Maria della Misericordia”;componente_rete;5;5;automatico
+0603;Conferenza Permanente per i rapporti tra lo Stato, le Regioni e le Province Autonome di Trento e Bolzano;solo_citato;5;5;automatico
+0603;Provincia Autonoma di Trento;solo_citato;5;5;automatico
+0603;Provincia Autonoma di Bolzano;solo_citato;5;5;automatico
+0701;Regione Liguria;firmatario;5;5;automatico
+0701;Città Metropolitana di Genova;firmatario;5;5;automatico
+0701;Prefettura - Ufficio Territoriale del Governo di La Spezia;firmatario;4;5;rivisto
+0701;Procura Generale della Repubblica presso la Corte d’Appello di Genova;firmatario;5;5;automatico
+0701;Procura della Repubblica presso il Tribunale di La Spezia;firmatario;5;5;automatico
+0701;Procura della Repubblica presso il Tribunale per i Minorenni di Genova;firmatario;5;5;rivisto
+0701;Legione Carabinieri Liguria;firmatario;5;5;automatico
+0701;Comando Regionale della Guardia di Finanza della Liguria;firmatario;5;5;automatico
+0701;Questura di Genova;firmatario;5;5;automatico
+0701;Questura di Imperia;firmatario;5;5;automatico
+0701;Questura di La Spezia;firmatario;5;5;automatico
+0701;Questura di Savona;firmatario;5;5;automatico
+0701;Università degli Studi di Genova;firmatario;5;5;automatico
+0701;Ufficio Scolastico Regionale per la Liguria;firmatario;5;5;automatico
+0701;Azienda Ligure Sanitaria (A.Li.Sa.);firmatario;5;5;automatico
+0701;ANCI Liguria;firmatario;5;5;automatico
+0701;Comune di Sanremo;firmatario;5;5;automatico
+0701;Comune di Chiavari;firmatario;5;5;automatico
+0701;Consiglio dei Ministri;solo_citato;2;5;automatico
+0701;Prefettura — U.T.G. di Genova;firmatario;5;5;rivisto
+0701;Prefettura — U.T.G. di La Spezia;firmatario;5;5;automatico
+0701;Prefettura — U.T.G. di Savona;firmatario;5;5;automatico
+0701;Ente Ospedaliero Ospedali Galliera;firmatario;5;5;automatico
+0701;IRCCS Ospedale Policlinico San Martino;firmatario;5;5;automatico
+0701;IRCCS Istituto Giannina Gaslini;firmatario;5;5;automatico
+0701;Ospedale Evangelico Internazionale;firmatario;5;5;automatico
+0701;Centro Antiviolenza Irene;firmatario;5;5;automatico
+0701;Centro Antiviolenza Telefono Donna;firmatario;5;5;automatico
+0701;Centro Antiviolenza Artemisia Gentileschi;firmatario;5;5;automatico
+0701;Centro Antiviolenza Mascherona;firmatario;5;5;automatico
+0701;Casa Rifugio Elisa;firmatario;5;5;rivisto
+0701;Centro Antiviolenza e Casa Rifugio Per non subire violenza;firmatario;5;5;automatico
+0701;Centro Antiviolenza Casa Pandora Margherita Ferro;firmatario;5;5;automatico
+0701;Telefono Donna Centro AntiViolenza CIF;firmatario;5;5;automatico
+0701;Centro Antiviolenza Mai più sola;firmatario;5;5;automatico
+0701;Casa Rifugio Franca Viola;firmatario;5;5;automatico
+0701;Casa Rifugio L’isola che c’è;firmatario;5;5;automatico
+0701;Casa Rifugio Marina;firmatario;5;5;automatico
+0701;Prefettura di Imperia;firmatario;5;5;automatico
+0701;A.S.L. 1;firmatario;5;5;rivisto
+0701;A.S.L. 2;firmatario;5;5;automatico
+0701;A.S.L. 3;firmatario;5;5;automatico
+0701;A.S.L. 4;firmatario;5;5;automatico
+0701;A.S.L. 5;firmatario;5;5;automatico
+0801;Procura della Repubblica presso il Tribunale di Bologna;firmatario;5;5;automatico
+0801;Consorzio Servizi Sociali di Imola;firmatario;5;5;automatico
+0801;Comune di San Lazzaro di Savena;firmatario;5;5;automatico
+0801;Unione dei Comuni Valli del Reno, Lavino e Samoggia;firmatario;5;5;automatico
+0801;Unione Reno Galliera;firmatario;5;5;automatico
+0801;Unione Terre d’Acqua;firmatario;5;5;automatico
+0801;Unione dei Comuni dell’Appennino bolognese;firmatario;5;5;automatico
+0801;Nuovo Circondario Imolese;firmatario;5;5;automatico
+0801;Casa delle Donne per non subire violenza;firmatario;5;5;automatico
+0801;Trama di terre;firmatario;5;5;automatico
+0801;UDI;firmatario;5;5;automatico
+0801;MondoDonna;firmatario;5;5;automatico
+0801;SOS Donna;firmatario;5;5;rivisto
+0801;PerLeDonne;firmatario;5;5;automatico
+0801;Casa SAVE;componente_rete;5;5;automatico
+0801;Casa Riuscire;componente_rete;5;5;automatico
+0801;Casa Girasola;componente_rete;5;5;automatico
+0801;Casa Phoebe;componente_rete;5;5;automatico
+0801;Regione Emilia-Romagna;solo_citato;5;5;automatico
+0801;ASP Circondario imolese;solo_citato;5;5;automatico
+0804;Università degli Studi di Ferrara;firmatario;5;5;automatico
+0804;Comune di Jolanda di Savoia;firmatario;5;5;automatico
+0804;Comune di Masi Torello;firmatario;5;5;rivisto
+0804;ASSP Unione Terre e Fiumi;firmatario;5;5;automatico
+0804;Comune di Voghiera;firmatario;5;5;automatico
+0804;Azienda Ospedaliera Universitaria di Ferrara;firmatario;5;5;rivisto
+0804;Centro Donna Giustizia APS di Ferrara;firmatario;5;5;automatico
+0804;CAM Centro di Ascolto per Uomini Maltrattanti APS di Ferrara;firmatario;5;5;automatico
+0804;UDI Unione Donne in Italia – Sede di Ferrara;firmatario;5;5;automatico
+0804;COMITATO PARI OPPORTUNITA’ presso l'Ordine degli Avvocati di Ferrara;firmatario;5;5;automatico
+0804;Sindacato Confederale CGIL;firmatario;5;5;automatico
+0804;Regione Emilia Romagna;componente_rete;5;5;automatico
+0804;Prefettura di Ferrara;solo_citato;5;5;automatico
+0804;Centro Antiviolenza di Ferrara;componente_rete;5;5;automatico
+0804;Ufficio Scolastico Regionale per l’Emilia Romagna Ufficio VI, Ambito Territoriale di Ferrara Provinciale;componente_rete;5;5;automatico
+0804;Comando Compagnia di Copparo;componente_rete;5;5;automatico
+0804;Comune di Tresignana;componente_rete;5;5;automatico
+0804;Comune di Riva del Po;componente_rete;5;5;automatico
+0804;INPS;componente_rete;5;5;automatico
+0804;Sportello Antiviolenza NonTiScordardiME;componente_rete;5;5;automatico
+0804;Casa della Salute Terre e Fiumi;componente_rete;5;5;automatico
+0804;Centro Pubblico Liberiamoci dalla Violenza L.D.V.;componente_rete;5;5;automatico
+0804;Comando Provinciale Carabinieri di Ferrara;firmatario;5;5;automatico
+0804;Comando Compagnia di Ferrara;componente_rete;5;5;automatico
+0804;Comando Compagnia di Portomaggiore;componente_rete;5;5;automatico
+0804;Comando Compagnia di Comacchio;componente_rete;5;5;automatico
+0804;Comando Compagnia di Cento;componente_rete;5;5;automatico
+0804;Questura di Ferrara;firmatario;5;5;automatico
+0804;D.i.Re, Donne in Rete contro la violenza;solo_citato;5;5;automatico
+0804;Cooperativa Girogirotondo;componente_rete;5;5;automatico
+0804;Tribunale dei minori di Bologna;componente_rete;5;5;automatico
+0804;UDI NAZIONALE;solo_citato;5;5;automatico
+0804;Provincia di Ferrara;solo_citato;5;5;automatico
+0804;Fondazione Forense Ferrarese;componente_rete;5;5;automatico
+0804;Tribunale di Ferrara;componente_rete;5;5;automatico
+0804;Azienda Universitaria-Ospedaliera di Ferrara;firmatario;1;5;rivisto
+0804;Procura della Repubblica presso lo stesso Tribunale;componente_rete;3;5;automatico
+0810;Unione dei Comuni della Bassa Romagna;firmatario;5;5;automatico
+0810;Unione dei Comuni della Romagna Faentina;firmatario;5;5;automatico
+0810;Comune di Ravenna;firmatario;5;5;automatico
+0810;Comune di Cervia;solo_citato;5;5;automatico
+0810;Comune di Russi;solo_citato;5;5;automatico
+0810;Azienda Unità Sanitaria Locale della Romagna;firmatario;5;5;automatico
+0810;Associazione di volontariato DEMETRA DONNE IN AIUTO ODV;firmatario;5;5;automatico
+0810;Associazione di volontariato SOS DONNA ODV;firmatario;5;5;automatico
+0810;Associazione di volontariato LINEA ROSA ODV;firmatario;5;5;automatico
+0810;Regione Emilia-Romagna;solo_citato;5;5;automatico
+0814;Provincia di Modena;componente_rete;5;5;automatico
+0814;Comune di Mirandola;componente_rete;5;5;automatico
+0814;UNIONE DEI COMUNI MODENESI AREA NORD;componente_rete;5;5;automatico
+0814;TELEFONO ROSA;componente_rete;2;5;automatico
+0814;COMUNE DI CAMPOSANTO;componente_rete;5;5;rivisto
+0814;COMUNE DI CAVEZZO;componente_rete;5;5;automatico
+0814;COMUNE DI CONCORDIA;componente_rete;5;5;automatico
+0814;COMUNE DI FINALE EMILIA;componente_rete;5;5;automatico
+0814;COMUNE DI MEDOLLA;componente_rete;5;5;automatico
+0814;COMUNE DI SAN FELICE SUL PANARO;componente_rete;5;5;automatico
+0814;COMUNE DI SAN POSSIDONIO;firmatario;5;5;rivisto
+0814;COMUNE DI SAN PROSPERO;componente_rete;5;5;automatico
+0814;LDV Liberiamoci dalla Violenza;componente_rete;5;5;automatico
+0814;Associazione Casa delle donne di Modena contro la violenza;componente_rete;5;5;automatico
+0905;Ufficio Scolastico Provinciale di Grosseto;firmatario;5;5;rivisto
+0905;Azienda USL Toscana Sud est;firmatario;5;5;automatico
+0905;Centro antiviolenza “Olympia de Gouges” di Grosseto e Orbetello;firmatario;1;5;rivisto
+0905;Centro antiviolenza “Tutto é vita — Elisabetta Fiorilli” Grosseto;firmatario;1;5;automatico
+0905;Azienda USL 9 di Grosseto;solo_citato;1;5;automatico
+0905;Ascom;solo_citato;5;5;automatico
+0905;Confesercenti;solo_citato;5;5;automatico
+0905;Federalberghi;solo_citato;5;5;automatico
+0905;Regione Toscana;componente_rete;5;5;automatico
+0905;Procura Generale della Repubblica presso la Corte d'Appello di Firenze;solo_citato;5;5;automatico
+0905;Procura della Repubblica per i Minorenni di Firenze;solo_citato;5;5;automatico
+0905;Procura Generale presso la Corte d'Appello di Genova;solo_citato;5;5;automatico
+0905;Procura della Repubblica presso il Tribunale di Massa;solo_citato;5;5;automatico
+0905;Ministero dell'Interno;solo_citato;5;5;automatico
+0905;Comune di Campagnatico;firmatario;5;5;automatico
+0905;Comune di Capalbio;firmatario;5;5;automatico
+0905;Comune di Castiglione della Pescaia;firmatario;5;5;automatico
+0905;Comune di Cinigiano;firmatario;5;5;automatico
+0905;Comune di Civitella Paganico;firmatario;5;5;automatico
+0905;Comune di Follonica;firmatario;5;5;automatico
+0905;Comune di Gavorrano;firmatario;5;5;automatico
+0905;Comune di Isola del Giglio;firmatario;5;5;rivisto
+0905;Comune di Magliano in Toscana;firmatario;5;5;automatico
+0905;Comune di Massa Marittima;firmatario;5;5;automatico
+0905;Comune di Monte Argentario;firmatario;5;5;automatico
+0905;Comune di Monterotondo Marittimo;firmatario;5;5;automatico
+0905;Comune di Montieri;firmatario;5;5;rivisto
+0905;Comune di Pitigliano;firmatario;5;5;automatico
+0905;Comune di Scansano;firmatario;5;5;automatico
+0905;Comune di Scarlino;firmatario;5;5;automatico
+0905;Unione dei comuni Montani Amiata Grossetana;firmatario;5;5;automatico
+0905;Comune di Sorano;firmatario;5;5;automatico
+0907;Provincia di Lucca;firmatario;5;5;automatico
+0907;Prefettura di Lucca;firmatario;5;5;automatico
+0907;Questura di Lucca;firmatario;5;5;automatico
+0907;Arma dei Carabinieri-Comando provinciale di Lucca;firmatario;5;5;automatico
+0907;Conferenza dei Sindaci ASL 2 zona Piana di Lucca;firmatario;5;5;rivisto
+0907;Conferenza dei Sindaci ASL 2 zona Valle del Serchio;firmatario;5;5;automatico
+0907;Conferenza dei Sindaci ASL 12 zona Versilia;firmatario;5;5;automatico
+0907;ASL 2 di Lucca;firmatario;5;5;automatico
+0907;ASL 12 Versilia;firmatario;5;5;automatico
+0907;Consigliera di Parità di Lucca;firmatario;4;5;rivisto
+0907;Ufficio Scolastico Provinciale di Lucca;firmatario;5;5;automatico
+0907;Governo Italiano;solo_citato;5;5;automatico
+0911;Regione Toscana;firmatario;5;5;automatico
+0911;Procura Generale della Repubblica presso la Corte d’Appello di Firenze;firmatario;5;5;automatico
+0911;Procura della Repubblica per i Minorenni di Firenze;firmatario;5;5;automatico
+0911;Procura Generale presso la Corte d’Appello di Genova;firmatario;5;5;automatico
+0911;Procura della Repubblica presso il Tribunale di Massa;firmatario;5;5;automatico
+0911;Azienda USL 9 di Grosseto;solo_citato;5;5;automatico
+0911;Autorità Garante per la protezione dei dati personali;solo_citato;5;5;automatico
+1001;Garante per l'infanzia e l'adolescenza — Regione Umbria;firmatario;5;5;automatico
+1001;Prefettura di Perugia;firmatario;5;5;automatico
+1001;Prefettura di Terni;firmatario;5;5;automatico
+1001;Procura Generale della Repubblica presso la Corte d’appello di Perugia;firmatario;5;5;automatico
+1001;Associazione Nazionale Comuni Italiani - ANCI Umbria;firmatario;5;5;automatico
+1001;Procura della Repubblica presso il Tribunale per i minorenni di Perugia;firmatario;5;5;automatico
+1001;Tribunale di Spoleto;firmatario;5;5;automatico
+1001;Tribunale per i minorenni dell’Umbria;firmatario;5;5;automatico
+1001;Comando Legione Carabinieri Umbria;firmatario;5;5;automatico
+1001;Questura di Perugia;firmatario;5;5;automatico
+1001;Questura di Terni;firmatario;5;5;automatico
+1001;Ufficio Scolastico regionale per l’Umbria;firmatario;5;5;automatico
+1001;Centro per le pari opportunità — Regione Umbria;firmatario;5;5;automatico
+1001;Comune di Città di Castello;firmatario;5;5;automatico
+1001;Comune di Assisi;firmatario;5;5;automatico
+1001;Comune di Marsciano;firmatario;5;5;automatico
+1001;Unione dei Comuni del Trasimeno;firmatario;5;5;automatico
+1001;Comune di Norcia;firmatario;5;5;automatico
+1001;Comune di Gubbio;firmatario;5;5;automatico
+1001;Comune di Foligno;firmatario;5;5;automatico
+1001;Comune di Narni;firmatario;5;5;automatico
+1001;Comune di Orvieto;firmatario;5;5;automatico
+1001;Azienda Unità Sanitaria Locale Umbria n. 2;firmatario;5;5;automatico
+1001;"Azienda Ospedaliera ""Santa Maria della Misericordia"" Perugia";firmatario;5;5;automatico
+1001;"Azienda Ospedaliera ""Santa Maria"" Terni";firmatario;5;5;automatico
+1001;Ordine degli Avvocati di Perugia;firmatario;5;5;automatico
+1001;Ordine degli Avvocati di Spoleto;firmatario;5;5;automatico
+1001;ASSOCIAZIONE LIBERA...MENTE DONNA ETS;firmatario;5;5;automatico
+1001;Associazione Donne contro la guerra;firmatario;5;5;automatico
+1001;Associazione Donne forum amelia;firmatario;5;5;automatico
+1001;Associazione L’Albero di Antonia;firmatario;5;5;automatico
+1001;Associazione Donne la Rosa;firmatario;5;5;automatico
+1001;Associazione Accademia Pietro Vannucci;firmatario;5;5;automatico
+1001;Ministero dell'Interno;solo_citato;5;5;automatico
+1001;Ministero della Giustizia;solo_citato;5;5;automatico
+1001;Garante per la protezione dei dati personali;solo_citato;5;5;automatico
+1001;Comando Generale dei Carabinieri;solo_citato;5;5;automatico
+1001;Conferenza permanente per i rapporti tra lo Stato e le Regioni;solo_citato;5;5;automatico
+1001;Ministero della Pubblica Istruzione;solo_citato;5;5;automatico
+1001;Consiglio dei Ministri;solo_citato;4;5;automatico
+1001;TI Trust Technologies;solo_citato;4;5;automatico
+1001;InfoCamere;solo_citato;4;5;rivisto
+1001;Tribunale di Terni;firmatario;3;5;automatico
+1001;CAV di Perugia;componente_rete;1;5;automatico
+1001;CAV di Terni;componente_rete;1;5;automatico
+1001;Casa Rifugio di Perugia;componente_rete;1;5;automatico
+1001;Casa Rifugio di Terni;componente_rete;1;5;rivisto
+1001;CAV di Spoleto;componente_rete;1;5;rivisto
+1001;CAV di Città della Pieve;componente_rete;1;5;rivisto
+1001;CAV di Magione;componente_rete;1;5;automatico
+1001;Biblioteca delle donne Laura Cipollone;componente_rete;2;5;automatico
+1001;Procura della Repubblica di Terni;firmatario;2;5;automatico
+1001;Procura della Repubblica di Spoleto;firmatario;2;5;rivisto
+1001;Ministero della Difesa;solo_citato;1;5;rivisto
+1103;Prefettura di Ancona - U.T.G.;firmatario;5;5;automatico
+1103;Consigliera di Parità per la Provincia di Ancona;firmatario;5;5;automatico
+1103;Procura della Repubblica c/o il Tribunale per i Minorenni delle Marche;firmatario;5;5;automatico
+1103;Questura di Ancona;firmatario;5;5;automatico
+1103;Comando Provinciale Carabinieri di Ancona;firmatario;5;5;automatico
+1103;A.S.T. Ancona;firmatario;5;5;automatico
+1103;Azienda Ospedaliero Universitaria delle Marche;firmatario;5;5;automatico
+1103;Cooperativa “Polo 9” - Ancona;firmatario;5;5;automatico
+1103;Associazione Donne e Giustizia Onlus - Ancona;firmatario;5;5;automatico
+1103;CGIL;firmatario;5;5;rivisto
+1103;CISL;firmatario;3;5;rivisto
+1103;UIL Ancona;firmatario;4;5;rivisto
+1103;Commissione per le Pari Opportunità tra uomo e donna della Regione Marche;firmatario;5;5;automatico
+1103;Associazione “La Voce dei Bambini Onlus”;firmatario;5;5;automatico
+1103;Compagnia Carabinieri di Senigallia;componente_rete;5;5;rivisto
+1103;Compagnia Carabinieri di Osimo;componente_rete;5;5;automatico
+1103;Compagnia Carabinieri di Fabriano;componente_rete;5;5;automatico
+1103;Casa Rifugio ZEFIRO;componente_rete;5;5;automatico
+1103;Casa rifugio secondo livello “CASA DEMETRA” — Ancona;componente_rete;5;5;automatico
+1103;Casa Rifugio primo livello “MIMOSA” - Fano;componente_rete;5;5;automatico
+1103;Casa Rifugio primo livello “Casa Giuditta” - Macerata;componente_rete;5;5;automatico
+1103;Casa Eva;componente_rete;5;5;automatico
+1103;Casa Rifugio primo livello “La Casa dei Fiori di Mandorlo” - Fermo;componente_rete;5;5;automatico
+1103;Centro Antiviolenza di Ancona;componente_rete;5;5;automatico
+1103;CUAV - Centro Uomini Autori di Violenza - AN;componente_rete;5;5;automatico
+1103;ATS XV di Macerata;solo_citato;5;5;automatico
+1103;Coop. Sociale Polo9;componente_rete;5;5;automatico
+1103;ATS N. 8 - Senigallia;firmatario;5;5;automatico
+1103;ATS N. 9 - Jesi;firmatario;5;5;automatico
+1103;ATS N. 10 - Fabriano;firmatario;5;5;automatico
+1103;ATS N. 11 - Ancona;firmatario;5;5;automatico
+1103;ATS N. 12 - Falconara M.ma;firmatario;5;5;automatico
+1103;ATS N. 13 - Osimo;firmatario;5;5;automatico
+1103;ASUR;solo_citato;2;5;automatico
+1103;ISTAT;solo_citato;5;5;automatico
+1103;Casa di Emergenza di Pesaro;componente_rete;5;5;automatico
+1103;Croce Rossa;componente_rete;5;5;automatico
+1103;Guardia di Finanza - Comando Provinciale Ancona;firmatario;5;5;automatico
+1103;Azienda Pubblica Servizi alla Persona ASP Ambito 9;componente_rete;5;5;automatico
+1103;Unione Montana Esino Frasassi;componente_rete;5;5;automatico
+1103;Punto V.O.C.E.;componente_rete;5;5;automatico
+1103;Comando Provinciale Guardia di Finanza;firmatario;3;5;automatico
+1103;Arma dei Carabinieri - Comando Provinciale;firmatario;3;5;automatico
+1103;Cooperativa sociale Polo9 Ancona;firmatario;2;5;automatico
+1104;Conferenza Unificata Stato Regioni;solo_citato;5;5;automatico
+1104;Comando Provinciale della Guardia di Finanza di Macerata;firmatario;5;5;rivisto
+1104;Procura della Repubblica di Macerata;firmatario;1;5;rivisto
+1104;Commissione Regionale per le pari opportunità tra uomo e donna della Regione Marche;firmatario;5;5;automatico
+1104;Provincia di Macerata;firmatario;1;5;automatico
+1104;Comune di Civitanova Marche;firmatario;5;5;automatico
+1104;Ufficio Scolastico Regionale per le Marche;firmatario;5;5;automatico
+1104;Area Vasta 3-Asur Marche;firmatario;5;5;rivisto
+1104;Unione Montana dei Monti Azzurri;firmatario;5;5;automatico
+1104;Unione Montana Alte valli del Potenza e dell'Esino;firmatario;5;5;automatico
+1104;Unione Montana Marca di Camerino;firmatario;5;5;automatico
+1104;Ambito Territoriale Sociale 16;firmatario;2;5;automatico
+1104;Università di Camerino;firmatario;5;5;automatico
+1104;Osservatorio di Genere;firmatario;5;5;automatico
+1104;Associazione “Il Lume”;firmatario;5;5;automatico
+1104;“Il Faro” Società Cooperativa Sociale Onlus;firmatario;5;5;automatico
+1104;Dipartimento Nazionale Pari Opportunità;componente_rete;5;5;automatico
+1104;Centro Provinciale Antiviolenza “S.O.S Donna”;componente_rete;5;5;automatico
+1104;CGIL;firmatario;5;5;automatico
+1104;CISL;firmatario;5;5;automatico
+1104;UIL;firmatario;5;5;automatico
+1104;Ordine Psicologi Marche;firmatario;5;5;automatico
+1104;Ordine Assistenti Sociali delle Marche;firmatario;5;5;automatico
+1104;Ordine dei Giornalisti Marche;firmatario;5;5;automatico
+1104;Ambito Sociale n. 16;firmatario;3;5;automatico
+1104;Ordine Provinciale dei Medici – Chirurghi e Odontoiatri;firmatario;1;5;rivisto
+1205;Centro Antiviolenza “RINASCITA”;firmatario;5;5;automatico
+1205;Associazione Kalimess;firmatario;5;5;automatico
+1205;Associazione Risorse Donna APS;firmatario;5;5;automatico
+1205;Ministero del lavoro e delle politiche sociali;solo_citato;5;5;automatico
+1205;Regione Lazio;solo_citato;5;5;automatico
+1205;Casa Rifugio “Essere Libera”;componente_rete;5;5;automatico
+1205;Casa Save;componente_rete;4;5;automatico
+1210;Millepiani APS - Ente del Terzo Settore;firmatario;5;5;automatico
+1210;Cooperativa Sociale BeFree;firmatario;5;5;automatico
+1210;CAV Nilde Iotti;solo_citato;5;5;automatico
+1210;Roma Capitale;solo_citato;5;5;automatico
+1210;Riconoscere OdV;solo_citato;5;5;automatico
+1210;Amaita Intercultura APS;solo_citato;5;5;automatico
+1210;LoosenArt;solo_citato;5;5;automatico
+1210;Municipio VIII;solo_citato;3;5;rivisto
+1215;Associazione di Promozione Sociale PONTE DONNA;firmatario;4;5;automatico
+1215;ASSOCIAZIONE “SPAZIO SUPPORTO DONNA-APS”;firmatario;5;5;automatico
+1215;Centro Antiviolenza Demetra VT4;componente_rete;5;5;automatico
+1215;APS Ponte Donna;firmatario;1;5;automatico
+1216;Ente Regionale per il Diritto allo Studio e alla Conoscenza;solo_citato;1;5;rivisto
+1216;Università della Tuscia;componente_rete;5;5;automatico
+1216;Regione Lazio;solo_citato;5;5;rivisto
+1216;I.T.C. Vanni;componente_rete;5;5;automatico
+1216;coop ALICENOVA;componente_rete;5;5;automatico
+1216;Comune di Viterbo;solo_citato;4;5;automatico
+1216;APS Casa delle Donne Lucha y Siesta;firmatario;5;5;automatico
+1216;APS Differenza Donna;firmatario;5;5;automatico
+1216;APS Ponte Donna;firmatario;5;5;automatico
+1216;Università ROMA TRE;componente_rete;5;5;automatico
+1216;Università ROMA TRE;solo_citato;1;5;automatico
+1216;Università di Tor Vergata;solo_citato;5;5;automatico
+1216;ISTAT;solo_citato;1;5;automatico
+1218;SPI CGIL II LEGA RREVA;firmatario;5;5;automatico
+1218;Associazione Nazionale Volontarie Telefono Rosa — OdV;firmatario;5;5;automatico
+1218;Cav “Franca Rame”;componente_rete;5;5;automatico
+1222;APS Ponte Donna;firmatario;5;5;automatico
+1222;ASD Underdog Social Club;firmatario;3;5;rivisto
+1222;Centro antiviolenza ‘Marielle Franco’ di Nettuno;componente_rete;5;5;automatico
+1222;Regione Lazio;solo_citato;5;5;automatico
+1222;associazione sportiva dilettantistica Underdog Social Club;firmatario;2;5;automatico
+1240;ASSOCIAZIONE SOlidarietà LAica e REsponsabile - SO.LA.RE. ONLUS;firmatario;5;5;automatico
+1240;ASSOCIAZIONE NAZIONALE VOLONTARIE TELEFONO ROSA — OdV;firmatario;5;5;automatico
+1241;Associazione Alliance for African Assistance;firmatario;5;5;automatico
+1241;ASSOCIAZIONE NAZIONALE VOLONTARIE TELEFONO ROSA — ODV;firmatario;5;5;automatico
+1244;ASSOCIAZIONE NAZIONALE VOLONTARIE TELEFONO ROSA ONLUS;firmatario;5;5;automatico
+1244;Associazione Donne in Rinascita;firmatario;5;5;automatico
+1247;Associazione Nazionale Volontarie Telefono Rosa — APS;firmatario;5;5;automatico
+1247;ACR La Librotéca;firmatario;5;5;automatico
+1255;CREDICI s.r.l. - Agenzia per il lavoro;firmatario;5;5;automatico
+1255;ASSOCIAZIONE DIFFERENZA DONNA APS;firmatario;5;5;automatico
+1264;Tribunale Ordinario di Roma;firmatario;5;5;automatico
+1264;Procura della Repubblica presso il Tribunale per i Minorenni di Roma;firmatario;5;5;rivisto
+1264;Procura della Repubblica presso il Tribunale di Roma;firmatario;3;5;automatico
+1264;Consiglio Ordine Avvocati di Roma;firmatario;5;5;rivisto
+1264;Differenza Donna ONG;firmatario;5;5;automatico
+1264;Telefono Rosa;firmatario;5;5;automatico
+1264;Bee Free Cooperativa Sociale;firmatario;5;5;automatico
+1264;Consiglio Superiore della Magistratura;solo_citato;5;5;automatico
+1264;Regione Lazio;solo_citato;5;5;automatico
+1264;CISIA;solo_citato;5;5;automatico
+1264;Procura ordinaria presso Tribunale di Roma;firmatario;2;5;automatico
+1265;Associazione Nazionale Volontarie Telefono Rosa — APS;firmatario;5;5;automatico
+1265;Associazione Culturale Torraccia A.S.D.;firmatario;5;5;automatico
+1265;CONI;solo_citato;5;5;automatico
+1265;Comune di Roma;solo_citato;5;5;automatico
+1267;Associazione Nazionale Volontarie Telefono Rosa — OdV;firmatario;5;5;automatico
+1267;Associazione Sportiva Dilettantistica Enjoy More;firmatario;5;5;rivisto
+1267;BNKR Skatepark;solo_citato;4;5;automatico
+1267;CAV “PAOLA LATTES”;solo_citato;5;5;automatico
+1267;Associazione Sportiva Dilettantistica Liberi Nantes A.S.D.;solo_citato;5;5;automatico
+1267;ISTAT;solo_citato;4;5;automatico
+1275;Prefettura- U.T.G. di Frosinone;firmatario;5;5;automatico
+1275;Procura della Repubblica presso il Tribunale di Frosinone;firmatario;5;5;automatico
+1275;Amministrazione Provinciale di Frosinone;firmatario;5;5;automatico
+1275;Azienda Sanitaria Locale di Frosinone;firmatario;5;5;automatico
+1275;Consiglio dell’Ordine degli Avvocati di Frosinone;firmatario;5;5;automatico
+1275;Procura Generale presso la Corte di Appello di Roma;solo_citato;5;5;automatico
+1275;Frosinone Formazione e Lavoro;solo_citato;5;5;automatico
+1275;Associazione Volontarie Telefono Rosa Frosinone- Regione Lazio ODV;solo_citato;5;5;automatico
+1275;Risorse Donna APS;firmatario;5;5;automatico
+1275;Diaconia Soc.Coop Sociale;firmatario;5;5;automatico
+1275;APS Calcutta;firmatario;5;5;automatico
+1275;Auser del Frusinate;firmatario;5;5;automatico
+1275;Questura di Frosinone;componente_rete;5;5;automatico
+1275;Comando Provinciale dell’Arma dei Carabinieri di Frosinone;componente_rete;5;5;automatico
+1280;QUESTURA DI FROSINONE;firmatario;5;5;automatico
+1280;TELEFONO ROSA FROSINONE REGIONE LAZIO ODV;firmatario;5;5;automatico
+1280;Camera dei deputati;solo_citato;5;5;automatico
+1280;Direzione Centrale della Polizia Criminale;componente_rete;3;5;automatico
+1283;Associazione Volontarie Telefono Rosa Frosinone-Centro di Orientamento per le Donne;firmatario;5;5;automatico
+1283;Amministrazione Locale di Villa Santo Stefano;firmatario;5;5;automatico
+1283;Coldiretti;componente_rete;5;5;automatico
+1283;Impresa Donne;componente_rete;5;5;automatico
+1283;Camera dei Deputati;solo_citato;5;5;automatico
+1283;Ministero dell’Interno;solo_citato;5;5;rivisto
+1283;ISTAT;solo_citato;5;5;automatico
+1292;Liceo Scientifico e Linguistico Statale di Ceccano;firmatario;5;5;automatico
+1292;Associazione volontarie Telefono Rosa Frosinone Regione Lazio ODV-Centro di Orientamento per le Donne;firmatario;5;5;automatico
+1292;INAIL;solo_citato;5;5;automatico
+1292;GARR;solo_citato;2;5;automatico
+1304;Comune di Teramo;firmatario;5;5;rivisto
+1304;Procura Generale presso la Corte di Appello di L'Aquila;firmatario;5;5;automatico
+1304;Procura della Repubblica presso il Tribunale per i Minorenni di L’Aquila;firmatario;5;5;automatico
+1304;Procura della Repubblica presso il Tribunale di Teramo;firmatario;1;5;rivisto
+1304;Provincia di Teramo;firmatario;1;5;automatico
+1304;Comune di Alba Adriatica;firmatario;5;5;automatico
+1304;Associazione L'Elefante S.C.S. di Atri;firmatario;5;5;automatico
+1304;Comune di Basciano;firmatario;5;5;automatico
+1304;Comune di Campli;firmatario;5;5;automatico
+1304;Comune di Canzano;firmatario;5;5;rivisto
+1304;Comune di Castellalto;firmatario;5;5;automatico
+1304;Comune di Castelli;firmatario;5;5;automatico
+1304;Comune di Castilenti;firmatario;5;5;automatico
+1304;Comune di Cellino Attanasio;firmatario;5;5;automatico
+1304;Comune di Civitella del Tronto;firmatario;5;5;automatico
+1304;Comune di Giulianova;firmatario;5;5;automatico
+1304;Comune di Isola del Gran Sasso;firmatario;5;5;automatico
+1304;Associazione “On the Road” di Martinsicuro;firmatario;5;5;automatico
+1304;Comune di Montefino;firmatario;5;5;automatico
+1304;Comune di Montorio al Vomano;firmatario;5;5;automatico
+1304;Comune di Pineto;firmatario;5;5;automatico
+1304;Comune di Rocca Santa Maria;firmatario;5;5;automatico
+1304;Comune di Roseto degli Abruzzi;firmatario;5;5;automatico
+1304;Comune di Silvi;firmatario;5;5;automatico
+1304;Comune di Torricella Sicura;firmatario;5;5;automatico
+1304;Comune di Tortoreto;firmatario;5;5;automatico
+1304;Regione Abruzzo;solo_citato;5;5;automatico
+1304;Consiglio dei Ministri;solo_citato;5;5;automatico
+1304;Consiglio Superiore della Magistratura;solo_citato;5;5;automatico
+1304;Istat;solo_citato;5;5;automatico
+1304;C.1.S.M.A.L- Coordinamento Italiano dei Servizi contro il Maltrattamento e l’Abuso all’Infanzia;solo_citato;5;5;automatico
+1308;Consiglio dei ministri;solo_citato;5;5;automatico
+1308;Regione Abruzzo;solo_citato;5;5;automatico
+1308;Governo Italiano;solo_citato;5;5;automatico
+1308;ASL N. 2 Abruzzo – Lanciano Chieti Vasto;firmatario;5;5;automatico
+1308;Associazione Dafne Onlus;firmatario;5;5;automatico
+1308;Prefettura di Chieti;firmatario;5;5;automatico
+1308;Comando provinciale dei carabinieri di Chieti;firmatario;5;5;automatico
+1308;Questura di Chieti;firmatario;5;5;automatico
+1308;Comune di Castel Frentano;firmatario;5;5;automatico
+1308;Comune di Fossacesia;firmatario;5;5;automatico
+1308;Comune di Frisa;firmatario;5;5;automatico
+1308;Comune di Mozzagrogna;firmatario;5;5;automatico
+1308;Comune di Rocca San Giovanni;firmatario;5;5;automatico
+1308;Comune di Santa Maria Imbaro;firmatario;5;5;automatico
+1308;Comune di San Vito Chietino;firmatario;5;5;automatico
+1308;Comune di Treglio;firmatario;5;5;automatico
+1308;Associazione “I Colori dell'Iride”;firmatario;5;5;automatico
+1308;Associazione “DeA- Donne e Aiuto”;firmatario;5;5;automatico
+1308;Associazione Donn’é di Ortona;firmatario;5;5;automatico
+1308;Sportello SenzaViolenza Donne&Minori;firmatario;5;5;automatico
+1308;Istituto Comprensivo “Umberto I”;firmatario;5;5;automatico
+1308;Istituto Comprensivo “Don Milani”;firmatario;5;5;automatico
+1308;Istituto Comprensivo “G. D'Annunzio”;firmatario;5;5;automatico
+1308;Istituto Comprensivo “Mario Bosco”;firmatario;5;5;automatico
+1308;Istituto Secondario Superiore “DE TITTA- FERMI”;firmatario;5;5;automatico
+1308;Istituto Tecnico Tecnologico “L. DA VINCI”;firmatario;5;5;automatico
+1308;Istituto Professionale per i Servizi Commerciali e Socio-Sanitari “DE GIORGIO”;firmatario;5;5;automatico
+1308;Istituto Istruzione Superiore “VITTORIO EMANUELE II”;firmatario;5;5;automatico
+1308;Liceo Scientifico “G. GALILEI”;firmatario;5;5;automatico
+1308;CRI - Casa Rifugio di Orsogna;firmatario;5;5;automatico
+1308;Associazione Culturale Maria Luisa Brasile;firmatario;5;5;automatico
+1308;Cooperativa “ICSole”;firmatario;5;5;automatico
+1308;International Police Association - 14ª Delegazione Regionale Abruzzo;firmatario;5;5;automatico
+1311;Comunità Montana Peligna;firmatario;5;5;automatico
+1311;Comunità Montana Alto Sangro ed Alto Piano delle 5 miglia;firmatario;5;5;automatico
+1311;Centro Antiviolenza “La Libellula” di Sulmona;firmatario;5;5;automatico
+1311;La Casa delle Donne di Sulmona;firmatario;5;5;automatico
+1311;Società Cooperativa Sociale Horizon Service;firmatario;5;5;automatico
+1311;Cooperativa Sociale Leonardo;firmatario;5;5;automatico
+1311;Associazione di Promozione Sociale Onlus “La Ninfea”;firmatario;4;5;rivisto
+1311;Regione Abruzzo;solo_citato;5;5;automatico
+1311;Associazione “La Ninfea” Onlus;firmatario;1;5;automatico
+1601;Tribunale per i Minorenni di Bari;solo_citato;5;5;automatico
+1601;Regione Puglia;solo_citato;5;5;automatico
+1601;CSM;solo_citato;5;5;automatico
+1602;Ambito Territoriale Sociale di Gioia del Colle;firmatario;5;5;rivisto
+1602;Distretto Socio-Sanitario di Gioia del Colle;firmatario;1;5;rivisto
+1602;Centro Antiviolenza Li.A;firmatario;5;5;automatico
+1602;Comunita San Francesco;componente_rete;5;5;automatico
+1602;Aps Sud Est Donne;componente_rete;5;5;automatico
+1602;Casamassima;componente_rete;5;5;automatico
+1602;Sammichele di Bari;componente_rete;5;5;automatico
+1602;Turi;componente_rete;5;5;automatico
+1602;Provincia di Bari;solo_citato;5;5;automatico
+1605;Ambito Territoriale Sociale di Putignano;firmatario;5;5;automatico
+1605;Comune di Castellana Grotte;componente_rete;5;5;rivisto
+1605;Comune di Noci;componente_rete;5;5;automatico
+1605;Comune di Alberobello;componente_rete;5;5;automatico
+1605;Comune di Locorotondo;componente_rete;5;5;rivisto
+1605;ASL Bari;componente_rete;5;5;automatico
+1605;Regione Puglia;solo_citato;5;5;automatico
+1605;Sud-est donne;componente_rete;5;5;automatico
+1605;Equipe Integrata Multidisciplinare di Ambito per il contrasto alla violenza;firmatario;1;5;automatico
+1613;Ambito Sociale di Galatina;componente_rete;5;5;automatico
+1613;Procura della Repubblica presso il Tribunale per i Minorenni di Lecce;firmatario;5;5;rivisto
+1613;"Centro Specialistico per la Cura del Trauma Interpersonale CS.C.T.I. ""Anemone""";componente_rete;5;5;automatico
+1613;Prefettura della Provincia di LECCE;solo_citato;5;5;automatico
+1613;Procura Generale della Repubblica presso la Procura Generale di Milano;solo_citato;5;5;automatico
+1613;Tribunale di Milano;solo_citato;5;5;automatico
+1613;Tribunale Bologna;solo_citato;5;5;automatico
+1613;Procura della Repubblica di Tivoli;solo_citato;5;5;automatico
+1613;Tribunale di Roma;solo_citato;3;5;rivisto
+1613;Corte di Cassazione;solo_citato;5;5;automatico
+1613;Tribunale per i minorenni Genova;solo_citato;5;5;automatico
+1613;Tribunale di Palermo;solo_citato;5;5;automatico
+1613;SSM;solo_citato;5;5;automatico
+1613;Conferenza Stato-Regioni;solo_citato;5;5;automatico
+1613;Presidenza del Consiglio dei Ministri;solo_citato;5;5;automatico
+1613;Azienda Sanitaria Locale di Lecce;firmatario;5;5;automatico
+1613;Ospedale “Vito Fazzi” di Lecce;componente_rete;5;5;automatico
+1613;Ospedale Gallipoli;componente_rete;5;5;automatico
+1613;Centro Antiviolenza Malala;componente_rete;5;5;automatico
+1613;Associazione Nazionale Donne Medico, sezione Lecce;componente_rete;5;5;automatico
+1613;Istituto Superiore di Sanita;solo_citato;5;5;automatico
+1613;Regione Puglia;solo_citato;5;5;automatico
+1613;Ministero della Salute;solo_citato;5;5;automatico
+1613;Ministero Pari Opportunita;solo_citato;5;5;automatico
+1613;P.O. “Vito Fazzi” di Lecce;componente_rete;5;5;automatico
+1613;Questura di Lecce;componente_rete;5;5;automatico
+1613;Questura di Brindisi;componente_rete;5;5;automatico
+1613;Comando Provinciale dei Carabinieri di Lecce;solo_citato;5;5;rivisto
+1613;Comando Provinciale dei Carabinieri di Brindisi;solo_citato;5;5;automatico
+1613;Comando Provinciale della Guardia di Finanza di Lecce;solo_citato;5;5;automatico
+1613;Comando Provinciale della Guardia di Finanza di Brindisi;solo_citato;5;5;rivisto
+1613;Procura Generale presso la Corte di Appello di LECCE;solo_citato;5;5;automatico
+1613;Prefettura della Provincia di BRINDISI;solo_citato;5;5;rivisto
+1613;S.S.M.;solo_citato;5;5;automatico
+1613;Procura ANCONA;solo_citato;5;5;automatico
+1613;Procura per i Minorenni di Bari;solo_citato;5;5;automatico
+1613;Procura BOLOGNA;solo_citato;3;5;rivisto
+1613;Procura CAGLIARI;solo_citato;5;5;automatico
+1613;Procura CALTANISSETTA;solo_citato;5;5;automatico
+1613;Procura CAMPOBASSO;solo_citato;3;5;rivisto
+1613;Procura CATANZARO;solo_citato;5;5;automatico
+1613;Procura POTENZA;solo_citato;3;5;automatico
+1613;Procura REGGIO CALABRIA;solo_citato;5;5;automatico
+1613;Procura ROMA;solo_citato;2;5;automatico
+1613;Procura SALERNO;solo_citato;3;5;automatico
+1613;Procura SASSARI;solo_citato;5;5;automatico
+1613;Procura TORINO;solo_citato;5;5;automatico
+1613;Procura TRIESTE;solo_citato;5;5;automatico
+1613;Procura VENEZIA;solo_citato;5;5;automatico
+1613;Comando Provinciale CC Campobasso;solo_citato;5;5;automatico
+1613;Comando Provinciale CC Firenze;solo_citato;5;5;automatico
+1613;Comando Provinciale CC Perugia;solo_citato;1;5;automatico
+1613;Comando Provinciale CC Salerno;solo_citato;5;5;automatico
+1613;Centro antiviolenza “Renata Fonte”;componente_rete;5;5;automatico
+1613;II Melograno;componente_rete;5;5;automatico
+1613;CAV Malala Yousafzai;componente_rete;5;5;automatico
+1613;Casa rifugio “Nazaret”;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “Vito Fazzi” - Lecce;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “Sacro Cuore di Gesù” - Gallipoli;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “Veris Delli Ponti” - Scorrano;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “Santa Caterina Novella” - Galatina;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “San Giuseppe da Copertino”;componente_rete;5;5;automatico
+1613;Presidio Ospedaliero “Francesco Ferrari”;componente_rete;5;5;automatico
+1613;Associazione Donne Insieme Onlus;componente_rete;5;5;automatico
+1613;Ambito di Lecce;componente_rete;5;5;automatico
+1613;Cooperativa Sociale Medihospes;componente_rete;5;5;automatico
+1613;Provincia di Bari;solo_citato;4;5;rivisto
+1613;Casarano;componente_rete;5;5;automatico
+1613;Nardò;componente_rete;5;5;automatico
+1613;ATS Maglie;componente_rete;5;5;automatico
+1613;Gagliano del Capo;componente_rete;5;5;automatico
+1613;Martano;componente_rete;5;5;automatico
+1613;Ministero della Giustizia;solo_citato;5;5;automatico
+1613;GIADA - Centro di riferimento Regionale;componente_rete;4;5;automatico
+1613;Azienda Ospedaliera Pia Fondazione di Culto e Religione “Cardinale Giovanni Panico” - Tricase;solo_citato;5;5;rivisto
+1613;Presidio Ospedaliero “Di Summa - Perrino” - Brindisi;solo_citato;5;5;automatico
+1613;Presidio Ospedaliero “Camberlingo” - Francavilla Fontana;solo_citato;5;5;automatico
+1613;nosocomio di Francavilla Fontana;solo_citato;4;5;automatico
+1613;nosocomio di Brindisi;solo_citato;4;5;rivisto
+1613;Consiglio Superiore della Magistratura;solo_citato;5;5;automatico
+1613;Commissione parlamentare di inchiesta sul femminicidio;solo_citato;5;5;automatico
+1613;Tribunale di Messina;solo_citato;5;5;automatico
+1613;ATS Lecce;componente_rete;3;5;automatico
+1613;P.O. di Gallipoli;componente_rete;3;5;automatico
+1613;CATANIA;solo_citato;2;5;rivisto
+1613;Arnesano;solo_citato;1;5;rivisto
+1613;Cavallino;solo_citato;1;5;automatico
+1613;Lequile;solo_citato;1;5;automatico
+1613;Lizzanello;solo_citato;1;5;automatico
+1613;Monteroni;solo_citato;1;5;automatico
+1613;San Cesario;solo_citato;1;5;rivisto
+1613;San Donato;solo_citato;1;5;rivisto
+1613;San Pietro in Lama;solo_citato;1;5;automatico
+1613;Surbo;solo_citato;1;5;rivisto
+1613;Campi Salentina;solo_citato;1;5;automatico
+1613;Carmiano;solo_citato;1;5;automatico
+1613;Guagnano;solo_citato;1;5;rivisto
+1613;Novoli;solo_citato;1;5;rivisto
+1613;Salice Salentino;solo_citato;1;5;automatico
+1613;Squinzano;solo_citato;1;5;rivisto
+1613;Trepuzzi;solo_citato;1;5;automatico
+1613;Veglie;solo_citato;1;5;rivisto
+1613;Galatone;solo_citato;1;5;automatico
+1613;Leverano;solo_citato;1;5;automatico
+1613;Porto Cesareo;solo_citato;1;5;automatico
+1613;Seclì;solo_citato;1;5;automatico
+1613;Calimera;solo_citato;1;5;automatico
+1613;Caprarica;solo_citato;1;5;rivisto
+1613;Carpignano;solo_citato;1;5;automatico
+1613;Castri di Lecce;solo_citato;1;5;automatico
+1613;Martignano;solo_citato;1;5;rivisto
+1613;Melendugno;solo_citato;1;5;rivisto
+1613;Sternatia;solo_citato;1;5;automatico
+1613;Vernole;solo_citato;1;5;automatico
+1613;Zollino;solo_citato;1;5;automatico
+1613;Aradeo;solo_citato;1;5;rivisto
+1613;Cutrofiano;solo_citato;1;5;automatico
+1613;Neviano;solo_citato;1;5;automatico
+1613;Sogliano Cavour;solo_citato;1;5;automatico
+1613;Soleto;solo_citato;1;5;automatico
+1613;Bagnolo;solo_citato;1;5;automatico
+1613;Cannole;solo_citato;1;5;automatico
+1613;Castrignano del Capo;solo_citato;2;5;automatico
+1613;Corigliano d’Otranto;solo_citato;1;5;rivisto
+1613;Cursi;solo_citato;1;5;automatico
+1613;Giurdignano;solo_citato;1;5;rivisto
+1613;Melpignano;solo_citato;1;5;automatico
+1613;Muro;solo_citato;1;5;automatico
+1613;Palmariggi;solo_citato;1;5;automatico
+1613;Andrano;solo_citato;1;5;rivisto
+1613;Botrugno;solo_citato;1;5;automatico
+1613;Castro;solo_citato;1;5;automatico
+1613;Diso;solo_citato;1;5;rivisto
+1613;Giuggianello;solo_citato;1;5;rivisto
+1613;Minervino;solo_citato;1;5;automatico
+1613;Nociglia;solo_citato;1;5;rivisto
+1613;Ortelle;solo_citato;1;5;automatico
+1613;Poggiardo;solo_citato;1;5;rivisto
+1613;San Cassiano;solo_citato;1;5;automatico
+1613;Sanarica;solo_citato;1;5;automatico
+1613;Santa Cesarea;solo_citato;1;5;rivisto
+1613;Spongano;solo_citato;1;5;automatico
+1613;Surano;solo_citato;1;5;rivisto
+1613;Uggiano la Chiesa;solo_citato;1;5;automatico
+1613;Alezio;solo_citato;1;5;automatico
+1613;Alliste;solo_citato;1;5;automatico
+1613;Melissano;solo_citato;1;5;rivisto
+1613;Racale;solo_citato;1;5;automatico
+1613;Sannicola;solo_citato;1;5;rivisto
+1613;Taviano;solo_citato;1;5;automatico
+1613;Tuglie;solo_citato;1;5;automatico
+1613;Collepasso;solo_citato;2;5;automatico
+1613;Matino;solo_citato;2;5;rivisto
+1613;Parabita;solo_citato;2;5;rivisto
+1613;Ruffano;solo_citato;2;5;rivisto
+1613;Supersano;solo_citato;2;5;automatico
+1613;Taurisano;solo_citato;2;5;automatico
+1613;Acquarica;solo_citato;2;5;automatico
+1613;Alessano;solo_citato;2;5;automatico
+1613;Corsano;solo_citato;2;5;rivisto
+1613;Miggiano;solo_citato;2;5;rivisto
+1613;Montesano;solo_citato;2;5;automatico
+1613;Morciano;solo_citato;2;5;automatico
+1613;Patù;solo_citato;2;5;automatico
+1613;Presicce;solo_citato;2;5;automatico
+1613;Salve;solo_citato;2;5;automatico
+1613;Specchia;solo_citato;2;5;automatico
+1613;Ugento;solo_citato;2;5;automatico
+1613;Procura della Repubblica di Lecce;firmatario;1;5;automatico
+1613;Province di LECCE e BRINDISI;componente_rete;1;5;automatico
+1613;Centro Ascolto CISMAI;solo_citato;1;5;automatico
+1613;Corte EDU;solo_citato;1;5;automatico
+1613;Conferenza dei Sindaci;firmatario;1;5;automatico
+1613;Ambito di Gallipoli;componente_rete;1;5;rivisto
+1702;Regione Basilicata;componente_rete;5;5;rivisto
+1801;Prefettura di Cosenza;firmatario;5;5;automatico
+1801;Procura della Repubblica presso il Tribunale di Castrovillari;firmatario;5;5;rivisto
+1801;Tribunale di Paola;firmatario;1;5;rivisto
+1801;Tribunale di Castrovillari;firmatario;1;5;automatico
+1801;Procura della Repubblica presso il Tribunale per i minorenni di Catanzaro;firmatario;5;5;automatico
+1801;Regione Calabria;firmatario;5;5;automatico
+1801;Provincia di Cosenza;firmatario;5;5;automatico
+1801;Questura di Cosenza;firmatario;5;5;automatico
+1801;Comando Provinciale dei Carabinieri di Cosenza;firmatario;5;5;automatico
+1801;Comando Provinciale della Guardia di Finanza di Cosenza;firmatario;5;5;automatico
+1801;Azienda Sanitaria Provinciale di Cosenza;firmatario;5;5;automatico
+1801;Azienda Ospedaliera S.S. Annunziata di Cosenza;firmatario;5;5;automatico
+1801;Comune Paterno;firmatario;5;5;automatico
+1801;Associazione Mondiversi Onlus;firmatario;5;5;automatico
+1801;Ministero dell’Interno;solo_citato;5;5;automatico
+1801;Ministero della Giustizia;solo_citato;4;5;rivisto
+1801;Consiglio dei Ministri;solo_citato;3;5;automatico
+1803;Procura della Repubblica presso il Tribunale di Catanzaro;firmatario;5;5;automatico
+1803;Associazione “Attivamente Coinvolte” APS;firmatario;5;5;automatico
+1803;Regione Calabria;solo_citato;5;5;automatico
+1803;Donne in Rete Contro La Violenza” D.iRe.;solo_citato;5;5;automatico
+1805;Presidenza del Consiglio dei Ministri;componente_rete;5;5;rivisto
+1805;Centro Calabrese di Solidarietà;firmatario;5;5;automatico
+1805;Unione dei Comuni del Versante Ionico;firmatario;5;5;automatico
+1805;Procura della Repubblica presso il Tribunale Ordinario di Catanzaro;firmatario;5;5;automatico
+1805;Questura di Catanzaro;firmatario;1;5;automatico
+1805;UPI Calabria;firmatario;5;5;rivisto
+1805;Fondazione Calabria Etica;firmatario;5;5;automatico
+1805;Siulp Sezione di Catanzaro;firmatario;1;5;automatico
+1805;ASP di Catanzaro;firmatario;1;5;automatico
+1805;Azienda ospedaliera Pugliese-Ciaccio;firmatario;5;5;automatico
+1805;Regione Calabria;firmatario;5;5;automatico
+1805;Consigliera di Parità Regionale;firmatario;5;5;rivisto
+1805;Commissione P.O. Provincia di Catanzaro;firmatario;1;5;automatico
+1805;Caritas Diocesi Catanzaro/Squillace;firmatario;1;5;automatico
+1805;Anci Calabria;firmatario;5;5;automatico
+1805;Comune di Lamezia Terme;firmatario;5;5;automatico
+1805;Comune di Settingiano;firmatario;5;5;automatico
+1805;Comune di Simeri;firmatario;5;5;automatico
+1805;Centro Antiviolenza Demetra;firmatario;5;5;automatico
+1805;Comitato Imprenditoria Femminile (CIF);firmatario;1;5;automatico
+1805;Amministrazione Provinciale di Vibo Valentia;firmatario;5;5;automatico
+1805;Amministrazione Provinciale di Reggio Calabria;firmatario;5;5;automatico
+1805;Associazione Differenza Donna;firmatario;5;5;automatico
+1805;Centro Antiviolenza Regionale Mondo Rosa;componente_rete;5;5;automatico
+2001;Regione Autonoma della Sardegna;firmatario;5;5;automatico
+2001;Centro antiviolenza Donna Ceteris - Cagliari;firmatario;5;5;automatico
+2001;Centro antiviolenza e Casa di accoglienza Donne al Traguardo - Cagliari;firmatario;5;5;automatico
+2001;Centro antiviolenza Mai pit violate - Tortoli;firmatario;5;5;automatico
+2001;Centro antiviolenza e Casa di accoglienza Onda Rosa - Nuoro;firmatario;5;5;automatico
+2001;Centro antiviolenza e Casa di accoglienza Prospettiva Donna - Olbia;firmatario;5;5;automatico
+2001;Centro Antiviolenza e Casa di accoglienza Aurora - Sassari;firmatario;5;5;automatico
+2001;Centro Antiviolenza dell’Unione dei Comuni del Marghine - Macomer;firmatario;5;5;automatico
+2001;Centro Antiviolenza Interdistrettuale Ambiti Plus di Sanluri e Guspini “Feminas” - Sanluri;firmatario;5;5;automatico
+2001;Centro Antiviolenza Spazio donna - Ozieri;firmatario;5;5;automatico
+2001;Centro Antiviolenza Unione Comuni d’Ogliastra - Elini;firmatario;5;5;automatico
+2001;Centro antiviolenza Ambiti Plus di Carbonia e Iglesias - Carbonia;firmatario;5;5;automatico
+2001;Centro antiviolenza e Casa di accoglienza Donna Eleonora - Oristano;firmatario;5;5;automatico
+2001;Centro Ascolto Uomini Maltrattanti Sardegna (CAM Sardegna);firmatario;5;5;automatico
+2001;Centro Italiano per la Promozione della Mediazione e la giustizia riparativa Sardegna (CIPM Sardegna);firmatario;5;5;automatico
+2001;Gruppo Ascolto Maltrattanti in Emersione (GAME);firmatario;5;5;automatico
+2001;Associazione Donne al Traguardo;firmatario;5;5;automatico
+2001;Garante per l’infanzia e l’adolescenza della Sardegna;firmatario;5;5;automatico
+2001;Prefettura di Cagliari;firmatario;5;5;automatico
+2001;Prefettura di Oristano;firmatario;5;5;automatico
+2001;Prefettura di Nuoro;firmatario;5;5;automatico
+2001;Prefettura di Sassari;firmatario;5;5;automatico
+2001;Questura di Cagliari;firmatario;5;5;automatico
+2001;Questura di Oristano;firmatario;5;5;automatico
+2001;Questura di Nuoro;firmatario;5;5;automatico
+2001;Questura di Sassari;firmatario;5;5;automatico
+2001;Comando Legione Carabinieri Sardegna;firmatario;5;5;automatico
+2001;Guardia di Finanza Comando regionale Sardegna;firmatario;5;5;automatico
+2001;Procura Generale presso la Corte d’Appello di Cagliari;firmatario;5;5;automatico
+2001;Procura della Repubblica presso il Tribunale per i Minorenni di Cagliari;firmatario;5;5;automatico
+2001;Procura della Repubblica presso il Tribunale di Oristano;firmatario;5;5;automatico
+2001;Procura della Repubblica presso il Tribunale di Tempio Pausania;firmatario;5;5;rivisto
+2001;Tribunale Ordinario di Cagliari;firmatario;5;5;automatico
+2001;Tribunale Ordinario di Oristano;firmatario;5;5;automatico
+2001;Tribunale Ordinario di Lanusei;firmatario;5;5;automatico
+2001;Tribunale Ordinario di Tempio Pausania;firmatario;5;5;automatico
+2001;Tribunale per i Minorenni di Sassari;firmatario;5;5;automatico
+2001;Ufficio Interdistrettuale di Esecuzione Penale Esterna (UIEPE) per la Sardegna;firmatario;5;5;automatico
+2001;Centro Giustizia Minorile della Sardegna (CGM);firmatario;5;5;automatico
+2001;Provveditorato Regionale Amministrazione Penitenziaria della Regione Sardegna (PRAP);firmatario;5;5;automatico
+2001;Azienda Regionale della Salute (ARES) Sardegna;firmatario;5;5;automatico
+2001;Azienda sociosanitaria locale n. 4 Ogliastra;firmatario;5;5;automatico
+2001;Azienda sociosanitaria locale n. 3 Nuoro;firmatario;5;5;automatico
+2001;ASL n. 5 Oristano;firmatario;5;5;automatico
+2001;Azienda sociosanitaria locale n. 6 Medio Campidano;firmatario;5;5;automatico
+2001;Azienda sociosanitaria locale n. 7 Sulcis;firmatario;5;5;automatico
+2001;Azienda di rilievo nazionale ed alta specializzazione (ARNAS) Brotzu;firmatario;5;5;automatico
+2001;Azienda Ospedaliera Universitaria di Cagliari (AOU CA);firmatario;5;5;automatico
+2001;Associazione Nazionale Comuni Italiani (ANCI) Sardegna;firmatario;5;5;rivisto
+2001;Consigliera di Parità della Città Metropolitana di Cagliari;firmatario;5;5;automatico
+2001;Consigliera di Parità della Provincia di Sassari;firmatario;5;5;automatico
+2001;Ufficio Scolastico Regionale della Sardegna (USR);firmatario;5;5;automatico
+2001;Ordine degli Assistenti Sociali Regione Sardegna;firmatario;5;5;automatico
+2001;Ordine degli Avvocati di Cagliari;firmatario;5;5;automatico
+2001;Ordine degli Avvocati di Oristano;firmatario;5;5;automatico
+2001;Ordine degli Avvocati di Lanusei;firmatario;5;5;automatico
+2001;Ordine degli Avvocati di Nuoro;firmatario;5;5;automatico
+2001;Ordine degli Avvocati di Tempio Pausania;firmatario;5;5;automatico
+2001;Ordine dei Giornalisti della Sardegna;firmatario;5;5;automatico
+2001;Ordine dei Medici Chirurghi e Odontoiatri della Provincia di Cagliari;firmatario;5;5;automatico
+2001;Ordine delle Professioni Infermieristiche di Carbonia Iglesias;firmatario;5;5;rivisto
+2001;Ordine delle Professioni Infermieristiche di Oristano;firmatario;5;5;automatico
+2001;Ordine della Professione di Ostetrica di Cagliari e delle province di Nuoro, Oristano e Sud Sardegna;firmatario;5;5;automatico
+2001;Ordine della Professione di Ostetrica di Sassari;firmatario;5;5;automatico
+2001;Ordine degli Psicologi della Sardegna;firmatario;5;5;automatico
+2001;Ordine dei Tecnici sanitari di Radiologia Medica e delle Professioni Sanitarie tecniche, della riabilitazione e della Prevenzione di Cagliari e Oristano;firmatario;5;5;automatico
+2001;Associazione Giulia Giornaliste Sardegna;firmatario;5;5;automatico
+2001;Provincia di Nuoro;solo_citato;2;5;automatico
+2001;AGENZIA ITALIANA PER LA COOPERAZIONE ALLO SVILUPPO;solo_citato;5;5;automatico
+2001;European Institute for Gender Equality (EIGE);solo_citato;5;5;automatico
+2001;HRC;solo_citato;5;5;automatico
+2001;USAID;solo_citato;5;5;automatico
+2001;Istituto Nazionale di Statistica (ISTAT);solo_citato;5;5;automatico
+2001;Ministero dell’Economia e delle Finanze;solo_citato;5;5;automatico
+2001;Rete Dafne Sardegna;firmatario;5;5;automatico
+2001;RAS;componente_rete;2;5;automatico
+2001;Comando Provinciale Carabinieri di Cagliari;componente_rete;5;5;automatico
+2001;Associazione Soroptimist International Italia;solo_citato;5;5;automatico
+2001;Tribunale di Nuoro;componente_rete;5;5;automatico
+2001;Azienda Ospedaliera universitaria di Sassari;firmatario;4;5;automatico
+2001;Ministero dell’Istruzione;solo_citato;5;5;automatico
+2001;Dipartimento della Funzione Pubblica;solo_citato;5;5;automatico
+2001;CUAV Centro uomini maltrattanti Sardegna;firmatario;5;5;automatico
+2001;Procura della Repubblica presso il Tribunale di Lanusei;firmatario;5;5;rivisto
+2001;Ambito Plus Olbia;firmatario;5;5;automatico
+2001;Ambito Plus Città di Cagliari;firmatario;5;5;automatico
+2001;Ambito Plus Nuoro;firmatario;5;5;automatico
+2001;Ambito Plus Ales Terralba;firmatario;5;5;automatico
+2001;Ambito Plus Anglona Coros Figulinas;firmatario;5;5;automatico
+2001;Ambito Plus Area Ovest;firmatario;5;5;automatico
+2001;Ambito Plus Carbonia;firmatario;5;5;automatico
+2001;Ambito Plus Ghilarza;firmatario;5;5;automatico
+2001;Ambito Plus Ozieri;firmatario;5;5;automatico
+2001;Ambito Plus Sarrabus Gerrei;firmatario;5;5;automatico
+2001;Ambito Plus Siniscola;firmatario;5;5;automatico
+2001;Ambito Plus Arcipelago del Sulcis;firmatario;5;5;automatico
+2001;Ambito Plus Guspini;firmatario;5;5;automatico
+2001;Ambito Plus Iglesias;firmatario;5;5;automatico
+2001;Ambito Plus Macomer;firmatario;5;5;automatico
+2001;Ambito Plus Ogliastra;firmatario;5;5;automatico
+2001;Ambito Plus Oristano;firmatario;5;5;automatico
+2001;Ambito Plus Quartu Parteolla;firmatario;5;5;automatico
+2001;Ambito Plus Sanluri;firmatario;5;5;automatico
+2001;Ambito Plus Sarcidano Barbagia;firmatario;5;5;automatico
+2001;Ambito Plus Sassari;firmatario;5;5;automatico
+2001;Ambito Plus Sorgono;firmatario;5;5;automatico
+2001;Ambito Plus Tempio Pausania;firmatario;5;5;automatico
+2001;Ambito Plus Trexenta;firmatario;5;5;automatico
+2001;Ambito Plus Alghero;firmatario;5;5;automatico
+2001;Camera Penale;solo_citato;2;5;automatico
+2001;Osservatorio Nazionale sul Diritto di Famiglia;solo_citato;5;5;automatico
+2001;Associazione Italiana degli Avvocati per la Famiglia e per i Minori;solo_citato;5;5;automatico
+2001;Associazione Nazionale Forense;solo_citato;5;5;automatico
+2001;Ministero dell’Interno;solo_citato;5;5;automatico
+2001;Ministero del Lavoro e Politiche Sociali;solo_citato;5;5;automatico
+2001;Ministero della Salute;solo_citato;5;5;automatico
+2001;Commissione parlamentare di inchiesta sul femminicidio, nonché su ogni forma di violenza di genere;solo_citato;5;5;automatico
+2001;Presidenza del Consiglio dei Ministri;solo_citato;5;5;automatico
+2001;Provincia autonoma di Trento;solo_citato;5;5;automatico
+2001;Provincia autonoma di Bolzano;solo_citato;5;5;automatico
+2001;Ministero degli Affari Esteri e della Cooperazione Internazionale;solo_citato;5;5;automatico
+2001;Interagency Gender Working Group (IGWG);solo_citato;5;5;automatico
+2001;UN Women;solo_citato;5;5;automatico
+2001;UNICEF;solo_citato;5;5;automatico
+2001;CIDU;solo_citato;5;5;automatico
+2001;OCSE;solo_citato;1;5;automatico
+2001;UNAIDS;solo_citato;5;5;automatico
+2001;UNDP;solo_citato;4;5;automatico
+2001;UNECA;solo_citato;4;5;automatico
+2001;UNESCO;solo_citato;4;5;rivisto
+2001;UNFPA;solo_citato;5;5;automatico
+2001;UNHCHR;solo_citato;4;5;automatico
+2001;UNIFEM;solo_citato;4;5;automatico
+2001;World Health Organization (WHO);solo_citato;4;5;rivisto
+2001;Inter-Agency Standing Committee;solo_citato;3;5;automatico
+2001;Consigliera regionale di parità;firmatario;4;5;automatico
+2001;Ordini dei Farmacisti della Sardegna;firmatario;2;5;automatico
+2001;OECD;solo_citato;2;5;rivisto
+2001;AICS;solo_citato;1;5;automatico
+2001;Province autonome di Trento e Bolzano;solo_citato;2;5;rivisto
+2001;Corte europea dei diritti dell’uomo;solo_citato;1;5;rivisto

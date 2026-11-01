@@ -49,3 +49,9 @@ Le 18 unità minime (una per regione) pesano il 45% di n = 40 e il 23% di n = 80
 - Quartili di lunghezza: frame 7.860 / 19.605 / 35.149 caratteri, campione 10.352 / 21.466 / 37.622. 14 protocolli su 60 superano i 40.000 caratteri (frame: 45 su 249): verranno spezzati.
 - Contiene il protocollo più lungo (1613, Puglia, 306.622 caratteri), incluso perché non si esclude per lunghezza.
 - Protocolli pilota estratti: 0905, 0907, 0911 (tutti e 3 i protocolli della Toscana). Sono marcati `si` nella colonna `pilota`.
+
+## Sottoinsieme gold (n = 20)
+- **Disegno.** Dai 60 si escludono i 3 pilota (il prompt è stato messo a punto su quelli) e i protocolli oltre 100.000 caratteri (onere di annotazione): restano 54. Ordinati per regione e lunghezza, 20 protocolli con campionamento sistematico e partenza casuale, seed 20261101. File: `campione_gold_v1.csv`; script: `codice/campione_gold.py`.
+- **Doppia annotazione.** 8 dei 20 (colonna `doppia`, campionamento sistematico) sono annotati da due persone.
+- **Limite.** I protocolli molto lunghi (oltre 100.000 caratteri) non sono nel gold. Il più lungo del gold ha circa 56.000 caratteri; 6 superano i 40.000 e sono spezzati dalla pipeline.
+- **Fase 2.** I restanti 40 protocolli del campione (inclusi i 3 pilota e quelli molto lunghi) sono il campione della revisione delle incoerenze interne del modello.

@@ -1,6 +1,6 @@
 # Ipotesi di lavoro per la ripartenza dell'estrazione AI (v2)
 
-> **Nota (2026-10-31).** Il campione di 36 protocolli (`archivio/annotazione_campione_v1/`) e la scelta della Toscana come set di sviluppo sono superati: vedi `docs/decisioni.md` e `campione/README.md`. I fogli di annotazione v2 sono archiviati e vanno rifatti sul nuovo campione.
+> **Nota (2026-11-01).** Il campione di 36 protocolli (`annotazione/gold_v1_legacy/`) non è un campione probabilistico (Toscana per intero più altri) e i suoi fogli partono dall'output della pipeline v1: resta come materiale di sviluppo, non come gold. Il gold per il paper è il sottoinsieme di 20 protocolli estratto dal campione di 60, annotato da zero: vedi `docs/decisioni.md` e `annotazione/README.md`.
 
 
 **Aggiornato: 2026-10-30.** Da confermare con i colleghi che hanno costruito il questionario. Quando arrivano le istruzioni di compilazione, si rivede questo file.

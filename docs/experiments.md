@@ -179,18 +179,23 @@ Periphery (generic mentions), 296 distinct, 160 present in all 10 runs, 32 prese
 
 ## 6. Annotation (planned)
 
-Manual validation by two annotators (Paolo, Elena), blind to the questionnaire, on the publication sample.
-- **Sample.** The first sample (36 protocols, Toscana in full) is withdrawn: treating Toscana as the development set and including it entirely was arbitrary. The new sample is stratified by region and, within region, by protocol length. It is used both to fix prompt, number of runs and metrics, and for manual validation. Size and draw: `campione/README.md`. The old files are in `archivio/annotazione_campione_v1/`.
-- **Review of stage 1.** For each protocol in the sample: entities not present in all runs, entities with unstable role, possible duplicates and a random share of the unanimous ones (`revisione_enti.py`). Decisions: ok / remove / merge, optional final name and role.
-- **Independent annotation.** Entities named in the protocol, listed by the annotators without seeing the AI list, on a subset. It measures recall and agreement between annotators.
-- **Planned measures.** Precision of the unanimous and of the non-unanimous entities; missing entities; agreement between annotators; agreement on the 30 categories (stage 2).
-- **Status.** Not started. The definitions in `docs/definizioni_soggetti_v1.md` are being checked by the annotators.
+Two phases, both blind to the questionnaire (the questionnaire plays no role in this stage).
+
+**Sample.** The publication sample (n = 60) is stratified by region and, within region, by protocol length (`campione/README.md`). The first sample (36 protocols: Toscana in full plus others) was not a probability sample and its sheets were pre-filled with the output of the v1 pipeline; it is kept as a development set and as a secondary check (`annotazione/gold_v1_legacy/`).
+
+**Phase 1: gold standard.** A subset of 20 protocols is drawn from the 60 (systematic sampling by region and length, seed 20261101; the 3 pilot protocols, on which the prompt was tuned, and protocols above 100,000 characters are excluded; `campione/campione_gold_v1.csv`). Annotators list named entities (with role and category) and generic mentions from the original text, without seeing any model output. Paolo annotates all 20; 8 protocols are annotated by a second annotator (Elena, or Mauro) to measure agreement. Uses: recall and precision of stage 1 (core and periphery), agreement between annotators, ground truth for the 30 categories (stage 2). Limit to report: very long protocols are not in the gold.
+
+**Phase 2: review of model inconsistencies.** On the 40 protocols of the sample outside the gold: entities not present in all runs, entities with unstable role, possible duplicates and a random share of the unanimous ones (`revisione_enti.py`; 310 review rows, 7.8 per protocol; the 10% sample of unanimous entities is redrawn). Decisions: correct / wrong / remove / merge, optional final name and role. Measures: precision of the unanimous and of the non-unanimous entities.
+
+**Planned measures.** Recall and precision on the gold; agreement between annotators; precision by stability class; agreement on the 30 categories (stage 2).
+
+**Status.** Template ready (`annotazione/gold_v2/gold_enti_v3_template.xlsx`); annotation not started. The definitions in `docs/definizioni_soggetti_v1.md` are being checked by the annotators.
 
 ## 7. Next steps
 
 1. Improve the merge of chunk lists (duplicates of the same entity), then repeat E8 on more long protocols of the sample.
 2. Check in the text the open points of v1.2: Banca d'Italia in 0906, RELIVE, WWP EN and WHO.
-3. Freeze the prompt and parameters (`parametri/`, a commit and a tag), draw the sample, run stage 1 on all 251 texts with 5 runs (chunked above 40,000 characters). Report stability and core vs periphery on all protocols; manual review on the sample.
+3. Freeze the prompt and parameters (`parametri/`, a commit and a tag), draw the sample, run stage 1 on all 251 texts with 5 runs (chunked above 40,000 characters). Report stability and core vs periphery on all protocols; gold standard on 20 protocols of the sample, review of model inconsistencies on the other 40.
 4. Annotation results, then stage 2 and stage 4.
 5. Open decisions: counting rule for the periphery; whether the number in item 2.2 counts only core entities; Unione dei Comuni as category 3 or 8; whether respondents tick more than one category.
 
@@ -200,9 +205,11 @@ Manual validation by two annotators (Paolo, Elena), blind to the questionnaire, 
 python codice/pipeline_ai_v2/stadio1_estrazione.py --regione Toscana --runs 3 --input testo --prompt v1_2
 python codice/pipeline_ai_v2/stadio1_estrazione.py --regione Toscana --runs 3 --input pdf --prompt v1_2 --max-mb 4.1
 python codice/pipeline_ai_v2/stadio1_spezzato.py --codici 0902,0911 --runs 3 --prompt v1_2
+python codice/pipeline_ai_v2/stadio1_spezzato.py --campione campione/campione_pubblicazione_v1.csv --runs 5 --tag pubblicazione_v1_2   # poi --tutti
 python codice/pipeline_ai_v2/stabilita_tollerante.py --tag v1_2_testo [--contenitore menzioni_generiche]
 python codice/pipeline_ai_v2/confronta_prompt.py --a v1_1_testo --b v1_2_testo
 python codice/pipeline_ai_v2/n_run_campionamento.py --tag v1_2_testo [--contenitore menzioni_generiche]
 python codice/pipeline_ai_v2/registro_misure.py
 ```
+Resume: `stadio1_spezzato.py` saves every chunk in `<tag>/_pezzi/` (atomic write), skips finished runs and chunks, and after failures retries the missing runs by itself (`--giri 6`, `--attesa 60`, `--timeout 300`, `--tentativi 5`). Rerun the same command after an interruption. `--forza` redoes the final runs from saved chunks (merge only); `--forza --rifai-pezzi` also redoes the model calls.
 Run files are in `microdati/ai_v2/stadio1/<tag>/` (not in git). The v0 runs are in the folders `testo` and `pdf`.

@@ -102,6 +102,20 @@ def fondi(risultati):
     return dict(enti_identificati=ident, menzioni_generiche=gen, note=note)
 
 
+def scrivi_atomico(path, testo):
+    """scrive su un file temporaneo e lo rinomina: se il processo muore a metà, il file vecchio resta intatto"""
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(testo, encoding="utf-8"); os.replace(tmp, path)
+
+
+def leggi_cache(f):
+    """contenuto del pezzo già fatto, o None se manca o è rovinato (in quel caso il pezzo si rifà)"""
+    try:
+        c = json.loads(f.read_text(encoding="utf-8")); return c["dati"], c["tin"], c["tout"]
+    except Exception:
+        return None
+
+
 def una_run(client, cfg, codice, k, sys_p, usr_p, p_hash, outdir, a):
     t0 = time.time()
     testo = (MICRODATI / "protocolli" / f"protocollo_{codice}.txt").read_text(encoding="utf-8", errors="ignore")
@@ -110,11 +124,11 @@ def una_run(client, cfg, codice, k, sys_p, usr_p, p_hash, outdir, a):
     ris, tin, tout = [], 0, 0
     for i, p in enumerate(pezzi, 1):
         f = cache / f"{codice}_run{k}_p{i}di{len(pezzi)}.json"
-        if f.exists():
-            c = json.loads(f.read_text(encoding="utf-8")); d, ti, to = c["dati"], c["tin"], c["tout"]
-        else:
-            d, ti, to = chiama(client, cfg, sys_p, usr_p, p, i, len(pezzi))
-            f.write_text(json.dumps(dict(dati=d, tin=ti, tout=to), ensure_ascii=False), encoding="utf-8")
+        c = None if a.rifai_pezzi else leggi_cache(f)
+        if c is None:
+            c = chiama(client, cfg, sys_p, usr_p, p, i, len(pezzi))
+            scrivi_atomico(f, json.dumps(dict(dati=c[0], tin=c[1], tout=c[2]), ensure_ascii=False))
+        d, ti, to = c
         ris.append(d); tin += ti; tout += to
     dati = fondi(ris) if len(ris) > 1 else ris[0]
     ref = S1.norm(testo)
@@ -127,7 +141,7 @@ def una_run(client, cfg, codice, k, sys_p, usr_p, p_hash, outdir, a):
                 deployment=cfg["deployment"], prompt_file=str(S1.PROMPT.relative_to(REPO)), prompt_sha=p_hash, reasoning_effort=cfg["effort"],
                 data_utc=datetime.now(timezone.utc).isoformat(timespec="seconds"), secondi=round(time.time() - t0, 1),
                 token_input=tin, token_output=tout)
-    (outdir / f"{codice}_run{k}.json").write_text(json.dumps({"meta": meta, **dati}, ensure_ascii=False, indent=1), encoding="utf-8")
+    scrivi_atomico(outdir / f"{codice}_run{k}.json", json.dumps({"meta": meta, **dati}, ensure_ascii=False, indent=1))
     return codice, k, len(pezzi), len(dati["enti_identificati"]), len(dati["menzioni_generiche"])
 
 
@@ -140,7 +154,12 @@ def main():
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--effort", default=None)
     ap.add_argument("--workers", type=int, default=2)
-    ap.add_argument("--forza", action="store_true")
+    ap.add_argument("--forza", action="store_true", help="rifà le run finali (riusando i pezzi già estratti: serve per rifare solo la fusione)")
+    ap.add_argument("--rifai-pezzi", action="store_true", help="con --forza: rifà anche le chiamate al modello")
+    ap.add_argument("--timeout", type=int, default=300, help="secondi massimi per una chiamata")
+    ap.add_argument("--tentativi", type=int, default=5, help="nuovi tentativi automatici per chiamata (con attesa crescente)")
+    ap.add_argument("--giri", type=int, default=6, help="dopo i fallimenti, quante volte rifare le run mancanti")
+    ap.add_argument("--attesa", type=int, default=60, help="secondi di attesa tra un giro e l'altro")
     ap.add_argument("--prompt", default="v1_2")
     ap.add_argument("--tag", default=None, help="default: <prompt>_testo_spezzato")
     ap.add_argument("--soglia", type=int, default=40000)
@@ -170,27 +189,42 @@ def main():
         return
     outdir.mkdir(parents=True, exist_ok=True)
     cfg = dict(deployment=os.environ.get("AZURE_OPENAI_DEPLOYMENT", ""), effort=a.effort)
-    compiti = [(c, k) for c in codici for k in range(1, a.runs + 1) if a.forza or not (outdir / f"{c}_run{k}.json").exists()]
-    print(f"{len(codici)} protocolli, {a.runs} run, prompt {p_hash}, {len(compiti)} run da fare -> {outdir}")
+    def mancanti(forza):
+        return [(c, k) for c in codici for k in range(1, a.runs + 1) if forza or not (outdir / f"{c}_run{k}.json").exists()]
+
+    compiti = mancanti(a.forza)
+    totale = len(compiti)
+    print(f"{len(codici)} protocolli, {a.runs} run, prompt {p_hash}, {totale} run da fare -> {outdir}")
+    errori = []
     if compiti:
         from openai import OpenAI
-        client = OpenAI(base_url=os.environ["AZURE_OPENAI_ENDPOINT"], api_key=os.environ["AZURE_OPENAI_API_KEY"], timeout=900, max_retries=2)
-        errori = []
-        with ThreadPoolExecutor(max_workers=a.workers) as ex:
-            fut = {ex.submit(una_run, client, cfg, c, k, sys_p, usr_p, p_hash, outdir, a): (c, k) for c, k in compiti}
-            for f in as_completed(fut):
-                c, k = fut[f]
-                try:
-                    _, _, n, n1, n2 = f.result(); print(f"  ok  {c} run{k}: {n} pezzi, {n1} identificati, {n2} generiche")
-                except Exception as e:
-                    msg = f"{c} run{k}: {type(e).__name__}: {str(e)[:300]}".replace(os.environ.get("AZURE_OPENAI_API_KEY", "#"), "***")
-                    errori.append(msg); print("  ERR", msg)
-        if errori:
-            with open(outdir / "errori.log", "a", encoding="utf-8") as f:
-                f.write(f"--- {datetime.now().isoformat(timespec='seconds')}\n" + "\n".join(errori) + "\n")
+        client = OpenAI(base_url=os.environ["AZURE_OPENAI_ENDPOINT"], api_key=os.environ["AZURE_OPENAI_API_KEY"], timeout=a.timeout, max_retries=a.tentativi)
+        fatte, t0 = 0, time.time()
+        for giro in range(1, a.giri + 1):
+            errori = []
+            with ThreadPoolExecutor(max_workers=a.workers) as ex:
+                fut = {ex.submit(una_run, client, cfg, c, k, sys_p, usr_p, p_hash, outdir, a): (c, k) for c, k in compiti}
+                for f in as_completed(fut):
+                    c, k = fut[f]
+                    try:
+                        _, _, n, n1, n2 = f.result(); fatte += 1
+                        el = time.time() - t0; eta = el / fatte * (totale - fatte)
+                        print(f"  ok  {c} run{k}: {n} pezzi, {n1} identificati, {n2} generiche   [{fatte}/{totale}, {el / 60:.0f} min, ancora circa {eta / 60:.0f} min]", flush=True)
+                    except Exception as e:
+                        msg = f"{c} run{k}: {type(e).__name__}: {str(e)[:300]}".replace(os.environ.get("AZURE_OPENAI_API_KEY", "#"), "***")
+                        errori.append(msg); print("  ERR", msg, flush=True)
+            if errori:
+                with open(outdir / "errori.log", "a", encoding="utf-8") as f:
+                    f.write(f"--- {datetime.now().isoformat(timespec='seconds')} giro {giro}\n" + "\n".join(errori) + "\n")
+            compiti = mancanti(False)
+            if not compiti:
+                errori = []; break
+            if giro < a.giri:
+                print(f"\n{len(compiti)} run mancanti. Giro {giro}/{a.giri} finito, nuovo tentativo tra {a.attesa} s (i pezzi già fatti non si rifanno).", flush=True)
+                time.sleep(a.attesa)
     S1.riepilogo(outdir, codici)
-    if compiti and errori:
-        print(f"\n{len(errori)} run fallite: rilancia lo stesso comando (i pezzi già fatti non si rifanno)."); sys.exit(1)
+    if errori:
+        print(f"\n{len(mancanti(False))} run ancora mancanti: rilancia lo stesso comando (i pezzi già fatti non si rifanno)."); sys.exit(1)
 
 
 if __name__ == "__main__":

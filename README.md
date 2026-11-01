@@ -51,17 +51,17 @@ python codice/test_api.py        # prova la connessione al modello
 
 ```
 README.md, CLAUDE.md
-docs/             stato, decisioni, metodologia, definizioni, ipotesi di lavoro, registro esperimenti (experiments.md)
+docs/             stato, decisioni, metodologia, definizioni, ipotesi di lavoro, registro esperimenti (experiments.md), pipeline e stime (pipeline_e_stime.md)
 prompts/          prompt versionati: v1/ (pipeline archiviata), v2/ (pipeline attuale, v1_2 = candidato al congelamento)
 parametri/        parametri_pubblicazione.json: modello, prompt, n. run, soglie di spezzatura, campione
 campione/         campione per la pubblicazione (disegno e, dopo l'estrazione, l'elenco dei protocolli)
 codice/           config.py, parse_questionari.py, anagrafica_protocolli.py, confronto_*.py, test_api.py
 codice/pipeline_ai_v2/   stadio 1 (estrazione, spezzatura), stabilità, revisione, misure, registro esperimenti
 revisione/        fogli di revisione degli enti e decisioni (con nomi di enti: si possono committare)
-annotazione/      gold standard sul nuovo campione (da generare)
+annotazione/      gold standard: sottoinsieme di 20 protocolli annotati da zero (gold_v2); fogli del primo campione (gold_v1_legacy)
 risultati/        tabelle e figure per il paper, generate da script
 riferimenti/      categorie_gino_30.csv (30 categorie di soggetti → 10 gruppi), documento Istat
-archivio/         pipeline v1, campione e fogli di annotazione sul campione v1 (superato): non si usano
+archivio/         pipeline v1 e script del primo campione: non si usano
 microdati/        non versionata, tranne il README
 output/           analisi aggregate preesistenti, non versionata, non usata per ora
 ```
@@ -83,3 +83,4 @@ Servono python3, pandas, openpyxl, numpy, Pillow, pdfplumber.
 - `docs/stato.md`: stato, prossimi passi, domande aperte
 - `docs/decisioni.md`: scelte fatte e motivi
 - `docs/metodologia.md`: fonti, prompt, corrispondenza domande–AI, disegno del confronto
+- `docs/pipeline_e_stime.md`: come run completa, campione e gold diventano stime
