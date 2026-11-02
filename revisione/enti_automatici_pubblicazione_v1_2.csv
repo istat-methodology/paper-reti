@@ -23,11 +23,6 @@
 0120;Comune di Niella Tanaro;5;5;solo_citato;solo_citato 5;Comune di Niella Tanaro
 0120;Comunita Montana Alto Tanaro Cebano Monregalese;1;5;solo_citato;solo_citato 1;Comunita Montana Alto Tanaro Cebano Monregalese
 0120;Presidio Ospedaliero di Ceva;2;5;solo_citato;solo_citato 2;Presidio Ospedaliero di Ceva
-0201;Consiglio Regionale della Valle d'Aosta;5;5;componente_rete;componente_rete 5;Consiglio Regionale della Valle d'Aosta
-0201;Azienda regionale sanitaria USL della Valle d'Aosta;5;5;componente_rete;componente_rete 5;Azienda regionale sanitaria USL della Valle d'Aosta
-0201;Fondazione opere Caritas;5;5;componente_rete;componente_rete 5;Fondazione Caritas | Fondazione opere Caritas
-0201;Università della Valle d'Aosta/Université de la Vallée d'Aoste;5;5;componente_rete;componente_rete 5;Università della Valle d'Aosta/Université de la Vallée d'Aoste
-0201;Consiglio permanente degli enti locali;1;5;componente_rete;componente_rete 1;Consiglio permanente degli enti locali
 0303;PIANO DI ZONA DI MANTOVA;5;5;firmatario;firmatario 5;PIANO DI ZONA DI MANTOVA | Piano di Zona di Mantova
 0303;PIANO DI ZONA DI GUIDIZZOLO;5;5;firmatario;firmatario 5;PIANO DI ZONA DI GUIDIZZOLO | Piano di Zona di Guidizzolo
 0303;PIANO DI ZONA DI SUZZARA;5;5;firmatario;firmatario 5;PIANO DI ZONA DI SUZZARA | Piano di Zona di Suzzara
@@ -143,6 +138,11 @@
 0312;Associazione Lule Onlus;5;5;solo_citato;solo_citato 5;Associazione Lule Onlus
 0312;Regione Lombardia;5;5;solo_citato;solo_citato 5;Regione Lombardia
 0312;Procura della Repubblica per i minorenni di Milano;5;5;solo_citato;"solo_citato 3; componente_rete 2";Procura della Repubblica per i minorenni di Milano
+044102;Verein Frauen helfen Frauen;5;5;firmatario;firmatario 5;Verein Frauen helfen Frauen
+044102;Beratungsstelle InPut;5;5;firmatario;firmatario 5;Beratungsstelle InPut
+044102;Caritas Diözese Brixen-Bozen;5;5;firmatario;firmatario 5;Caritas Diözese Brixen-Bozen
+044102;Südtiroler Sanitätsbetrieb;5;5;firmatario;firmatario 5;Südtiroler Sanitätsbetrieb
+044102;Bezirksgemeinschaft Pustertal;5;5;firmatario;firmatario 5;Bezirksgemeinschaft Pustertal
 044202;Comune di Trento;5;5;firmatario;"firmatario 4; componente_rete 1";Comune di Trento | Consiglio delle Autonomie locali della provincia di Trento | Legione Carabinieri “Trentino Alto Adige”, Comando Provinciale di Trento | PROVINCIA AUTONOMA DI TRENTO | Provincia autonoma di Trento | Questura di Trento | Villaggio del Fanciullo Sos - Trento | Villaggio del Fanciullo Sos – Trento
 044202;Questura di Trento;1;5;componente_rete;componente_rete 1;Questura di Trento
 044202;Legione Carabinieri “Trentino Alto Adige”, Comando Provinciale di Trento;1;5;componente_rete;componente_rete 1;Legione Carabinieri “Trentino Alto Adige”, Comando Provinciale di Trento
@@ -497,14 +497,6 @@
 1103;Comando Provinciale Guardia di Finanza;3;5;firmatario;firmatario 3;Comando Provinciale Guardia di Finanza | Comando provinciale Guardia di Finanza
 1103;Arma dei Carabinieri - Comando Provinciale;3;5;firmatario;firmatario 3;Arma dei Carabinieri - Comando Provinciale
 1103;Cooperativa sociale Polo9 Ancona;2;5;firmatario;firmatario 2;Cooperativa Sociale Polo9 Ancona | Cooperativa sociale Polo9 Ancona
-1210;Millepiani APS - Ente del Terzo Settore;5;5;firmatario;firmatario 5;Millepiani APS - Ente del Terzo Settore
-1210;Cooperativa Sociale BeFree;5;5;firmatario;firmatario 5;Cooperativa Sociale BeFree
-1210;CAV Nilde Iotti;5;5;solo_citato;solo_citato 5;CAV Nilde Iotti
-1210;Roma Capitale;5;5;solo_citato;solo_citato 5;Roma Capitale
-1210;Riconoscere OdV;5;5;solo_citato;solo_citato 5;Riconoscere OdV
-1210;Amaita Intercultura APS;5;5;solo_citato;solo_citato 5;Amaita Intercultura APS
-1210;LoosenArt;5;5;solo_citato;solo_citato 5;LoosenArt
-1210;Municipio VIII;3;5;solo_citato;solo_citato 3;Municipio VIII
 1215;Associazione di Promozione Sociale PONTE DONNA;4;5;firmatario;firmatario 4;Associazione di Promozione Sociale PONTE DONNA
 1215;ASSOCIAZIONE “SPAZIO SUPPORTO DONNA-APS”;5;5;firmatario;firmatario 5;ASSOCIAZIONE “SPAZIO SUPPORTO DONNA-APS”
 1215;Centro Antiviolenza Demetra VT4;5;5;componente_rete;componente_rete 5;Centro Antiviolenza Demetra VT4
@@ -803,7 +795,6 @@
 1613;Corte EDU;1;5;solo_citato;solo_citato 1;Corte EDU
 1613;Conferenza dei Sindaci;1;5;firmatario;firmatario 1;Conferenza dei Sindaci
 1613;Ambito di Gallipoli;1;5;componente_rete;componente_rete 1;Ambito di Gallipoli
-1702;Regione Basilicata;5;5;componente_rete;"componente_rete 4; solo_citato 1";REGIONE BASILICATA | Regione Basilicata
 1803;Procura della Repubblica presso il Tribunale di Catanzaro;5;5;firmatario;firmatario 5;Procura della Repubblica presso il Tribunale di Catanzaro
 1803;Associazione “Attivamente Coinvolte” APS;5;5;firmatario;firmatario 5;Associazione “Attivamente Coinvolte” APS
 1803;Regione Calabria;5;5;solo_citato;solo_citato 5;Regione Calabria

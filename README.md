@@ -6,12 +6,19 @@ Istat, Direzione metodologica.
 
 ## Idea
 
-Gli uffici regionali compilano il questionario GINO leggendo i protocolli d'intesa delle reti territoriali. Una pipeline LLM legge gli stessi protocolli ed estrae le stesse informazioni. Confrontiamo i due risultati a livello micro: la fonte è la stessa, cambia chi la legge.
+In un'indagine tradizionale come il monitoraggio delle reti, il questionario GINO riporta in forma strutturata il contenuto di un protocollo d'intesa. Il protocollo è un PDF senza struttura standard, difficile da analizzare. Gli uffici regionali lo leggono e compilano il questionario. Una pipeline LLM legge gli stessi protocolli. La fonte è la stessa, cambia chi la legge.
 
-- **RQ1 – qualità del questionario.** Quanta sovra/sotto-copertura c'è rispetto al protocollo? Dove le definizioni sono ambigue (proponente, attore, incaricato)? Parte del disaccordo dipende da come le domande sono formulate, non dagli errori di chi risponde.
+Il messaggio del paper: nella statistica ufficiale gli strumenti AI integrano gli strumenti tradizionali di raccolta dati. Il lavoro ha due parti.
+
+**Parte A – si possono usare strumenti AI in un processo di produzione statistica, in particolare nella fase di raccolta dati?**
+- **RQ0.** Un'estrazione AI dai protocolli è abbastanza affidabile da essere usata nella raccolta dati? La risposta è l'esperimento: definizione dei prompt, più run per protocollo, estrazione di un campione, gold standard annotato a mano, confronto, stime con errore noto. Per quanto ne sappiamo, in statistica ufficiale è la prima volta che un esperimento di questo tipo viene fatto per intero (claim da verificare in letteratura).
+- La pipeline estrae gli enti di ogni protocollo, con ruolo nel documento (`firmatario`, `componente_rete`, `solo_citato`) e categoria (30 modalità). Le stime riguardano `firmatario` e `componente_rete`; i `solo_citato` si riportano a parte; le menzioni generiche non entrano nelle stime e servono a valutare l'estrazione. La parte A non usa il questionario né i suoi ruoli.
+
+**Parte B – l'indagine è già stata condotta ed è online. Come si colloca l'output AI rispetto al questionario?**
+- **RQ1 – confrontabilità e cause delle differenze.** L'output AI è confrontabile con il questionario? In alcuni casi sì, in altri no. Le differenze si spiegano in modo quantitativo con due cause: i fattori legati ai compilatori (competenza, lettura del protocollo) e l'aspetto definitorio (proponente, attore, incaricato; definizioni ambigue). Il secondo è il più importante e va trattato con cautela: le differenze di definizione sono una proprietà delle domande, non errori dei rispondenti. Include la sovra/sotto-copertura rispetto al protocollo e il confronto per categoria (30 modalità).
 - **RQ2 – integrazione.** Il protocollo può arricchire l'indagine? Prima validazione, poi arricchimento, poi eventuale precompilazione o sostituzione del questionario.
 
-Il paper contiene sia il controllo di qualità sia l'integrazione.
+La parte B si articola in due livelli. B1 confronta gli insiemi di enti (item 2.2, con controllo sull'unione di 2.1, 3.3 e 3.7) e non richiede di definire i ruoli del questionario. B2 confronta per proponente, attore e incaricato ed è condizionato alle definizioni dei colleghi che hanno costruito il questionario.
 
 ## Le tre fonti
 
@@ -54,7 +61,7 @@ README.md, CLAUDE.md
 docs/             stato, decisioni, metodologia, definizioni, ipotesi di lavoro, registro esperimenti (experiments.md), pipeline e stime (pipeline_e_stime.md)
 prompts/          prompt versionati: v1/ (pipeline archiviata), v2/ (pipeline attuale, v1_2 = candidato al congelamento)
 parametri/        parametri_pubblicazione.json: modello, prompt, n. run, soglie di spezzatura, campione
-campione/         campione per la pubblicazione (disegno e, dopo l'estrazione, l'elenco dei protocolli)
+campione/         campione per la pubblicazione (v2: 58 documenti), gold v2, frame_esclusioni_v1.csv (fuori ambito e copie)
 codice/           config.py, parse_questionari.py, anagrafica_protocolli.py, confronto_*.py, test_api.py
 codice/pipeline_ai_v2/   stadio 1 (estrazione, spezzatura), stabilità, revisione, misure, registro esperimenti
 revisione/        fogli di revisione degli enti e decisioni (con nomi di enti: si possono committare)

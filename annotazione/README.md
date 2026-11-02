@@ -5,7 +5,7 @@ Sottoinsieme di 20 protocolli estratto a caso dal campione di 60 (`campione/camp
 
 Annotazione manuale da zero, senza vedere output di modelli: enti con nome proprio (con ruolo e categoria) e menzioni generiche (periferia). Annotatore principale Paolo su tutti i protocolli; 8 protocolli con `doppia=si` li annota anche un secondo annotatore (Elena, se disponibile, altrimenti Mauro), per misurare l'accordo.
 
-- `gold_v2/gold_enti_v3_template.xlsx`: template (fogli `istruzioni`, `protocolli`, `enti`, `menzioni_generiche`, `categorie`).
+- `gold_v2/gold_enti_v4_template.xlsx`: template, v4 dal 2026-11-02 (la v3 non ha le colonne `promotore`, `coordinatore_capofila`, `monitoraggio` nel foglio `enti`; fogli `istruzioni`, `protocolli`, `enti`, `menzioni_generiche`, `categorie`).
 
 Usi: recall e precision dello stadio 1, accordo tra annotatori, verità per lo stadio 2 (30 categorie).
 

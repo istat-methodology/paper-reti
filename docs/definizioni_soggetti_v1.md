@@ -4,6 +4,22 @@
 
 Fonti usate: nota metodologica Istat (`riferimenti/rif_istat_reti_territoriali_2025_v1.pdf`, pp. 16-18 e nota 11 a p. 15); Intesa Stato-Regioni del 27/11/2014 (artt. 1 e 8, letti sul testo); D.Lgs. 117/2017 (Codice del Terzo settore, da verificare su Normattiva).
 
+## 0. Tre livelli di attributi di un ente
+
+Di ogni ente si valutano tre cose distinte. Non vanno confuse nei documenti e nel paper.
+
+| Livello | Valori | Stadio | Stato |
+|---|---|---|---|
+| Ruolo nel documento | `firmatario`, `componente_rete`, `solo_citato` | 1 | estratto dal prompt v1.2; entra nell'analisi |
+| Categoria | una delle 30 modalità GINO | 2 | da fare |
+| Ruolo nel questionario | proponente, attore, incaricato (soggetto, attore, responsabile) | 4 | fuori dall'analisi |
+
+- Il ruolo nel documento descrive come il testo tratta l'ente. Non è il ruolo del questionario GINO e non è il ruolo per il monitoraggio della rete.
+- Non c'è una corrispondenza tra i due ruoli. Un firmatario non è per definizione un proponente.
+- Il ruolo nel questionario ha definizioni ambigue (proponente, attore, incaricato) che hanno messo in difficoltà i revisori. Non lo misuriamo. Lo stadio 4 confronta gli insiemi di enti (item 2.2, con controllo sull'unione di 2.1, 3.3 e 3.7), senza distinguere i tre ruoli.
+- I `solo_citato` si riportano a parte, non insieme a `firmatario` e `componente_rete`.
+- **Funzioni dichiarate nel documento** (`promotore`, `coordinatore_capofila`, `monitoraggio`): quarto attributo, annotato nel gold insieme a ruolo e categoria (template v4). Indicazione esplicita nel testo; `monitoraggio` solo per il responsabile. Se i promotori sono servizi gestiti da un altro ente nominato nel testo, `promotore` vale anche per l'ente gestore. Non coincidono con i ruoli del questionario. Vedi `docs/decisioni.md`.
+
 ## 1. Cosa conta come "ente"
 
 **[ipotesi]** Un ente è un soggetto distinto (persona giuridica, ufficio o struttura) che nel protocollo è firmatario o ha un compito o un impegno nella rete.

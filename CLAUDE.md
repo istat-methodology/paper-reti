@@ -1,6 +1,6 @@
 # Contesto per Claude
 
-Paper su reti territoriali antiviolenza: confronto micro tra i questionari GINO (parsati dai PDF) e l'estrazione LLM dai protocolli. Leggi `README.md`, `docs/stato.md` e `docs/decisioni.md` prima di tutto.
+Paper su reti territoriali antiviolenza, in due parti: (A) si possono usare strumenti AI nella raccolta dati? Analisi del contenuto dei protocolli con strumenti AI, validata su un gold standard (RQ0); (B) confronto con la raccolta dati tradizionale, cioè i questionari GINO (parsati dai PDF). Struttura in `README.md`, sezione Idea. Leggi `README.md`, `docs/stato.md` e `docs/decisioni.md` prima di tutto.
 
 ## Regole
 - Lingua del paper: inglese. Con Mauro si conversa in italiano.

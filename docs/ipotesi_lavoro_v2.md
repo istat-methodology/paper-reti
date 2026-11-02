@@ -5,6 +5,8 @@
 
 **Aggiornato: 2026-10-30.** Da confermare con i colleghi che hanno costruito il questionario. Quando arrivano le istruzioni di compilazione, si rivede questo file.
 
+> **Nota (2026-11-02).** Il lavoro ha due parti: A, analisi dei protocolli con strumenti AI; B, confronto con il questionario (vedi `README.md`). Le ipotesi sul confronto sotto valgono per B1 (insiemi di enti, senza ruoli del questionario). B2, per proponente, attore e incaricato, è condizionato alle definizioni dei colleghi.
+
 ## Impostazione
 
 Si riparte dall'inizio, anche dai prompt, e si valida a stadi. Ogni stadio si chiude prima di passare al successivo.

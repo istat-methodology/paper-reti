@@ -185,7 +185,7 @@ Two phases, both blind to the questionnaire (the questionnaire plays no role in 
 
 **Phase 1: gold standard.** A subset of 20 protocols is drawn from the 60 (systematic sampling by region and length, seed 20261101; the 3 pilot protocols, on which the prompt was tuned, and protocols above 100,000 characters are excluded; `campione/campione_gold_v1.csv`). Annotators list named entities (with role and category) and generic mentions from the original text, without seeing any model output. Paolo annotates all 20; 8 protocols are annotated by a second annotator (Elena, or Mauro) to measure agreement. Uses: recall and precision of stage 1 (core and periphery), agreement between annotators, ground truth for the 30 categories (stage 2). Limit to report: very long protocols are not in the gold.
 
-**Phase 2: review of model inconsistencies.** On the 40 protocols of the sample outside the gold: entities not present in all runs, entities with unstable role, possible duplicates and a random share of the unanimous ones (`revisione_enti.py`; 310 review rows, 7.8 per protocol; the 10% sample of unanimous entities is redrawn). Decisions: correct / wrong / remove / merge, optional final name and role. Measures: precision of the unanimous and of the non-unanimous entities.
+**Phase 2: review of model inconsistencies.** On the 38 protocols of the v2 sample outside the gold (40 before the 2026-11-02 sample revision): entities not present in all runs, entities with unstable role, possible duplicates and a random share of the unanimous ones (`revisione_enti.py`; 310 review rows, 7.8 per protocol; the 10% sample of unanimous entities is redrawn). Decisions: correct / wrong / remove / merge, optional final name and role. Measures: precision of the unanimous and of the non-unanimous entities.
 
 **Planned measures.** Recall and precision on the gold; agreement between annotators; precision by stability class; agreement on the 30 categories (stage 2).
 
@@ -195,7 +195,7 @@ Two phases, both blind to the questionnaire (the questionnaire plays no role in 
 
 1. Improve the merge of chunk lists (duplicates of the same entity), then repeat E8 on more long protocols of the sample.
 2. Check in the text the open points of v1.2: Banca d'Italia in 0906, RELIVE, WWP EN and WHO.
-3. Freeze the prompt and parameters (`parametri/`, a commit and a tag), draw the sample, run stage 1 on all 251 texts with 5 runs (chunked above 40,000 characters). Report stability and core vs periphery on all protocols; gold standard on 20 protocols of the sample, review of model inconsistencies on the other 40.
+3. Freeze the prompt and parameters (`parametri/`, a commit and a tag), draw the sample, run stage 1 on all 249 texts with text with 5 runs (chunked above 40,000 characters). Report stability and core vs periphery on all protocols; gold standard on 20 protocols of the sample, review of model inconsistencies on the other 40.
 4. Annotation results, then stage 2 and stage 4.
 5. Open decisions: counting rule for the periphery; whether the number in item 2.2 counts only core entities; Unione dei Comuni as category 3 or 8; whether respondents tick more than one category.
 
