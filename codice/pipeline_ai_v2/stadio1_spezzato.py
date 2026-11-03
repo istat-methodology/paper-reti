@@ -176,7 +176,7 @@ def main():
         if a.campione:
             codici = sorted(pd.read_csv(a.campione, sep=";", encoding="utf-8-sig", dtype=str).codice)
         else:
-            an = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str).codice
+            an = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str).codice
             codici = sorted(c for c in an if len((MICRODATI / "protocolli" / f"protocollo_{c}.txt").read_text(encoding="utf-8", errors="ignore")) >= 500)
     else:
         codici = S1.codici_da_processare(a)

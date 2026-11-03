@@ -20,7 +20,7 @@ PILOTA = {"0901", "0902", "0903", "0904", "0905", "0906", "0907", "0908", "0910"
 
 
 def main():
-    an = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)[["codice", "regione"]]
+    an = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str)[["codice", "regione"]]
     an["caratteri"] = [len((MICRODATI / "protocolli" / f"protocollo_{c}.txt").read_text(encoding="utf-8", errors="ignore")) for c in an.codice]
     frame1 = an[an.caratteri >= 500]
     v1 = pd.read_csv(REPO / "campione/campione_pubblicazione_v1.csv", sep=";", dtype=str, encoding="utf-8-sig")

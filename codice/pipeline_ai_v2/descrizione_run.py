@@ -61,7 +61,7 @@ def main():
     if not a.tutti_i_file:
         esc = set(pd.read_csv(RADICE / "campione" / "frame_esclusioni_v1.csv", sep=";", dtype=str, encoding="utf-8-sig").codice)
         dati = {c: r for c, r in dati.items() if c not in esc}
-    anag = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)[["codice", "regione"]].drop_duplicates("codice")
+    anag = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str)[["codice", "regione"]].drop_duplicates("codice")
     regione = dict(zip(anag.codice, anag.regione))
 
     righe, presenze = [], []

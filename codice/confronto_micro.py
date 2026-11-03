@@ -23,7 +23,7 @@ a=ap.parse_args()
 
 cat=pd.read_csv(RIFERIMENTI/"categorie_gino_30.csv",sep=";",encoding="utf-8-sig"); lab=dict(zip(cat.codice,cat.etichetta))
 l=pd.read_csv(MICRODATI/"gino/gino_pdf_risposte_lungo.csv",sep=";",encoding="utf-8-sig",dtype=str)
-anag=pd.read_excel(MICRODATI/"rif_anagrafica_v1.xlsx",sheet_name="Anagrafica",dtype=str).set_index("codice")
+anag=pd.read_excel(MICRODATI/"rif_anagrafica_v2.xlsx",sheet_name="Anagrafica",dtype=str).set_index("codice")
 l["cod"]=l.file.str.extract(r"questionario_(\d+)\.pdf")[0]; l["cat"]=pd.to_numeric(l.voce,errors="coerce")
 codici=[c for c in sorted(l.cod.unique()) if c not in ESCLUSI]
 

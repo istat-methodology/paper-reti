@@ -30,7 +30,7 @@ def alloca(cnt, n):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--n", type=int, default=60); ap.add_argument("--seed", type=int, default=20261031)
     a = ap.parse_args()
-    an = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)[["codice", "regione"]]
+    an = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str)[["codice", "regione"]]
     an["caratteri"] = [len((MICRODATI / "protocolli" / f"protocollo_{c}.txt").read_text(encoding="utf-8", errors="ignore")) for c in an.codice]
     frame = an[an.caratteri >= MIN_CARATTERI].copy()
     cnt = frame.groupby("regione").size().sort_values(ascending=False)

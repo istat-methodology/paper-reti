@@ -87,7 +87,7 @@ def codici_da_processare(args):
     if args.codici:
         return [c.strip() for c in args.codici.split(",")]
     import pandas as pd
-    a = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)
+    a = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str)
     a = a[(a.regione == args.regione) & ~a.codice.isin(ESCLUSI)]
     return sorted(a.codice)
 

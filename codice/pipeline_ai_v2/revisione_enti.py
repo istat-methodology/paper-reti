@@ -79,7 +79,7 @@ def scrivi_excel(a, righe, dati):
     from openpyxl.worksheet.datavalidation import DataValidation
     import pandas as pd
     random.seed(20261031)
-    an = pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str).set_index("codice")
+    an = pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str).set_index("codice")
     # righe mescolate dentro ogni protocollo, con id progressivo: chi rivede non vede il motivo
     per = {}
     for r in righe: per.setdefault(r["codice"], []).append(r)

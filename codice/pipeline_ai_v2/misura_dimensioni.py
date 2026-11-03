@@ -7,7 +7,7 @@ from config import MICRODATI  # noqa: E402
 import pymupdf  # noqa: E402
 
 import pandas as pd  # noqa: E402
-reg = dict(pd.read_excel(MICRODATI / "rif_anagrafica_v1.xlsx", dtype=str)[["codice", "regione"]].values)
+reg = dict(pd.read_excel(MICRODATI / "rif_anagrafica_v2.xlsx", dtype=str)[["codice", "regione"]].values)
 abb = {r["codice"]: r["file_ai"] for r in csv.DictReader(open(MICRODATI / "rif_ai_abbinamento_v1.csv", encoding="utf-8-sig"), delimiter=";")}
 righe = []
 for f in sorted((MICRODATI / "protocolli").glob("protocollo_*.txt")):

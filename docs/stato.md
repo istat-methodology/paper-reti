@@ -32,6 +32,11 @@ Tabelle in `risultati/descrizione_run_stadio1_v2.xlsx` (240 documenti; la v1 è 
 - Funzioni (promotore, coordinatore/capofila, monitoraggio responsabile): colonne nel template v4 del gold, annotate da Paolo insieme al resto. Il pacchetto v2 contiene la v4.
 - Da valutare: documenti contenuti in altri (1308, 1307 in 1305; 1295 in 1276); quasi-copie del Lazio (0113/0122, 1285/1286, 1242 con 1261/1264, ecc.); 1245 e 0116 come possibili non protocolli; 044102 (nel campione, fase 2, deciso di tenerlo) è in tedesco e 044104 è bilingue.
 
+## Protocolli in PDF (2026-11-03)
+- 338 PDF dai 17 zip regionali (`microdati/protocolli_pdf/_originali/`). 251 `protocollo_<codice>.pdf`, abbinati agli stessi 251 questionari dei TXT (0909 e 0910 condividono il file).
+- Fuori campione, tenuti con il nome originale in `_estratti/`: 85 PDF di convenzioni, leggi e altri documenti che le regioni hanno caricato oltre ai protocolli, più 3 senza TXT (2 prove, 1 file Piemonte senza timestamp). Elenco in `microdati/rif_anagrafica_v2.xlsx`, fogli `Protocolli_non_usati` e `Pdf_senza_txt`.
+- Mapping nuovo/originale in `rif_anagrafica_v2.xlsx` (colonne `protocollo_pdf_*`); gli script leggono ora la v2. 0903 e 0908 tengono la versione non compressa.
+
 ## Struttura (2026-11-02)
 Due parti: A, si possono usare strumenti AI nella raccolta dati? (RQ0, analisi dei protocolli); B, confronto con il questionario già condotto (RQ1 confrontabilità e cause, RQ2 integrazione; B1 insiemi di enti, B2 ruoli). Recall del gold su tutti gli enti, poi per ruolo. Vedi `README.md` e `docs/decisioni.md`.
 
